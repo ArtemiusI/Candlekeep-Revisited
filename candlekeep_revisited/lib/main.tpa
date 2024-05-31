@@ -1,0 +1,77 @@
+COPY ~%MOD_FOLDER%/bam~ ~override~
+
+COPY_EXISTING ~osprey.cre~ ~override~
+		WRITE_BYTE 0x238 14 // strength
+		WRITE_BYTE 0x23c 10 // dexterity
+		WRITE_BYTE 0x23d 16 // constitution
+		WRITE_BYTE 0x23a 17 // intelligence
+		WRITE_BYTE 0x23b 17 // wisdom
+		WRITE_BYTE 0x23e 8  // charisma
+
+COPY_EXISTING ~imoen1.cre~ ~override/imoen.cre~
+		WRITE_ASCII DIALOG ~IMOEN~ #8
+		WRITE_ASCII SCRIPT_OVERRIDE ~~
+		WRITE_ASCII SCRIPT_CLASS ~IMOEN~
+		WRITE_ASCII SCRIPT_RACE ~~
+		WRITE_ASCII SCRIPT_GENERAL ~~
+		WRITE_ASCII SCRIPT_DEFAULT ~WTRUNSGT~
+		WRITE_ASCII DEATHVAR ~IMOEN~
+		REMOVE_CRE_ITEMS
+
+EXTEND_TOP ~imoen.bcs~ ~%MOD_FOLDER%/bcs/imoen.baf~
+EXTEND_TOP ~ch1cut01.bcs~ ~%MOD_FOLDER%/bcs/ch1cut01.baf~
+EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600.baf~
+EXTEND_TOP ~%bg1_eet_symbol%2616.bcs~ ~%MOD_FOLDER%/bcs/ar2616.baf~
+EXTEND_TOP ~%bg1_eet_symbol%2605.bcs~ ~%MOD_FOLDER%/bcs/ar2605.baf~
+
+COMPILE ~%MOD_FOLDER%/dlg/dialog.d~
+COMPILE ~%MOD_FOLDER%/dlg/imoen.d~
+
+COPY_EXISTING ~SCRL2L.ITM~ ~OVERRIDE/C0CR#LET.ITM~
+SAY NAME2 ~Letter from Mordaine~
+SAY DESC ~This tightly-sealed letter was given to you by Mordaine. You were asked to deliver it to the reader who does chores in the clinic.~
+
+COPY ~%MOD_FOLDER%/ITM/C0CR#BAG.ITM~ ~OVERRIDE~
+SAY NAME1 ~Bag~
+SAY NAME2 ~Bag of Medical Supplies~
+SAY DESC ~This heavy sack is filled with various items for medical purposes, including bandages, medicinal herbs and concoctions, and the like.
+
+STATISTICS:
+
+Weight: 10~
+
+COPY ~%MOD_FOLDER%/ITM/C0CR#RIN.ITM~ ~OVERRIDE~
+SAY NAME1 ~Silver Ring~
+SAY NAME2 ~Ring of Insight~
+SAY DESC ~Ring of Insight
+Though seemingly just an unremarkable silver band, this ring has a slight magical enchantment which expands the wearer's capacity for storing old knowledge, making it useful for aiding in the memory of the aging scribes and lorekeepers of Candlekeep who wist through hundreds of pages each day. Though its usefulness in combat is nonexistent, it can aid in the identification of rare and magical objects.
+
+STATISTICS:
+
+Equipped abilities:
+– Lore: +10
+
+Weight: 0~
+
+COPY_EXISTING ~%bg1_eet_symbol%2602.are~ ~override~
+      LPF ADD_AREA_ITEM
+      INT_VAR
+        container_to_add_to = 4
+      STR_VAR
+        item_to_add = ~C0CR#BAG~
+      END
+
+
+COPY_EXISTING ~%bg1_eet_symbol%2616.are~ ~override~
+      LPF ADD_AREA_ITEM
+      INT_VAR
+        container_to_add_to = 1
+      STR_VAR
+        item_to_add = ~BOOK18~
+      END
+      LPF ADD_AREA_ITEM
+      INT_VAR
+        container_to_add_to = 1
+      STR_VAR
+        item_to_add = ~BOOK35~
+      END

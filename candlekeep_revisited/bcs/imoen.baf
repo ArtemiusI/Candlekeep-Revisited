@@ -1,0 +1,23 @@
+IF
+	OR(2)
+	Dead("shank")
+	Dead("carbos")
+	InParty(Myself)
+	Global("C0CandleReImoenAssassin","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0CandleReImoenAssassin","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END
+
+IF
+	OR(2)
+	Dead("shank")
+	Dead("carbos")
+	!InParty(Myself)
+	Global("C0CandleReImoenAssassin","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0CandleReImoenAssassin","GLOBAL",-1)
+END
+	

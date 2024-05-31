@@ -1,0 +1,37 @@
+BACKUP ~candlekeep_revisited/backup~
+AUTHOR ~The Artisan~
+ALWAYS
+  INCLUDE ~%MOD_FOLDER%/lib/eet.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/alter_script.tpa~
+  INCLUDE ~%MOD_FOLDER%/lib/replace_multiline.tpa~
+  ACTION_IF (GAME_IS ~eet~) BEGIN
+    OUTER_SET bg2_chapter = 12
+  END ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+  ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
+  OUTER_SPRINT "bg1_eet_symbol" AR
+  END
+
+  ACTION_IF GAME_IS ~EET~ THEN BEGIN
+  OUTER_SPRINT "bg1_eet_symbol" BG
+  END
+  
+  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+    OUTER_SET bg2_chapter = bg2_chapter + 1
+    OUTER_SPRINT name_source ~bg2_chapter_%i%~
+    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+  END
+END
+
+AUTO_TRA ~candlekeep_revisited/tra/%s~ //~%~
+LANGUAGE 
+  ~English~ 
+  ~english~
+  ~%MOD_FOLDER%/tra/english/setup.tra~
+
+BEGIN ~Candlekeep Revisited: BG1 Prologue Expansion~
+  REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
+  
+INCLUDE ~%MOD_FOLDER%/lib/main.tpa~
