@@ -163,7 +163,7 @@ END
 CHAIN C0CR#MOR C0CandleReMordaine.2
 ~Actually, there is one thing. I hate to ask this of you, and it's certainly not an urgent matter, but should you have a chance... could you deliver this letter to the clinic for me?~
 = ~Just hand it over to the reader that does chores there. Young man, short, yellow robes... probably soaked with dishwater. Thanks in advance.~
-EXIT
+DO ~GiveItemCreate("C0CR#LET",Player1,1,0,0)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~!NumTimesTalkedTo(0)
 IsGabber(Player1)~ THEN C0CR#MOR C0CandleReMordaine
