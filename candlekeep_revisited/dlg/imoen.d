@@ -91,7 +91,7 @@ END
 I_C_T2 INNKE2 6 C0CandleReImoenInterjectWinthrop
 == INNKE2 IF ~IsValidForPartyDialog("IMOEN")~ THEN ~Oho, and I see a familiar face taggin' along with you too. Imoen, girl, does my memory fail me, or did I not entrust you with the cleanin' of the rooms upstairs, eh?~
 == IMOEN2 ~Puffguts! Um... I'll get to it... later! Yeah, just need to find, um... a cleaning rag somewhere...~
-== INNKE2 ~Now, haven't I always told you to be honest to your old man? You're spendin' time with <CHARNAME> before <PRO_HESHE>, I don't mind it. Just make sure you don't forget before the day's through, aye? You know this old back ain't as good at bendin' over to reach the corners as it used to be.~
+== INNKE2 ~Now, haven't I always told you to be honest to your old man? You're spendin' time with <CHARNAME> before <PRO_HESHE> goes, I don't mind it. Just make sure you don't forget before the day's through, aye? You know this old back ain't as good at bendin' over to reach the corners as it used to be.~
 == IMOEN2 ~Aww... come on. Alright, alright... I'll get to it after I'm done sendin' off <CHARNAME>.~
 == INNKE2 ~That's a good girl.~
 END
