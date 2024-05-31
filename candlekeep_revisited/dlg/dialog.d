@@ -213,7 +213,7 @@ DO ~SetGlobal("C0CandleReMordaineQuest","GLOBAL",2)~ EXIT
 CHAIN IF WEIGHT #-1 ~NumTimesTalkedTo(0)
 IsGabber(Player1)~ THEN C0CR#OSP C0CandleReOsprey
 ~<CHARNAME>! Good <DAYNIGHTALL>. May your day be blessed with knowledge and wisdom.~
-== C0CR#OSP ~As you see, I have been making my daily preyer to lord Deneir. Perhaps I should pray for you, as well, for you are soon to embark upon a long journey.~
+== C0CR#OSP ~As you see, I have been making my daily prayer to lord Deneir. Perhaps I should pray for you, as well, for you are soon to embark upon a long journey.~
 END
   + ~!ReactionLT(LastTalkedToBy,FRIENDLY_LOWER)~ + ~Thank you, Osprey.~ + C0CandleReOsprey.highroll
   + ~ReactionLT(LastTalkedToBy,FRIENDLY_LOWER)~ + ~Thank you, Osprey.~ + C0CandleReOsprey.lowroll
