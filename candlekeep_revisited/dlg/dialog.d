@@ -41,6 +41,7 @@ EXIT
 
 CHAIN C0CR#ARK C0CandleReArkanis.3
 ~Thank you, my <PRO_GIRLBOY>. We'll have much less trouble standing guard with these.~
+DO ~TakePartyItem("BOOK18") TakePartyItem("BOOK35")~
 == C0CR#ARK ~History of Sembia, eh? Isn't that where you're from, Deder? I remember you saying something along those lines.~
 == C0CR#DED ~That was a long time ago. I don't really have the best memories of those days... you can have that one, Arkanis.~
 == C0CR#ARK ~I see. Well, I'd still like to read yours after I'm done with mine. I'm sorry to trouble you for the legwork, <CHARNAME>. Here, take these arrows with you. It's a dangerous world beyond these walls... keep your eyes out for trouble in the distance and bring it down before it gets close to you, and I'm sure you'll do fine.~
