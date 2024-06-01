@@ -1,4 +1,5 @@
 IF
+	Global("Chapter","GLOBAL",0)
 	OR(2)
 	Dead("shank")
 	Dead("carbos")
@@ -11,6 +12,7 @@ THEN
 END
 
 IF
+	Global("Chapter","GLOBAL",0)
 	OR(2)
 	Dead("shank")
 	Dead("carbos")
@@ -19,5 +21,18 @@ IF
 THEN
   RESPONSE #100
 	SetGlobal("C0CandleReImoenAssassin","GLOBAL",-1)
+END
+	
+IF
+	Global("Chapter","GLOBAL",1)
+	AreaCheck("AR2700")
+	Global("C0CandleReImoenJoins","GLOBAL",3)
+THEN
+  RESPONSE #100
+	SetGlobal("C0CandleReImoenJoins","GLOBAL",4)
+	ActionOverride("imoen",SetDialog("IMOEN2"))
+	ActionOverride("imoen",SetNumTimesTalkedTo(0))
+	MoveGlobalObject("imoen",Myself)
+	DestroySelf()
 END
 	

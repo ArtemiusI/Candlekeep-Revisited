@@ -17,7 +17,7 @@ CHAIN IMOEN2 C0CandleReImoenFarewell.2
 ~Take care of yourself, and, uh... aw, heck. I'm no good at this parting stuff. Never had to do it before. Not like this.~
 = ~Just... make sure you come back in one piece, okay? I'm sure it won't be too long. And then show me the new stuff you've picked up!~
 = ~See ya, <CHARNAME>.~
-DO ~SetGlobal("C0CandleReImoenJoins","GLOBAL",-1)
+DO ~SetGlobal("C0CandleReImoenJoins","GLOBAL",3)
 ClearAllActions()
 StartCutSceneMode()
 StartCutScene("ch1cut01")~ EXIT
