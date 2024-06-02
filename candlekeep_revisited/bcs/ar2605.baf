@@ -1,16 +1,4 @@
 IF
-	Global("C0CandleReSpawnNPCs","MYAREA",0)
-THEN
-  RESPONSE #100
-	CreateCreature("cander",[200.370],E)
-	ActionOverride("canderous",ChangeAIScript("SHOUT",OVERRIDE))
-	ActionOverride("canderous",ChangeAIScript("SEEENEMY",RACE))
-	ActionOverride("canderous",ChangeAIScript("WDASIGHT",DEFAULT))
-	ActionOverride("canderous",SetDialog("C0CR#CAN"))
-	SetGlobal("C0CandleReSpawnNPCs","MYAREA",1)
-END
-
-IF
 	GlobalGT("Chapter","GLOBAL",5)
 	Global("C0CandleReSpawnNPCs","MYAREA",1)
 THEN

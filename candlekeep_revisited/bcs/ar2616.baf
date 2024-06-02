@@ -1,16 +1,4 @@
 IF
-	Global("C0CandleReSpawnNPCs","MYAREA",0)
-THEN
-  RESPONSE #100
-	CreateCreature("mordai",[347.510],SE)
-	ActionOverride("mordaine",ChangeAIScript("SHOUT",OVERRIDE))
-	ActionOverride("mordaine",ChangeAIScript("SEEENEMY",RACE))
-	ActionOverride("mordaine",ChangeAIScript("WTASIGHT",DEFAULT))
-	ActionOverride("mordaine",SetDialog("C0CR#MOR"))
-	SetGlobal("C0CandleReSpawnNPCs","MYAREA",1)
-END
-
-IF
 	GlobalGT("Chapter","GLOBAL",5)
 	Global("C0CandleReSpawnNPCs","MYAREA",1)
 THEN

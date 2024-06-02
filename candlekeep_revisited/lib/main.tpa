@@ -1,12 +1,71 @@
 COPY ~%MOD_FOLDER%/bam~ ~override~
 
+COPY_EXISTING ~arkani.cre~ ~override~
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~DWARVEN_DEFENDER~))
+  SAY BIO ~ARKANIS is a Watcher of Candlekeep, whom you know to have served dutifully for as long as you can remember. Defying the common perception of dwarves being sullen and difficult to befriend, you have always known Arkanis to be a gentle, fatherly sort who enjoys telling tales, taking care of children, and reading books together with his close companion Deder.~
+
+COPY_EXISTING ~arkani3.cre~ ~override~
+  WRITE_BYTE 0x24 60 // current hp
+  WRITE_BYTE 0x26 60 // maximum hp
+  WRITE_BYTE 0x52 15 // THAC0
+  WRITE_BYTE 0x54 6 // save vs death
+  WRITE_BYTE 0x55 8 // save vs wand
+  WRITE_BYTE 0x56 7 // save vs polymorph
+  WRITE_BYTE 0x57 8 // save vs breath
+  WRITE_BYTE 0x58 9 // save vs spell
+  WRITE_BYTE 0x234 6 // level first class
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~DWARVEN_DEFENDER~))
+  REPLACE_CRE_ITEM ~plat04~ #0 #0 #0 ~IDENTIFIED~ ~armor~
+  REPLACE_CRE_ITEM ~ax1h02~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+  REPLACE_CRE_ITEM ~shld04a~ #0 #0 #0 ~IDENTIFIED~ ~shield~
+  REPLACE_CRE_ITEM ~potn52~ #3 #3 #3 ~IDENTIFIED~ ~qitem1~
+  REPLACE_CRE_ITEM ~potn14~ #1 #1 #1 ~IDENTIFIED~ ~qitem2~
+  ADD_CRE_ITEM ~potn09~ #1 #1 #1 ~IDENTIFIED~ ~inv1~
+  ADD_KNOWN_SPELL ~SPDWD02~ #0 ~innate~
+  ADD_MEMORIZED_SPELL ~SPDWD02~ #0 ~innate~ (2)
+
+COPY_EXISTING ~cander.cre~ ~override~
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~GODHELM~))
+  SAY BIO ~CANDEROUS is a cleric of Helm, the Watcher. He is not from the Sword Coast, but has called Candlekeep home for at least a few years. Though trained in combat, he has lived a peaceful life within the keep's walls as a healer, tending to the various minor ailments of the residents.~
+
+COPY_EXISTING ~deder.cre~ ~override~
+  SAY BIO ~You know little of DEDER's past outside of the fact that he was born in the merchant state of Sembia. Though he serves as a Watcher, you know him to be adept in the rogue's trade, having taught Imoen the skills of thievery during your childhood. He is a person of few words, yet has a close friendship with his fellow Watcher Arkanis.~
+  ADD_KNOWN_SPELL ~SPCL423~ #0 ~innate~
+  ADD_MEMORIZED_SPELL ~SPCL423~ #0 ~innate~ (1)
+
+COPY_EXISTING ~deder3.cre~ ~override~
+  WRITE_BYTE 0x24 40 // current hp
+  WRITE_BYTE 0x26 40 // maximum hp
+  WRITE_BYTE 0x52 10 // THAC0
+  WRITE_BYTE 0x54 8 // save vs death
+  WRITE_BYTE 0x55 9 // save vs wand
+  WRITE_BYTE 0x56 11 // save vs polymorph
+  WRITE_BYTE 0x57 13 // save vs breath
+  WRITE_BYTE 0x58 10 // save vs spell
+  WRITE_BYTE 0x234 5 // level first class
+  WRITE_BYTE 0x235 5 // level second class
+  WRITE_ASCII DIALOG ~C0CR#DE3~ #8
+  REPLACE_CRE_ITEM ~leat05~ #0 #0 #0 ~IDENTIFIED~ ~armor~
+  REPLACE_CRE_ITEM ~sw1h08~ #0 #0 #0 ~IDENTIFIED~ ~weapon1~
+  REPLACE_CRE_ITEM ~bow06~ #0 #0 #0 ~IDENTIFIED~ ~weapon2~
+  REPLACE_CRE_ITEM ~potn52~ #3 #3 #3 ~IDENTIFIED~ ~qitem1~
+  REPLACE_CRE_ITEM ~potn10~ #2 #2 #2 ~IDENTIFIED~ ~qitem2~
+  ADD_CRE_ITEM ~potn41~ #1 #1 #1 ~IDENTIFIED~ ~inv1~
+  ADD_KNOWN_SPELL ~SPCL423~ #0 ~innate~
+  ADD_MEMORIZED_SPELL ~SPCL423~ #0 ~innate~ (2)
+
+COPY_EXISTING ~mordai.cre~ ~override~
+  WRITE_BYTE 0x27b 49 // alignment
+  SAY BIO ~MORDAINE is a young elven mage who you recall entering Candlekeep as a child with her father and has lived within its walls ever since. Though you have never seen her father after the day you met her, you know Mordaine has never questioned being left alone in the castle, nor does she spare time to tell you her father's reasons for leaving her, as she oft spends too many long hours delving into the library's innumerable tomes of knowledge.~
+
 COPY_EXISTING ~osprey.cre~ ~override~
 		WRITE_BYTE 0x238 14 // strength
 		WRITE_BYTE 0x23c 10 // dexterity
 		WRITE_BYTE 0x23d 16 // constitution
 		WRITE_BYTE 0x23a 17 // intelligence
 		WRITE_BYTE 0x23b 17 // wisdom
-		WRITE_BYTE 0x23e 8  // charisma
+		WRITE_BYTE 0x23e 14  // charisma
+  SAY BIO ~OSPREY is a trainee scribe and a childhood friend of yourself and Imoen. A devout—perhaps exceedingly so—worshipper of Deneir, god of scholars and knowledge, nobody could be less out of place in a place such as Candlekeep as Osprey. Capable in both arcane and divine magic, Osprey is an eager student and loves knowledge of all sorts.~
 
 COPY_EXISTING ~imoen1.cre~ ~override/imoen.cre~
 		WRITE_ASCII DIALOG ~IMOEN~ #8
@@ -20,9 +79,11 @@ COPY_EXISTING ~imoen1.cre~ ~override/imoen.cre~
 
 EXTEND_TOP ~imoen.bcs~ ~%MOD_FOLDER%/bcs/imoen.baf~
 EXTEND_TOP ~ch1cut01.bcs~ ~%MOD_FOLDER%/bcs/ch1cut01.baf~
-EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600.baf~
+
 EXTEND_TOP ~%bg1_eet_symbol%2616.bcs~ ~%MOD_FOLDER%/bcs/ar2616.baf~
 EXTEND_TOP ~%bg1_eet_symbol%2605.bcs~ ~%MOD_FOLDER%/bcs/ar2605.baf~
+
+COMPILE ~%MOD_FOLDER%/bcs/c0cr#c6s.baf~
 
 COMPILE ~%MOD_FOLDER%/dlg/dialog.d~
 COMPILE ~%MOD_FOLDER%/dlg/imoen.d~
@@ -53,6 +114,101 @@ Equipped abilities:
 
 Weight: 0~
 
+COPY_EXISTING ~SPWI050.SPL~ ~OVERRIDE/C0CR#VI1.SPL~
+SAY NAME1 #-1
+
+COPY_EXISTING ~SPWI051.SPL~ ~OVERRIDE/C0CR#VI2.SPL~
+SAY NAME1 #-1
+
+COPY_EXISTING ~SPWI052.SPL~ ~OVERRIDE/C0CR#VI3.SPL~
+SAY NAME1 #-1
+
+COPY_EXISTING ~%bg1_eet_symbol%2600.are~ ~override~
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 3994
+ fj_loc_y = 503
+ fj_dest_x = 3994
+ fj_dest_y = 504
+ fj_orientation = 10
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Osprey
+ fj_cre_resref = osprey
+ fj_dlg_resref = C0CR#OSP
+ fj_bcs_override = SHOUT
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 1204
+ fj_loc_y = 2353
+ fj_dest_x = 1204
+ fj_dest_y = 2353
+ fj_orientation = 0
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Arkanis
+ fj_cre_resref = arkani
+ fj_dlg_resref = C0CR#ARK
+ fj_bcs_override = SHOUT
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 1267
+ fj_loc_y = 2353
+ fj_dest_x = 1267
+ fj_dest_y = 2353
+ fj_orientation = 0
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Deder
+ fj_cre_resref = deder
+ fj_dlg_resref = C0CR#DED
+ fj_bcs_override = SHOUT
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+
+COPY_EXISTING ~%bg1_eet_symbol%2605.are~ ~override~
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 200
+ fj_loc_y = 370
+ fj_dest_x = 200
+ fj_dest_y = 370
+ fj_orientation = 12
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Canderous
+ fj_cre_resref = cander
+ fj_dlg_resref = C0CR#CAN
+ fj_bcs_override = SHOUT
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+
+COPY_EXISTING ~%bg1_eet_symbol%2616.are~ ~override~
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 347
+ fj_loc_y = 510
+ fj_dest_x = 347
+ fj_dest_y = 510
+ fj_orientation = 14
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Mordaine
+ fj_cre_resref = mordai
+ fj_dlg_resref = C0CR#MOR
+ fj_bcs_override = SHOUT
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+
 COPY_EXISTING ~%bg1_eet_symbol%2602.are~ ~override~
       LPF ADD_AREA_ITEM
       INT_VAR
@@ -60,7 +216,6 @@ COPY_EXISTING ~%bg1_eet_symbol%2602.are~ ~override~
       STR_VAR
         item_to_add = ~C0CR#BAG~
       END
-
 
 COPY_EXISTING ~%bg1_eet_symbol%2616.are~ ~override~
       LPF ADD_AREA_ITEM

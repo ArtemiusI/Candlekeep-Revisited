@@ -1,0 +1,20 @@
+IF
+	Name("arkanis",Myself)
+	NearLocation(Player1,482,1196,15)
+	!Exists([ENEMY])
+	Global("C0CandleReArkanisC6Join","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ActionOverride("deder",ChangeEnemyAlly(Myself,NEUTRAL))
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		SetGlobal("C0CandleReArkanisC6Join","GLOBAL",2)
+		StartDialogueNoSet(Player1)
+END
+
+IF
+    !See(Player1)
+    Allegiance(Myself,CONTROLLED)
+THEN
+    RESPONSE #100
+        MoveToObjectFollow(Player1)
+END

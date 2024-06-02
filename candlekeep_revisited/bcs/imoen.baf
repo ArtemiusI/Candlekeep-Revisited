@@ -30,9 +30,9 @@ IF
 THEN
   RESPONSE #100
 	SetGlobal("C0CandleReImoenJoins","GLOBAL",4)
+	MoveGlobalObject("imoen",Myself)
 	ActionOverride("imoen",SetDialog("IMOEN2"))
 	ActionOverride("imoen",SetNumTimesTalkedTo(0))
-	MoveGlobalObject("imoen",Myself)
 	DestroySelf()
 END
 	

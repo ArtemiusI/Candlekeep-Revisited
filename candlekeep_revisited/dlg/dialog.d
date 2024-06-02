@@ -1,6 +1,7 @@
 BEGIN C0CR#ARK
 BEGIN C0CR#CAN
 BEGIN C0CR#DED
+BEGIN C0CR#DE3
 BEGIN C0CR#MOR
 BEGIN C0CR#OSP
 
@@ -59,6 +60,43 @@ END
 CHAIN INNKE2 C0CandleReArkanisQuestWinthrop
 ~Aye, there's some books in the guest room for those who are bored and lookin' for something to read. It's got nothin' on the great library, of course, but it's somethin'. They be on the shelf, go ahead and take them, child. They're mostly gatherin' dust these days.~
 EXIT
+
+// Arkanis - C6
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+INTERJECT ARKANI3 1 C0CandleReArkanisC6
+== C0CR#DE3 ~We'd better move quickly, <CHARNAME>. There'll be more of these shapeshifting fiends ahead. Best watch for traps as well—who knows what's been done to this place.~
+== ARKANI3 ~Aye... don't trust a word from anyone else we find here... I'll put my axe through their skulls first. Fear not, child... we'll see you through this.~
+	DO ~SetGlobal("C0CandleReArkanisC6Join","GLOBAL",1)
+		ActionOverride("deder",ChangeAIScript("C0CR#C6S",DEFAULT))
+		ChangeAIScript("C0CR#C6S",DEFAULT)
+		ActionOverride("deder",ChangeEnemyAlly(Myself,CONTROLLED))
+		ActionOverride("deder",UseItem("potn41",Myself))
+		ChangeEnemyAlly(Myself,CONTROLLED)
+		UseItem("potn09",Myself)~ EXIT
+
+I_C_T2 TETHTO3 0 C0CandleReArkanisC6Interject
+== ARKANI3 IF ~InMyArea("ARKANIS")~ THEN ~Bah! Lies, <CHARNAME>, heed them not. The Watchers never heard anyone speak of such a thing!~
+== TETHTO3 ~Calm yourself, Arkanis. There was reason to keep this secret from the Watchers, as well. Until we had full knowledge of the threat, some things had to be kept secret.~
+END
+
+I_C_T2 HULL3 0 C0CandleReArkanisC6Interject2
+== ARKANI3 IF ~InMyArea("ARKANIS")~ THEN ~By Moradin's hammer! Young Hull, too? This is truly a waking nightmare...~
+END
+
+CHAIN IF WEIGHT #-1 ~Global("C0CandleReArkanisC6Join","GLOBAL",2)~ THEN ARKANI3 C0CandleReArkanisC6End
+~This is as far as we can go, my <PRO_GIRLBOY>. The Watchers must know of what has transpired here... but the end of the path will not be too far ahead.~
+== ARKANI3 ~It pains us that we cannot protect you any further, but you have grown much since you first left. Even though your journey will undoubtedly only become more difficult... I can see you won't need the two of us any longer.~
+== C0CR#DE3 ~Don't worry, <CHARNAME>. We'll do everything we can to clear out these filth from Candlekeep's walls. You can rest assured of that.~
+== ARKANI3 ~Aye... this is goodbye once more, but I know we will meet again, someday.~
+END
+  ++ ~Thank you, Arkanis, Deder. Take care of yourselves.~ EXTERN ARKANI3 C0CandleReArkanisC6End.1
+  ++ ~Just get going, the both of you.~ EXTERN ARKANI3 C0CandleReArkanisC6End.1
+  
+CHAIN ARKANI3 C0CandleReArkanisC6End.1
+~Go now, <PRO_GIRLBOY>... go, and live well.~
+DO ~ActionOverride("deder",EscapeAreaObject("Door2615"))
+EscapeAreaObject("Door2615")~ EXIT
 
 // Canderous
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -35,3 +35,8 @@ BEGIN ~Candlekeep Revisited: BG1 Prologue Expansion~
   REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   
 INCLUDE ~%MOD_FOLDER%/lib/main.tpa~
+
+BEGIN ~Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey~
+  REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
+  
+INCLUDE ~%MOD_FOLDER%/lib/portraits.tpa~
