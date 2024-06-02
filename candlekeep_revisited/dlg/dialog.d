@@ -80,7 +80,7 @@ EXIT
   
 CHAIN C0CR#ARK C0CandleReArkanisC6.1
 ~Aye, well... this is a special day, <CHARNAME>, and your return is only one of the reasons why. We have had far more visitors than usual lately, many powerful and respected... though when facing those of the Iron Throne, I cannot help but stay on my guard.~
-== C0CR#ARK ~Deder is more the expert when it comes to their history, but even I know of them by reputation. Untrustworthy lot, they are. Best you not get anywhere close to them, my <PRO_GIRLBOY>, and I mean this both for your safety and theirs. By Moradin, even talking to them briefly makes me want to bury an axe in their heads for their arrogance flagrant disrespect shown to the humble folk of this place.~
+== C0CR#ARK ~Deder is more the expert when it comes to their history, but even I know of them by reputation. Untrustworthy lot, they are. Best you not get anywhere close to them, my <PRO_GIRLBOY>, and I mean this both for your safety and theirs. By Moradin, even talking to them briefly makes me want to bury an axe in their heads for their arrogance and flagrant disrespect shown to the humble folk of this place.~
 == C0CR#ARK ~But come, we should not spoil this happy occasion by dwelling on such matters. You should go around and greet all your old friends. The news has spread, and I am certain they are all eager to see you.~
 EXIT
 
