@@ -1,8 +1,0 @@
-IF
-	GlobalGT("Chapter","GLOBAL",5)
-	Global("C0CandleReSpawnNPCs","MYAREA",1)
-THEN
-  RESPONSE #100
-	ActionOverride("canderous",DestroySelf())
-	SetGlobal("C0CandleReSpawnNPCs","MYAREA",2)
-END

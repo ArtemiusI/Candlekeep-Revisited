@@ -12,6 +12,19 @@ THEN
 END
 
 IF
+	Name("deder",Myself)
+	NearLocation(Player1,482,1196,15)
+	!Exists([ENEMY])
+	Dead("arkanis")
+	Global("C0CandleReArkanisC6Join","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ChangeEnemyAlly(Myself,NEUTRAL)
+		SetGlobal("C0CandleReArkanisC6Join","GLOBAL",2)
+		StartDialogueNoSet(Player1)
+END
+
+IF
     !See(Player1)
     Allegiance(Myself,CONTROLLED)
 THEN

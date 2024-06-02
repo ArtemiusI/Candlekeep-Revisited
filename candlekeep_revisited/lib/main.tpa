@@ -28,6 +28,38 @@ COPY_EXISTING ~cander.cre~ ~override~
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~GODHELM~))
   SAY BIO ~CANDEROUS is a cleric of Helm, the Watcher. He is not from the Sword Coast, but has called Candlekeep home for at least a few years. Though trained in combat, he has lived a peaceful life within the keep's walls as a healer, tending to the various minor ailments of the residents.~
 
+COPY_EXISTING ~cander.cre~ ~override/C0CR#CA3.cre~
+  WRITE_BYTE 0x24 48 // current hp
+  WRITE_BYTE 0x26 48 // maximum hp
+  WRITE_BYTE 0x52 18 // THAC0
+  WRITE_BYTE 0x54 9 // save vs death
+  WRITE_BYTE 0x55 13 // save vs wand
+  WRITE_BYTE 0x56 12 // save vs polymorph
+  WRITE_BYTE 0x57 15 // save vs breath
+  WRITE_BYTE 0x58 14 // save vs spell
+  WRITE_BYTE 0x234 6 // level first class
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~GODHELM~))
+  ADD_KNOWN_SPELL ~SPPR101~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR102~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR103~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR203~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR208~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR212~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR214~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR304~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR313~ #0 ~PRIEST~
+  ADD_KNOWN_SPELL ~SPPR315~ #0 ~PRIEST~
+  ADD_MEMORIZED_SPELL ~SPPR101~ #0 ~PRIEST~ (1)
+  ADD_MEMORIZED_SPELL ~SPPR102~ #0 ~PRIEST~ (1)
+  ADD_MEMORIZED_SPELL ~SPPR103~ #0 ~PRIEST~ (2)
+  ADD_MEMORIZED_SPELL ~SPPR203~ #1 ~PRIEST~ (1)
+  ADD_MEMORIZED_SPELL ~SPPR208~ #1 ~PRIEST~ (1)
+  ADD_MEMORIZED_SPELL ~SPPR212~ #1 ~PRIEST~ (1)
+  ADD_MEMORIZED_SPELL ~SPPR214~ #1 ~PRIEST~ (1)
+  ADD_MEMORIZED_SPELL ~SPPR304~ #2 ~PRIEST~ (1)
+  ADD_MEMORIZED_SPELL ~SPPR313~ #2 ~PRIEST~ (1)
+  ADD_MEMORIZED_SPELL ~SPPR315~ #2 ~PRIEST~ (1)
+
 COPY_EXISTING ~deder.cre~ ~override~
   SAY BIO ~You know little of DEDER's past outside of the fact that he was born in the merchant state of Sembia. Though he serves as a Watcher, you know him to be adept in the rogue's trade, having taught Imoen the skills of thievery during your childhood. He is a person of few words, yet has a close friendship with his fellow Watcher Arkanis.~
   ADD_KNOWN_SPELL ~SPCL423~ #0 ~innate~
@@ -79,9 +111,6 @@ COPY_EXISTING ~imoen1.cre~ ~override/imoen.cre~
 
 EXTEND_TOP ~imoen.bcs~ ~%MOD_FOLDER%/bcs/imoen.baf~
 EXTEND_TOP ~ch1cut01.bcs~ ~%MOD_FOLDER%/bcs/ch1cut01.baf~
-
-EXTEND_TOP ~%bg1_eet_symbol%2616.bcs~ ~%MOD_FOLDER%/bcs/ar2616.baf~
-EXTEND_TOP ~%bg1_eet_symbol%2605.bcs~ ~%MOD_FOLDER%/bcs/ar2605.baf~
 
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#c6s.baf~
 
@@ -191,6 +220,40 @@ COPY_EXISTING ~%bg1_eet_symbol%2605.are~ ~override~
  fj_bcs_default = WTASIGHT
  END
 
+COPY_EXISTING ~%bg1_eet_symbol%2626.are~ ~override~
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 3324
+ fj_loc_y = 2159
+ fj_dest_x = 3324
+ fj_dest_y = 2159
+ fj_orientation = 0
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Arkanis
+ fj_cre_resref = ARKANI3
+ fj_dlg_resref = C0CR#ARK
+ fj_bcs_override = SHOUT
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 3947
+ fj_loc_y = 513
+ fj_dest_x = 3947
+ fj_dest_y = 513
+ fj_orientation = 14
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Canderous
+ fj_cre_resref = C0CR#CA3
+ fj_dlg_resref = C0CR#CAN
+ fj_bcs_override = SHOUT
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+
 COPY_EXISTING ~%bg1_eet_symbol%2616.are~ ~override~
  LPF fj_are_structure
  INT_VAR
@@ -199,6 +262,60 @@ COPY_EXISTING ~%bg1_eet_symbol%2616.are~ ~override~
  fj_dest_x = 347
  fj_dest_y = 510
  fj_orientation = 14
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Mordaine
+ fj_cre_resref = mordai
+ fj_dlg_resref = C0CR#MOR
+ fj_bcs_override = SHOUT
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+
+COPY_EXISTING ~%bg1_eet_symbol%2611.are~ ~override~
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 1464
+ fj_loc_y = 1039
+ fj_dest_x = 1464
+ fj_dest_y = 1039
+ fj_orientation = 6
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Osprey
+ fj_cre_resref = osprey
+ fj_dlg_resref = C0CR#OSP
+ fj_bcs_override = SHOUT
+ fj_bcs_class = INITMAIN
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+
+COPY_EXISTING ~%bg1_eet_symbol%2608.are~ ~override~
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 1736
+ fj_loc_y = 1196
+ fj_dest_x = 1736
+ fj_dest_y = 1196
+ fj_orientation = 0
+ STR_VAR
+ fj_structure_type = actor
+ fj_name = Deder
+ fj_cre_resref = deder
+ fj_dlg_resref = C0CR#DED
+ fj_bcs_override = SHOUT
+ fj_bcs_class = INITMAIN
+ fj_bcs_race = SEEENEMY
+ fj_bcs_default = WTASIGHT
+ END
+ LPF fj_are_structure
+ INT_VAR
+ fj_loc_x = 1530
+ fj_loc_y = 897
+ fj_dest_x = 1530
+ fj_dest_y = 897
+ fj_orientation = 6
  STR_VAR
  fj_structure_type = actor
  fj_name = Mordaine
