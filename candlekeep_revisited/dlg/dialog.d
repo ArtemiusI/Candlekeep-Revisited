@@ -88,6 +88,18 @@ CHAIN IF WEIGHT #-1 ~GlobalGT("Chapter","GLOBAL",0)~ THEN C0CR#ARK C0CandleReArk
 ~Keep your wits about you, my <PRO_GIRLBOY>, and don't hesitate to come running to me something concerns you. You may have grown much from traveling out there, but you'll always be a ward of Candlekeep.~
 EXIT
 
+INTERJECT ARKANI3 3 C0CandleReArkanisImoenTalk
+== IMOEN2 IF ~IsValidForPartyDialog("IMOEN")~ THEN ~Wait! Arkanis, <CHARNAME>, please don't! <CHARNAME>, I think we can trust them. We need all the help we can get to make it through here... so let's work together, okay?~
+END
+ ++ ~Fine. If you think they can be trusted, Imoen... they can come with us.~ EXTERN IMOEN2 C0CandleReArkanisImoenTalk.1
+ ++ ~I won't hurt them, but I can't trust them. Get out of my sight, the both of you!~ EXTERN ARKANI3 2
+ ++ ~No, I won't risk any chance of a trap. They die!~ DO ~ActionOverride("DEDER",Enemy())
+ActionOverride("ARKANIS",Enemy())~ EXIT
+ 
+CHAIN IMOEN2 C0CandleReArkanisImoenTalk.1
+~Thank you, <CHARNAME>. Arkanis, Deder... please help us get through here. We can trust you, right?~
+EXTERN ARKANI3 1
+
 INTERJECT ARKANI3 1 C0CandleReArkanisC6
 == C0CR#DE3 ~We'd better move quickly, <CHARNAME>. There'll be more of these shapeshifting fiends ahead. Best watch for traps as well—who knows what's been done to this place.~
 == ARKANI3 ~Aye... don't trust a word from anyone else we find here... I'll put my axe through their skulls first. Fear not, child... we'll see you through this.~
