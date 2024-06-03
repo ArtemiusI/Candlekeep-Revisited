@@ -1,0 +1,4 @@
+[submodule "candlekeep_revisited/lib/bgforge"]
+	path = candlekeep_revisited/lib/bgforge
+	url = https://github.com/BGforgeNet/BGforge-MLS-IElib.git
+	branch = master
