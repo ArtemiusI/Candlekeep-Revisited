@@ -91,12 +91,12 @@ COPY_EXISTING ~mordai.cre~ ~override~
   SAY BIO ~MORDAINE is a young elven mage who you recall entering Candlekeep as a child with her father and has lived within its walls ever since. Though you have never seen her father after the day you met her, you know Mordaine has never questioned being left alone in the castle, nor does she spare time to tell you her father's reasons for leaving her, as she oft spends too many long hours delving into the library's innumerable tomes of knowledge.~
 
 COPY_EXISTING ~osprey.cre~ ~override~
-		WRITE_BYTE 0x238 14 // strength
-		WRITE_BYTE 0x23c 10 // dexterity
-		WRITE_BYTE 0x23d 16 // constitution
-		WRITE_BYTE 0x23a 17 // intelligence
-		WRITE_BYTE 0x23b 17 // wisdom
-		WRITE_BYTE 0x23e 14  // charisma
+		WRITE_BYTE CRE_strength 14 // strength
+		WRITE_BYTE CRE_dexterity 10 // dexterity
+		WRITE_BYTE CRE_constitution 16 // constitution
+		WRITE_BYTE CRE_intelligence 17 // intelligence
+		WRITE_BYTE CRE_wisdom 17 // wisdom
+		WRITE_BYTE CRE_charisma 14  // charisma
   SAY BIO ~OSPREY is a trainee scribe and a childhood friend of yourself and Imoen. A devout—perhaps exceedingly so—worshipper of Deneir, god of scholars and knowledge, nobody could be less out of place in a place such as Candlekeep as Osprey. Capable in both arcane and divine magic, Osprey is an eager student and loves knowledge of all sorts.~
 
 COPY_EXISTING ~imoen1.cre~ ~override/imoen.cre~
