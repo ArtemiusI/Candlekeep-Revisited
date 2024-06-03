@@ -1,5 +1,5 @@
 BACKUP ~candlekeep_revisited/backup~
-AUTHOR ~The Artisan~
+AUTHOR ~The Artisan~ //
 ALWAYS
   INCLUDE ~%MOD_FOLDER%/lib/eet.tph~
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
