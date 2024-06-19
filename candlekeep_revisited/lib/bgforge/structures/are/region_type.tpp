@@ -1,0 +1,3 @@
+ARE_REGION_TYPE_proximity = 0
+ARE_REGION_TYPE_info = 1
+ARE_REGION_TYPE_travel = 2

@@ -1,0 +1,33 @@
+- name: IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT
+  desc: Returns 1 if item is given or created in the dialog or script, 0 otherwise.
+  type: action
+  string_params:
+    - name: item
+      type: resref
+      required: 1
+      desc: item resource
+    - name: dialog or script
+      type: filename
+      required: 1
+      desc: filename of the dialog or script
+  return:
+    - name: present
+      type: bool
+      desc: is item given or created in the dialog or script
+
+- name: IS_ITEM_IN_RESOURCE
+  desc: Returns 1 if item is present in area, store, on creature, or given/created in the dialog or script. 0 otherwise.
+  type: action
+  string_params:
+    - name: item
+      type: resref
+      required: 1
+      desc: item resource
+    - name: resource file
+      type: filename
+      required: 1
+      desc: filename
+  return:
+    - name: present
+      type: bool
+      desc: is item present?

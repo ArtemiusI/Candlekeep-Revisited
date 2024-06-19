@@ -1,0 +1,9 @@
+ITM_DAMAGE_TYPE_none = 0
+ITM_DAMAGE_TYPE_piercing_magic = 1
+ITM_DAMAGE_TYPE_blunt = 2
+ITM_DAMAGE_TYPE_slashing = 3
+ITM_DAMAGE_TYPE_ranged = 4
+ITM_DAMAGE_TYPE_fists = 5
+ITM_DAMAGE_TYPE_piercing_blunt = 6
+ITM_DAMAGE_TYPE_piercing_slashing = 7
+ITM_DAMAGE_TYPE_blunt_slashing = 8

@@ -1,0 +1,30 @@
+- name: GET_ARMOR_BASE_AC
+  desc: |
+    Returns current armor's base AC. If base AC is not found, defaults to 100.
+  type: patch
+  return:
+    - name: base_ac
+      desc: base AC
+      type: int
+
+- name: INFER_ARMOR_ENCHANTMENT
+  desc: Returns current armor enchantment level (Leather Armor +1 will return 1). Ankeg armor and Red Dragon scales are considered +2. Defaults to -1 if enchantment couldn't be determined.
+  type: patch
+  return:
+    - name: enchantment
+      desc: Armor enchantment
+      type: int
+
+- name: INFER_ARMOR_TYPE
+  desc: Returns current armor type.
+  type: patch
+  int_params:
+    - name: warn
+      desc: Warn if the item is not an armor
+      type: bool
+      default: true
+
+  return:
+    - name: type
+      type: string
+      desc: leather, studded_leather, chain, splint, plate, full_plate or unknown.

@@ -1,0 +1,6 @@
+$link-color: $blue-100;
+.required { color: $red-300; }
+.site-logo { width: 30% !important; }
+.realtitle {
+  @include fs-5;
+}

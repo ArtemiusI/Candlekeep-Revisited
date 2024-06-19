@@ -1,0 +1,90 @@
+- name: ALTER_AREA_REGION_MATCH
+  desc: Alters area regions which match all the `match_*` variables according to the non-`match_` variables.
+  type: patch
+  int_params:
+    - name: trapped
+      desc: region trapped flag
+      type: bool
+    - name: trap_detect
+      desc: trap detection difficulty
+      type: int
+    - name: trap_remove
+      desc: trap removal difficulty
+      type: int
+    - name: flag_trap_detectable
+      desc: whether trap is detectable
+      type: bool
+  string_params:
+    - name: match_script
+      desc: only alter if script matches
+      type: resref
+      required: 1
+
+- name: GET_AREA_STRUCTURE_CENTER_POINT
+  desc: Returns coordinates of an area structure center point by averaging coordinates of all of its vertices.
+  type: patch
+  int_params:
+    - name: index
+      desc: structure index
+      type: int
+      required: 1
+  string_params:
+    - name: type
+      type: string
+      required: 1
+      desc: container, door or region
+  return:
+    - name: x
+      desc: x coordinate
+      type: int
+    - name: y
+      desc: y coordinate
+      type: int
+
+- name: ALTER_AREA_STRUCTURE_SCRIPT
+  desc: Writes new script to an area structure.
+  type: patch
+  int_params:
+    - name: index
+      desc: structure index
+      type: int
+      required: 1
+  string_params:
+    - name: script
+      type: resref
+      desc: new script
+      required: 1
+    - name: type
+      type: string
+      required: 1
+      desc: container, door or region
+
+- name: REPLACE_AREA_ITEM_MATCH
+  desc: Replaces each occurrence of `match_item` with `new_item`. Doesn't change charges, flags, etc. Does nothing if `match_item` wasn't found.
+  type: patch
+  string_params:
+    - name: match_item
+      desc: old item
+      type: resref
+      required: 1
+    - name: new_item
+      desc: new item
+      type: resref
+      required: 1
+
+- name: IS_ITEM_IN_AREA
+  desc: Returns 1 if item is sold in the store, 0 otherwise.
+  type: action
+  string_params:
+    - name: item
+      type: resref
+      required: 1
+      desc: item resource
+    - name: area
+      type: resref
+      required: 1
+      desc: area resource
+  return:
+    - name: present
+      type: bool
+      desc: is item somewhere in the area?

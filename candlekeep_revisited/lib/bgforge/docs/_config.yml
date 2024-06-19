@@ -1,0 +1,48 @@
+title: BGforge IElib
+email: ielib@bgforge.net
+description: IElib documentation
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: BGforgeNet
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-remote-theme
+  - jekyll-analytics
+
+remote_theme: pmarsceill/just-the-docs
+color_scheme: custom
+logo: "/assets/favicon/android-chrome-512x512.png"
+
+search_enabled: true
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - generate.sh
+  - yaml_to_md.py
+
+include:
+  - _pages
+
+aux_links:
+  "Forum":
+    - "https://forums.bgforge.net/viewforum.php?f=35"
+  "GitHub":
+    - "https://github.com/BGforgeNet/BGforge-MLS-IElib"
+  "BGforge":
+    - "https://bgforge.net"
+
+jekyll_analytics:
+  Matomo:
+    url: st.bgforge.net
+    siteId: "20"

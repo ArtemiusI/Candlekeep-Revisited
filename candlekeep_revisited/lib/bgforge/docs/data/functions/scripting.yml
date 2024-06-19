@@ -1,0 +1,35 @@
+- name: CREATE_MINION
+  desc: Creates a an invisible, invulnerable minion creature file to run your custom script.
+  type: action
+  string_params:
+    - name: cre
+      desc: cre filename
+      type: resref
+      required: 1
+    - name: script
+      desc: cre script
+      type: resref
+    - name: name
+      desc: cre name
+      type: string
+    - name: ea
+      desc: EA allegiance
+      default: NEUTRAL
+      type: ids
+
+- name: IS_ITEM_GIVEN_OR_CREATED_IN_SCRIPT
+  desc: Returns 1 if item is given or created in the script, 0 otherwise.
+  type: action
+  string_params:
+    - name: item
+      type: resref
+      required: 1
+      desc: item resource
+    - name: script
+      type: resref
+      required: 1
+      desc: script resource
+  return:
+    - name: present
+      type: bool
+      desc: is item given or created in the script?

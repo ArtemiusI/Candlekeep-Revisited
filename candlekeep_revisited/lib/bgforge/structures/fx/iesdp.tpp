@@ -1,0 +1,17 @@
+FX_duration = 0xe
+FX_max_level = 0x1c
+FX_min_level = 0x20
+FX_opcode = 0x0
+FX_parameter1 = 0x4
+FX_parameter2 = 0x8
+FX_power = 0x3
+FX_probability1 = 0x12
+FX_probability2 = 0x13
+FX_resistance = 0xd
+FX_resource = 0x14
+FX_save_bonus = 0x28
+FX_save_type = 0x24
+FX_stacking_id_Ex = 0x2c
+FX_target = 0x2
+FX_timing = 0xc
+

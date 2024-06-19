@@ -1,0 +1,12 @@
+FLAG_ARE_DOOR_open = BIT0
+FLAG_ARE_DOOR_locked = BIT1
+FLAG_ARE_DOOR_trap_resets = BIT2
+FLAG_ARE_DOOR_trap_detectable = BIT3
+FLAG_ARE_DOOR_broken = BIT4
+FLAG_ARE_DOOR_cannot_close = BIT5
+FLAG_ARE_DOOR_linked = BIT6
+FLAG_ARE_DOOR_hidden = BIT7
+FLAG_ARE_DOOR_found = BIT8
+FLAG_ARE_DOOR_not_blocking_line_of_sight = BIT9
+FLAG_ARE_DOOR_remove_key_bg2 = BIT10
+FLAG_ARE_DOOR_ignore_obstacles_when_closing = BIT11

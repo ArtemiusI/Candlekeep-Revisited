@@ -1,0 +1,16 @@
+- name: GET_2DA_INDEX
+  desc: |
+    Returns associative arrays containing current 2DA row and column names, for usage in `SET_2DA_ENTRY_LATER`:
+    ```
+    COPY_EXISTING ~clsrcreq.2da~ override
+      LPF GET_2DA_INDEX RET_ARRAY row_index col_index END
+      SET_2DA_ENTRY_LATER new_rows $row_index(CLERIC_MAGE) $col_index(ELF) 1
+    ```
+  type: patch
+  return:
+    - name: col_index
+      desc: column name => index
+      type: map
+    - name: row_index
+      desc: row name => index
+      type: map

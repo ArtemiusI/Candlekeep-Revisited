@@ -1,0 +1,16 @@
+BUTTON_stealth = 0
+BUTTON_thieving_skill = 1
+BUTTON_spell_select = 2
+BUTTON_quick_spell1 = 3
+BUTTON_quick_spell2 = 4
+BUTTON_quick_spell3 = 5
+BUTTON_turn_undead = 6
+BUTTON_talk = 7
+BUTTON_use_item = 8
+BUTTON_quick_item1 = 9
+BUTTON_bard_song_ee = 10
+BUTTON_quick_item2 = 11
+BUTTON_quick_item3 = 12
+BUTTON_innate_ability = 13
+BUTTON_find_traps = 14
+BUTTON_inventory_ee = 15

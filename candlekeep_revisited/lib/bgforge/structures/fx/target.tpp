@@ -1,0 +1,10 @@
+TARGET_FX_none = 0
+TARGET_FX_self = 1
+TARGET_FX_preset = 2
+TARGET_FX_party = 3
+TARGET_FX_everyone = 4
+TARGET_FX_everyone_except_party = 5
+TARGET_FX_everyone_match_specific_caster = 6
+TARGET_FX_everyone_match_specific_target = 7
+TARGET_FX_everyone_except_self = 8
+TARGET_FX_original_caster = 9

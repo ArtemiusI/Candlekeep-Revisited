@@ -1,0 +1,18 @@
+- name: array
+  desc: Array. [Simple](https://weidu.org/~thebigg/README-WeiDU.html#DEFINE_ARRAY), or [associative](https://weidu.org/~thebigg/README-WeiDU.html#DEFINE_ASSOCIATIVE_ARRAY).
+- name: bool
+  desc: 0 or 1.
+- name: ids
+  desc: A string containing an existing IDS symbol.
+- name: int
+  desc: Integer value.
+- name: list
+  desc: "[Array](https://weidu.org/~thebigg/README-WeiDU.html#DEFINE_ARRAY)."
+- name: map
+  desc: "[Associative array](https://weidu.org/~thebigg/README-WeiDU.html#DEFINE_ASSOCIATIVE_ARRAY)."
+- name: resref
+  desc: An IE resource reference string. 8 characters max. Without extension.
+- name: filename
+  desc: A file name string. With extension.
+- name: string
+  desc: Just a string.

@@ -1,0 +1,6 @@
+ITM_ATTACK_TYPE_none = 0
+ITM_ATTACK_TYPE_melee = 1
+ITM_ATTACK_TYPE_projectile = 2
+ITM_ATTACK_TYPE_ranged = 2
+ITM_ATTACK_TYPE_magic = 3
+ITM_ATTACK_TYPE_launcher = 4

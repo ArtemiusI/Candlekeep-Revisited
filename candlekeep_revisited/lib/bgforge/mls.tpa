@@ -1,0 +1,8 @@
+OUTER_PATCH ~bgforge-ielib~ BEGIN // to skip lots of OUTER_SETs
+  PATCH_INCLUDE
+    ~%BGFORGE_LIB_DIR%/ids/main.tpp~
+    ~%BGFORGE_LIB_DIR%/opcodes/main.tpp~
+    ~%BGFORGE_LIB_DIR%/structures/main.tpp~
+    ~%BGFORGE_LIB_DIR%/misc/main.tpp~
+    ~%BGFORGE_LIB_DIR%/2da/sectype.tpp~
+END

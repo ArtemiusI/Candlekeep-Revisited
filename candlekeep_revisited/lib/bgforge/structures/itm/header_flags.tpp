@@ -1,0 +1,10 @@
+FLAG_HEAD_add_strength_bonus = BIT0
+FLAG_HEAD_breakable = BIT1
+FLAG_HEAD_damage_strength_bonus_EE = BIT2
+FLAG_HEAD_thac0_strength_bonus_EE = BIT3
+FLAG_HEAD_hostile = BIT10
+FLAG_HEAD_recharge_after_rest = BIT11
+FLAG_HEAD_bypass_armor = BIT16
+FLAG_HEAD_keen_edge = BIT17
+FLAG_HEAD_toggle_backstab_Ex = BIT25
+FLAG_HEAD_cant_target_invisible_Ex = BIT26

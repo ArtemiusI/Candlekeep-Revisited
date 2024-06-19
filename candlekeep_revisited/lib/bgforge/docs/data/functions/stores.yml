@@ -1,0 +1,29 @@
+- name: REPLACE_STORE_ITEM_MATCH
+  desc: Replaces each occurrence of `match_item` with `new_item`. Doesn't change charges, flags, etc. Does nothing if `match_item` wasn't found.
+  type: patch
+  string_params:
+    - name: match_item
+      desc: old item
+      type: resref
+      required: 1
+    - name: new_item
+      desc: new item
+      type: resref
+      required: 1
+
+- name: IS_ITEM_IN_STORE
+  desc: Returns 1 if item is sold in the store, 0 otherwise.
+  type: action
+  string_params:
+    - name: item
+      type: resref
+      required: 1
+      desc: item resource
+    - name: store
+      type: resref
+      required: 1
+      desc: store resource
+  return:
+    - name: present
+      type: bool
+      desc: is item sold in the store?

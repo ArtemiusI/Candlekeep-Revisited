@@ -1,0 +1,3 @@
+CURRENT_HP_MOD_TYPE_cumulative = 0
+CURRENT_HP_MOD_TYPE_flat = 1
+CURRENT_HP_MOD_TYPE_percentage = 2

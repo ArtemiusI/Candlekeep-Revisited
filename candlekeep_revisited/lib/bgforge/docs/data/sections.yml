@@ -1,0 +1,35 @@
+- name: 2da
+  title: 2DA
+  desc: Working with 2DAs.
+
+- name: areas
+  title: Areas
+  desc: Area altering functions.
+
+- name: creatures
+  title: Creatures
+  desc: Creatures functions.
+
+- name: dialogs
+  title: Dialogs
+  desc: Working with dialogs.
+
+- name: items
+  title: Items
+  desc: Items functions.
+
+- name: misc
+  title: Miscellaneous
+  desc: Various functions that didn't fit into other categories.
+
+- name: scripting
+  title: Scripting
+  desc: Various scripting-related functions.
+
+- name: stores
+  title: Stores
+  desc: Stores functions.
+
+- name: strref
+  title: String references
+  desc: Working with STRREFs.

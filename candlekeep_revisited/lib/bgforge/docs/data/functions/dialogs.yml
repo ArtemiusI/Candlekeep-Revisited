@@ -1,0 +1,16 @@
+- name: IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG
+  desc: Returns 1 if item is given or created in the dialog, 0 otherwise.
+  type: action
+  string_params:
+    - name: item
+      type: resref
+      required: 1
+      desc: item resource
+    - name: dialog
+      type: resref
+      required: 1
+      desc: dialog resource
+  return:
+    - name: present
+      type: bool
+      desc: item is given or created in the dialog?

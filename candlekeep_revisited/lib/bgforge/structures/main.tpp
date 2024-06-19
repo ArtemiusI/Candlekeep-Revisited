@@ -1,0 +1,12 @@
+TEXT_SPRINT BGFORGE_STRUCTURES_DIR ~%BGFORGE_LIB_DIR%/structures~
+
+PATCH_INCLUDE
+  ~%BGFORGE_STRUCTURES_DIR%/are/main.tpp~
+  ~%BGFORGE_STRUCTURES_DIR%/cre/main.tpp~
+  ~%BGFORGE_STRUCTURES_DIR%/eff/main.tpp~
+  ~%BGFORGE_STRUCTURES_DIR%/eff2/main.tpp~
+  ~%BGFORGE_STRUCTURES_DIR%/fx/main.tpp~
+  ~%BGFORGE_STRUCTURES_DIR%/itm/main.tpp~
+  ~%BGFORGE_STRUCTURES_DIR%/spl/main.tpp~
+  ~%BGFORGE_STRUCTURES_DIR%/sto/main.tpp~
+  ~%BGFORGE_STRUCTURES_DIR%/item_types.tpp~
