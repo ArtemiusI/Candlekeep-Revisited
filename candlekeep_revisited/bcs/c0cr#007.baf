@@ -1,0 +1,21 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        MoveViewObject(Myself,INSTANT)
+        SetCutSceneBreakable(TRUE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",1)
+		SetAreaScript("C0CR#SKP",OVERRIDE)
+		FadeFromColor([35.0],0)
+		Wait(2)
+		ForceSpell([0.ANIMAL],CLERIC_CURE_LIGHT_WOUNDS)
+		Wait(4)
+		CreateCreature("C0CR#GOR",[1729.351],S)
+		ActionOverride("C0CR#GOR",MoveToPoint([2156.339]))
+		Face(W)
+		ActionOverride("C0CR#GOR",Wait(2))
+		ActionOverride("C0CR#GOR",FaceObject(Player1))
+		ActionOverride("C0CR#GOR",Wait(2))
+		ActionOverride("C0CR#GOR",StartDialogueNoSet(Player1))
+END

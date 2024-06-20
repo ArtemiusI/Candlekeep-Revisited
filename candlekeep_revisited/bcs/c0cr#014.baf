@@ -1,0 +1,15 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        MoveViewObject(Myself,INSTANT)
+		Wait(2)
+		CreateCreature("C0CR#ULR",[3179.1628],NW)
+		SmallWait(5)
+		ActionOverride("Ulraunt",MoveToPoint([2867.1878]))
+		ActionOverride("Ulraunt",SmallWait(5))
+		ActionOverride("Ulraunt",Face(NW))
+		ActionOverride("Ulraunt",Wait(2))
+		ActionOverride("Ulraunt",StartDialogueNoSet(Player1))
+END

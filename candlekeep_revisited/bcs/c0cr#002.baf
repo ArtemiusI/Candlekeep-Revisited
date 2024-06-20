@@ -1,0 +1,20 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        MoveViewObject(Myself,INSTANT)
+        SetCutSceneBreakable(TRUE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",1)
+		SetAreaScript("C0CR#SKP",OVERRIDE)
+		FadeFromColor([35.0],0)
+		PlaySong(4)
+		Wait(4)
+		CreateCreature("C0CR#GOR",[3153.585],S)
+		FaceObject("C0CR#GOR")
+		ActionOverride("C0CR#GOR",MoveToPoint([3750.621]))
+		ActionOverride("C0CR#GOR",SmallWait(5))
+		ActionOverride("C0CR#GOR",FaceObject(Player1))
+		ActionOverride("C0CR#GOR",Wait(2))
+		ActionOverride("C0CR#GOR",StartDialogueNoSet(Player1))
+END

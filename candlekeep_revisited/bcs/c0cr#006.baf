@@ -1,0 +1,15 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        MoveViewObject(Myself,INSTANT)
+        SetCutSceneBreakable(TRUE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",3)
+		SetAreaScript("C0CR#SKP",OVERRIDE)
+		FadeFromColor([35.0],0)
+		CreateCreature("C0CR#ERI",[3166.1066],SW)
+		CreateCreature("C0CR#DOG",[3180.1102],W)
+		Wait(4)
+		ActionOverride("C0CR#ERI",StartDialogueNoSet(Player1))
+END

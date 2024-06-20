@@ -1,5 +1,5 @@
 BACKUP ~candlekeep_revisited/backup~
-AUTHOR ~The Artisan~ //
+AUTHOR ~The Artisan~
 ALWAYS
   OUTER_SPRINT BGFORGE_LIB_DIR "%MOD_FOLDER%/lib/bgforge"
   INCLUDE ~%BGFORGE_LIB_DIR%/main.tpa~
@@ -37,6 +37,11 @@ BEGIN ~Candlekeep Revisited: BG1 Prologue Expansion~
   REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   
 INCLUDE ~%MOD_FOLDER%/lib/main.tpa~
+
+BEGIN ~Candlekeep Revisited: BG1 Expanded Starting Sequence~
+  REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
+  
+INCLUDE ~%MOD_FOLDER%/lib/intro.tpa~
 
 BEGIN ~Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey~
   REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~

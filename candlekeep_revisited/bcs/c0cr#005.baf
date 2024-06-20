@@ -1,0 +1,15 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        MoveViewObject(Myself,INSTANT)
+        SetCutSceneBreakable(TRUE)
+        SetGlobal("C0CandleReDederStart","GLOBAL",1)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",4)
+		SetAreaScript("C0CR#SKP",OVERRIDE)
+		FadeFromColor([35.0],0)
+		CreateCreature("DEDER",[267.285],SW)
+		Wait(4)
+		ActionOverride("DEEDER",StartDialogue("C0CR#DED",Player1))
+END

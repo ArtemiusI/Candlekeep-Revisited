@@ -1,0 +1,27 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        MoveViewObject(Myself,INSTANT)
+        SetCutSceneBreakable(TRUE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",1)
+		SetAreaScript("C0CR#SKP",OVERRIDE)
+		FadeFromColor([35.0],0)
+		Wait(3)
+		CreateVisualEffect("SPPORTAL",[638.1756])
+		Wait(2)
+		CreateVisualEffect("ICFIRSDI",[638.1756])
+		SmallWait(15)
+		CreateVisualEffect("ICFIRSDI",[587.1580])
+		SmallWait(15)
+		CreateVisualEffect("ICFIRSDI",[647.1956])
+		Wait(3)
+		CreateCreature("C0CR#GOR",[742.1269],S)
+		ActionOverride("C0CR#GOR",MoveToPoint([741.1637]))
+		Face(N)
+		ActionOverride("C0CR#GOR",Wait(2))
+		ActionOverride("C0CR#GOR",FaceObject(Player1))
+		ActionOverride("C0CR#GOR",Wait(2))
+		ActionOverride("C0CR#GOR",StartDialogueNoSet(Player1))
+END

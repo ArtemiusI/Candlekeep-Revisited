@@ -1,0 +1,14 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("C0CR#GOR")
+		Wait(2)
+		ForceSpellPointRES("C0CR#VI4",[1735.836])
+		Wait(2)
+		CreateVisualEffect("SPANISUM",[1735.836])
+		Wait(1)
+		CreateCreature("C0CR#GFM",[1735.836],NW)
+		Wait(4)
+		ActionOverride("C0CR#GFM",StartDialogueNoSet(Player1))
+END

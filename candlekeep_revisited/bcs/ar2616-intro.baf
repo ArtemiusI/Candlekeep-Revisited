@@ -1,0 +1,121 @@
+IF
+    Global("BD_DEFAI","MYAREA",0)
+THEN
+    RESPONSE #100
+        SetGlobal("BD_DEFAI","MYAREA",1)
+        SetGlobal("BDAI_RESET_TIMERS","GLOBAL",1)
+        ActionOverride(Player1,ChangeAIScript("BDDEFAI",CLASS))
+        Continue()
+END
+
+IF
+    HasItemEquiped("staf01",Player6)  // Quarterstaff
+    CheckStatLT(Player6,5,STR)
+THEN
+    RESPONSE #100
+        ActionOverride(Player6,GiveItem("staf01",Player6))  // Quarterstaff
+        ActionOverride(Player6,EquipMostDamagingMelee())
+        Continue()
+END
+
+IF
+    HasItemEquiped("staf01",Player5)  // Quarterstaff
+    CheckStatLT(Player5,5,STR)
+THEN
+    RESPONSE #100
+        ActionOverride(Player5,GiveItem("staf01",Player5))  // Quarterstaff
+        ActionOverride(Player5,EquipMostDamagingMelee())
+        Continue()
+END
+
+IF
+    HasItemEquiped("staf01",Player4)  // Quarterstaff
+    CheckStatLT(Player4,5,STR)
+THEN
+    RESPONSE #100
+        ActionOverride(Player4,GiveItem("staf01",Player4))  // Quarterstaff
+        ActionOverride(Player4,EquipMostDamagingMelee())
+        Continue()
+END
+
+IF
+    HasItemEquiped("staf01",Player3)  // Quarterstaff
+    CheckStatLT(Player3,5,STR)
+THEN
+    RESPONSE #100
+        ActionOverride(Player3,GiveItem("staf01",Player3))  // Quarterstaff
+        ActionOverride(Player3,EquipMostDamagingMelee())
+        Continue()
+END
+
+IF
+    HasItemEquiped("staf01",Player2)  // Quarterstaff
+    CheckStatLT(Player2,5,STR)
+THEN
+    RESPONSE #100
+        ActionOverride(Player2,GiveItem("staf01",Player2))  // Quarterstaff
+        ActionOverride(Player2,EquipMostDamagingMelee())
+        Continue()
+END
+
+IF
+    HasItemEquiped("staf01",Player1)  // Quarterstaff
+    CheckStatLT(Player1,5,STR)
+THEN
+    RESPONSE #100
+        ActionOverride(Player1,GiveItem("staf01",Player1))  // Quarterstaff
+        ActionOverride(Player1,EquipMostDamagingMelee())
+        Continue()
+END
+
+IF
+    Global("Chapter","GLOBAL",-1)
+    IsTouchGUI()
+THEN
+    RESPONSE #100
+        IncrementChapter("Chptxt0")
+        DisplayString(Myself,31107)  // Welcome to Candlekeep, your home! To select your character, tap on the circle around their feet or on the character portrait to the right. You can move by tapping on the ground. As you move around the keep, you will find green-robed monks. Your character should walk over and talk with them. To talk with the monks, tap on them while your character is selected. Many important messages will be given to you through the text window on the bottom of the screen. To expand and contract this window, simply use the two small buttons to the right.
+        AddJournalEntry(31438,QUEST)  // Find Gorion Gorion, my foster father, has informed me that we must immediately leave Candlekeep and set out on a journey. He has given me some gold, and I must purchase supplies for the road, including weapons and armor.
+        ActionOverride("JONDAL",SetDialog("JONDALTB"))
+        Continue()
+END
+
+IF
+    Global("Chapter","GLOBAL",-1)
+    !IsTouchGUI()
+THEN
+    RESPONSE #100
+        IncrementChapter("Chptxt0")
+        DisplayString(Myself,16214)  // Welcome to Candlekeep, your home! As you move around the keep, you will find green-robed monks. Your character should walk over and talk with them. Many important messages will be given to you through the text window on the bottom of the screen. To expand and contract this window, simply drag the top to the desired height.
+        AddJournalEntry(31438,QUEST)  // Find Gorion Gorion, my foster father, has informed me that we must immediately leave Candlekeep and set out on a journey. He has given me some gold, and I must purchase supplies for the road, including weapons and armor.
+        Continue()
+END
+
+IF
+    Global("start_a_new_game","AR2600",0)
+    Global("start_a_new_game","AR2616",0)
+THEN
+    RESPONSE #100
+        SetGlobal("start_a_new_game","AR2600",1)
+        SetGlobal("start_a_new_game","AR2616",1)
+        StartTimer(3,30)
+        SetGlobalTimer("Tethtoril","GLOBAL",TEN_ROUNDS)
+        SetGlobal("BD_Chapter_Save","GLOBAL",-1)
+        SaveGame(18)
+        SaveGame(0)
+        Explore()
+END
+
+IF
+    AreaCheck("AR2616")  // Candlekeep (prologue), exterior
+    PartyHasItem("BPRNG1")  // Slave Ring
+THEN
+    RESPONSE #100
+        ActionOverride(Player1,DestroyItem("BPRNG1"))  // Slave Ring
+        ActionOverride(Player2,DestroyItem("BPRNG1"))  // Slave Ring
+        ActionOverride(Player3,DestroyItem("BPRNG1"))  // Slave Ring
+        ActionOverride(Player4,DestroyItem("BPRNG1"))  // Slave Ring
+        ActionOverride(Player5,DestroyItem("BPRNG1"))  // Slave Ring
+        ActionOverride(Player6,DestroyItem("BPRNG1"))  // Slave Ring
+        Continue()
+END

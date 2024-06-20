@@ -1,0 +1,26 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        MoveViewObject(Myself,INSTANT)
+        SetCutSceneBreakable(TRUE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",2)
+		SetAreaScript("C0CR#SKP",OVERRIDE)
+		FadeFromColor([35.0],0)
+		CreateCreature("C0CR#JON",[1512.2797],NW)
+		Wait(1)
+		SwingOnce()
+		SmallWait(2)
+		SwingOnce()
+		SmallWait(2)
+		SwingOnce()
+		SmallWait(2)
+		SwingOnce()
+		Wait(2)
+		SetSequence(SEQ_HEAD_TURN)
+		Wait(1)
+		FaceObject("C0CR#JON")
+		Wait(1)
+		ActionOverride("C0CR#JON",StartDialogueNoSet(Player1))
+END

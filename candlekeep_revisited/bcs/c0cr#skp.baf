@@ -1,0 +1,361 @@
+IF
+    CutSceneBroken()
+	Switch("C0CR_CUTSCENE_BREAKABLE","GLOBAL")
+THEN
+    RESPONSE #1
+        SetCutSceneBreakable(FALSE)
+        StartCutSceneMode()
+        ClearAllActions()
+        FadeToColor([0.0],0)
+        ActionOverride(Player1,ClearActions(Myself))
+        ActionOverride("C0CR#GOR",DestroySelf())
+		GiveGoldForce(400)
+		SetGlobal("C0CandleReGorionBegin","GLOBAL",1)
+        SetCursorState(FALSE)
+        SetAreaScript("",OVERRIDE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",0)
+        FadeFromColor([20.0],0)
+		EndCutSceneMode()
+        Continue()
+    RESPONSE #2
+        SetCutSceneBreakable(FALSE)
+        StartCutSceneMode()
+        ClearAllActions()
+        FadeToColor([0.0],0)
+        ActionOverride(Player1,ClearActions(Myself))
+        ActionOverride("C0CR#GOR",DestroySelf())
+        ActionOverride("C0CR#JON",DestroySelf())
+		GiveGoldForce(400)
+		SetGlobal("C0CandleReGorionBegin","GLOBAL",1)
+        SetCursorState(FALSE)
+        SetAreaScript("",OVERRIDE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",0)
+        FadeFromColor([20.0],0)
+		EndCutSceneMode()
+        Continue()
+    RESPONSE #3
+        SetCutSceneBreakable(FALSE)
+        StartCutSceneMode()
+        ClearAllActions()
+        FadeToColor([0.0],0)
+        ActionOverride(Player1,ClearActions(Myself))
+        ActionOverride("C0CR#GOR",DestroySelf())
+        ActionOverride("C0CR#ERI",DestroySelf())
+        ActionOverride("C0CR#DOG",DestroySelf())
+		GiveGoldForce(400)
+		SetGlobal("C0CandleReGorionBegin","GLOBAL",1)
+        SetCursorState(FALSE)
+        SetAreaScript("",OVERRIDE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",0)
+        FadeFromColor([20.0],0)
+		EndCutSceneMode()
+        Continue()
+    RESPONSE #4
+        SetCutSceneBreakable(FALSE)
+        StartCutSceneMode()
+        ClearAllActions()
+        FadeToColor([0.0],0)
+        ActionOverride(Player1,ClearActions(Myself))
+        ActionOverride("C0CR#GOR",DestroySelf())
+        ActionOverride("C0CR#DED",DestroySelf())
+		GiveGoldForce(400)
+		SetGlobal("C0CandleReGorionBegin","GLOBAL",1)
+        SetCursorState(FALSE)
+        SetAreaScript("",OVERRIDE)
+        SetGlobal("C0CR_CUTSCENE_BREAKABLE","GLOBAL",0)
+        FadeFromColor([20.0],0)
+		EndCutSceneMode()
+        Continue()
+END
+
+IF
+    CutSceneBroken()
+	Global("C0CandleReClassStartBard","GLOBAL",1)
+THEN
+    RESPONSE #100
+    GiveItemCreate("POTN60",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYBASTARDSWORD)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SW1H01Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYLONGSWORD)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SW1H04Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYSHORTSWORD)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SW1H07Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYAXE)
+THEN
+    RESPONSE #100
+    GiveItemCreate("AX1H01Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYTWOHANDEDSWORD)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SW2H01Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYKATANA)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SW1H43",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYSCIMITARWAKISASHININJATO)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SW1H20Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYDAGGER)
+THEN
+    RESPONSE #100
+    GiveItemCreate("DAGG01Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYWARHAMMER)
+THEN
+    RESPONSE #100
+    GiveItemCreate("HAMM01Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYSPEAR)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SPER01Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYHALBERD)
+THEN
+    RESPONSE #100
+    GiveItemCreate("HALB01Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYFLAILMORNINGSTAR)
+THEN
+    RESPONSE #100
+    GiveItemCreate("BLUN02Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+    CheckStatGT(Player1,1,PROFICIENCYMACE)
+THEN
+    RESPONSE #100
+    GiveItemCreate("BLUN04Q",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Kit(Player1,BLACKGUARD)
+	OR(6)
+	Class(Player1,CLERIC)
+	Class(Player1,PALADIN)
+	Class(Player1,FIGHTER_CLERIC)
+	Class(Player1,FIGHTER_MAGE_CLERIC)
+	Class(Player1,CLERIC_MAGE)
+	Class(Player1,CLERIC_THIEF)
+THEN
+    RESPONSE #100
+    GiveItemCreate("scrl56",Player1,1,0,0)
+    GiveItemCreate("scrl59",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,SORCERER)
+	OR(3)
+	Class(Player1,MAGE)
+	Class(Player1,FIGHTER_MAGE)
+	Class(Player1,MAGE_THIEF)
+THEN
+    RESPONSE #100
+    ActionOverride(Player1,AddSpecialAbility("SPWI123")
+END
+    
+IF
+    CutSceneBroken()
+	Class(Player1,SORCERER)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SCRL6D",Player1,1,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	!Class(Player1,SHAMAN)
+	OR(2)
+	Class(Player1,DRUID)
+	Class(Player1,FIGHTER_DRUID)
+THEN
+    RESPONSE #100
+    GiveItemCreate("ring03",Player1,5,0,0)
+    ActionOverride(Player1,SetItemFlags("ring03",IDENTIFIED,TRUE))
+END
+    
+IF
+    CutSceneBroken()
+	Global("C0CandleReClassStartThief","GLOBAL",1)
+THEN
+    RESPONSE #100
+    GiveItemCreate("POTN10",Player1,2,0,0)
+END
+    
+IF
+    CutSceneBroken()
+	OR(2)
+	Class(Player1,RANGER)
+	Class(Player1,CLERIC_RANGER)
+    CheckStatGT(Player1,0,PROFICIENCYCROSSBOW)
+THEN
+    RESPONSE #100
+    GiveItemCreate("XBOW04",Player1,1,0,0)
+    GiveItemCreate("BOLT01",Player1,40,0,0)
+END
+ 
+IF
+    CutSceneBroken()
+	OR(2)
+	Class(Player1,RANGER)
+	Class(Player1,CLERIC_RANGER)
+    CheckStatGT(Player1,0,PROFICIENCYLONGBOW)
+THEN
+    RESPONSE #100
+    GiveItemCreate("BOW03",Player1,1,0,0)
+    GiveItemCreate("AROW01",Player1,40,0,0)
+END
+
+IF
+    CutSceneBroken()
+	OR(2)
+	Class(Player1,RANGER)
+	Class(Player1,CLERIC_RANGER)
+    CheckStatGT(Player1,0,PROFICIENCYSHORTBOW)
+THEN
+    RESPONSE #100
+    GiveItemCreate("BOW05",Player1,1,0,0)
+    GiveItemCreate("AROW01",Player1,40,0,0)
+END
+
+IF
+    CutSceneBroken()
+	OR(2)
+	Class(Player1,RANGER)
+	Class(Player1,CLERIC_RANGER)
+    CheckStatGT(Player1,0,PROFICIENCYDART)
+THEN
+    RESPONSE #100
+    GiveItemCreate("DART01",Player1,60,0,0)
+END
+
+IF
+    CutSceneBroken()
+	OR(2)
+	Class(Player1,RANGER)
+	Class(Player1,CLERIC_RANGER)
+    CheckStatGT(Player1,0,PROFICIENCYSLING)
+THEN
+    RESPONSE #100
+    GiveItemCreate("SLNG01",Player1,1,0,0)
+    GiveItemCreate("BULL01",Player1,40,0,0)
+END

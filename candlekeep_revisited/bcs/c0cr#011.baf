@@ -1,0 +1,17 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        MoveViewObject(Myself,INSTANT)
+		Wait(2)
+		CreateCreature("C0CR#GOR",[2552.857],S)
+		Face(W)
+		ActionOverride("C0CR#ERI",Face(W))
+		ActionOverride("C0CR#GOR",MoveToPoint([2717.989]))
+		ActionOverride("C0CR#GOR",Wait(1))
+		ActionOverride("C0CR#GOR",MoveToPoint([2837.1045]))
+		ActionOverride("C0CR#GOR",FaceObject(Player1))
+		ActionOverride("C0CR#GOR",Wait(2))
+		ActionOverride("C0CR#GOR",StartDialogueNoSet(Player1))
+END

@@ -1,0 +1,290 @@
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	Class(Player1,BARD)
+	%warlock_check_3%
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,LeaveAreaLUA("AR2616","",[441.365],S))
+    ActionOverride(Player2,LeaveAreaLUA("AR2616","",[488.160],E))
+    ActionOverride(Player3,LeaveAreaLUA("AR2616","",[610.156],SW))
+    ActionOverride(Player4,LeaveAreaLUA("AR2616","",[655.183],SW))
+    ActionOverride(Player5,LeaveAreaLUA("AR2616","",[736.261],SW))
+    ActionOverride(Player6,LeaveAreaLUA("AR2616","",[716.308],W))
+	FadeToColor([0.0],0)
+	StartCutSceneMode()
+	StartCutScene("C0CR#001")
+	SetGlobal("C0CandleReClassStartBard","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	!Kit(Player1,BLACKGUARD)
+	OR(6)
+	Class(Player1,CLERIC)
+	Class(Player1,PALADIN)
+	Class(Player1,FIGHTER_CLERIC)
+	Class(Player1,FIGHTER_MAGE_CLERIC)
+	Class(Player1,CLERIC_MAGE)
+	Class(Player1,CLERIC_THIEF)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([3886.619]))
+    ActionOverride(Player2,JumpToPoint([3997.755]))
+    ActionOverride(Player3,JumpToPoint([4045.796]))
+    ActionOverride(Player4,JumpToPoint([3969.834]))
+    ActionOverride(Player5,JumpToPoint([3999.876]))
+    ActionOverride(Player6,JumpToPoint([4091.771]))
+    ActionOverride(Player1,Face(NE))
+    ActionOverride(Player2,Face(NW))
+    ActionOverride(Player3,Face(NW))
+    ActionOverride(Player4,Face(NW))
+    ActionOverride(Player5,Face(NW))
+    ActionOverride(Player6,Face(NW))
+	FadeToColor([0.0],0)
+	StartCutSceneMode()
+	StartCutScene("C0CR#002")
+	SetGlobal("C0CandleReClassStartCleric","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	OR(4)
+	Class(Player1,MAGE)
+	Class(Player1,FIGHTER_MAGE)
+	Class(Player1,MAGE_THIEF)
+	Class(Player1,SORCERER)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([1648.693]))
+    ActionOverride(Player2,JumpToPoint([1756.660]))
+    ActionOverride(Player3,JumpToPoint([1815.668]))
+    ActionOverride(Player4,JumpToPoint([1879.676]))
+    ActionOverride(Player5,JumpToPoint([1948.692]))
+    ActionOverride(Player6,JumpToPoint([2018.706]))
+    ActionOverride(Player1,Face(SE))
+    ActionOverride(Player2,Face(SSW))
+    ActionOverride(Player3,Face(SSW))
+    ActionOverride(Player4,Face(SSW))
+    ActionOverride(Player5,Face(SSW))
+    ActionOverride(Player6,Face(SSW))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+	StartCutSceneMode()
+	StartCutScene("C0CR#003")
+	SetGlobal("C0CandleReClassStartMage","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	!Class(Player1,MONK)
+	OR(3)
+	Class(Player1,FIGHTER)
+	Class(Player1,FIGHTER_THIEF)
+	Class(Player1,FIGHTER_MAGE_THIEF)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([1411.2729]))
+    ActionOverride(Player2,JumpToPoint([1310.2786]))
+    ActionOverride(Player3,JumpToPoint([1352.2848]))
+    ActionOverride(Player4,JumpToPoint([1232.2799]))
+    ActionOverride(Player5,JumpToPoint([1261.2857]))
+    ActionOverride(Player6,JumpToPoint([1319.2924]))
+    ActionOverride(Player1,Face(N))
+    ActionOverride(Player2,Face(NE))
+    ActionOverride(Player3,Face(NE))
+    ActionOverride(Player4,Face(NE))
+    ActionOverride(Player5,Face(NE))
+    ActionOverride(Player6,Face(NE))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+	StartCutSceneMode()
+	StartCutScene("C0CR#004")
+	SetGlobal("C0CandleReClassStartFighter","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	Class(Player1,THIEF)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,LeaveAreaLUA("AR2616","",[231.302],NE))
+    ActionOverride(Player2,LeaveAreaLUA("AR2616","",[488.160],E))
+    ActionOverride(Player3,LeaveAreaLUA("AR2616","",[610.156],SW))
+    ActionOverride(Player4,LeaveAreaLUA("AR2616","",[655.183],SW))
+    ActionOverride(Player5,LeaveAreaLUA("AR2616","",[736.261],SW))
+    ActionOverride(Player6,LeaveAreaLUA("AR2616","",[716.308],W))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+	StartCutSceneMode()
+	StartCutScene("C0CR#005")
+	SetGlobal("C0CandleReClassStartThief","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	OR(2)
+	Class(Player1,RANGER)
+	Class(Player1,CLERIC_RANGER)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([3084.1065]))
+    ActionOverride(Player2,JumpToPoint([3323.1188]))
+    ActionOverride(Player3,JumpToPoint([3344.1242]))
+    ActionOverride(Player4,JumpToPoint([3344.1299]))
+    ActionOverride(Player5,JumpToPoint([3347.1347]))
+    ActionOverride(Player6,JumpToPoint([3304.1383]))
+    ActionOverride(Player1,Face(SE))
+    ActionOverride(Player2,Face(W))
+    ActionOverride(Player3,Face(W))
+    ActionOverride(Player4,Face(W))
+    ActionOverride(Player5,Face(W))
+    ActionOverride(Player6,Face(W))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+	StartCutSceneMode()
+	StartCutScene("C0CR#006")
+	SetGlobal("C0CandleReClassStartRanger","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	!Class(Player1,SHAMAN)
+	OR(2)
+	Class(Player1,DRUID)
+	Class(Player1,FIGHTER_DRUID)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([2263.320]))
+    ActionOverride(Player2,JumpToPoint([2018.458]))
+    ActionOverride(Player3,JumpToPoint([2081.475]))
+    ActionOverride(Player4,JumpToPoint([2150.488]))
+    ActionOverride(Player5,JumpToPoint([2221.505]))
+    ActionOverride(Player6,JumpToPoint([2290.521]))
+    ActionOverride(Player1,Face(NW))
+    ActionOverride(Player2,Face(NNE))
+    ActionOverride(Player3,Face(NNE))
+    ActionOverride(Player4,Face(NNE))
+    ActionOverride(Player5,Face(NNE))
+    ActionOverride(Player6,Face(NNE))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+	StartCutSceneMode()
+	StartCutScene("C0CR#007")
+	SetGlobal("C0CandleReClassStartDruid","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	Class(Player1,MONK)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([745.1746]))
+    ActionOverride(Player2,JumpToPoint([1045.2106]))
+    ActionOverride(Player3,JumpToPoint([1102.2140]))
+    ActionOverride(Player4,JumpToPoint([1096.2195]))
+    ActionOverride(Player5,JumpToPoint([1095.2254]))
+    ActionOverride(Player6,JumpToPoint([1114.2315]))
+    ActionOverride(Player1,Face(W))
+    ActionOverride(Player2,Face(E))
+    ActionOverride(Player3,Face(E))
+    ActionOverride(Player4,Face(E))
+    ActionOverride(Player5,Face(E))
+    ActionOverride(Player6,Face(E))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+  GiveItemCreate("C0CR#MON",Player1,1,0,0)
+  XEquipItem("C0CR#MON",Player1,SLOT_ARMOR,EQUIP)
+	StartCutSceneMode()
+	StartCutScene("C0CR#008")
+	SetGlobal("C0CandleReClassStartMonk","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	Class(Player1,SHAMAN)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([745.1746]))
+    ActionOverride(Player2,JumpToPoint([1045.2106]))
+    ActionOverride(Player3,JumpToPoint([1102.2140]))
+    ActionOverride(Player4,JumpToPoint([1096.2195]))
+    ActionOverride(Player5,JumpToPoint([1095.2254]))
+    ActionOverride(Player6,JumpToPoint([1114.2315]))
+    ActionOverride(Player1,Face(W))
+    ActionOverride(Player2,Face(E))
+    ActionOverride(Player3,Face(E))
+    ActionOverride(Player4,Face(E))
+    ActionOverride(Player5,Face(E))
+    ActionOverride(Player6,Face(E))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+  GiveItemCreate("C0CR#SHA",Player1,1,0,0)
+  XEquipItem("C0CR#SHA",Player1,SLOT_AMULET,EQUIP)
+	StartCutSceneMode()
+	StartCutScene("C0CR#012")
+	SetGlobal("C0CandleReClassStartShaman","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	Kit(Player1,BLACKGUARD)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([745.1746]))
+    ActionOverride(Player2,JumpToPoint([1045.2106]))
+    ActionOverride(Player3,JumpToPoint([1102.2140]))
+    ActionOverride(Player4,JumpToPoint([1096.2195]))
+    ActionOverride(Player5,JumpToPoint([1095.2254]))
+    ActionOverride(Player6,JumpToPoint([1114.2315]))
+    ActionOverride(Player1,Face(W))
+    ActionOverride(Player2,Face(E))
+    ActionOverride(Player3,Face(E))
+    ActionOverride(Player4,Face(E))
+    ActionOverride(Player5,Face(E))
+    ActionOverride(Player6,Face(E))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+  GiveItemCreate("C0CR#BLK",Player1,1,0,0)
+  XEquipItem("C0CR#BLK",Player1,SLOT_GAUNTLETS,EQUIP)
+	StartCutSceneMode()
+	StartCutScene("C0CR#009")
+	SetGlobal("C0CandleReClassStartBlackguard","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
+
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+	%warlock_check_1%
+	%warlock_check_2%
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([745.1746]))
+    ActionOverride(Player2,JumpToPoint([1045.2106]))
+    ActionOverride(Player3,JumpToPoint([1102.2140]))
+    ActionOverride(Player4,JumpToPoint([1096.2195]))
+    ActionOverride(Player5,JumpToPoint([1095.2254]))
+    ActionOverride(Player6,JumpToPoint([1114.2315]))
+    ActionOverride(Player1,Face(W))
+    ActionOverride(Player2,Face(E))
+    ActionOverride(Player3,Face(E))
+    ActionOverride(Player4,Face(E))
+    ActionOverride(Player5,Face(E))
+    ActionOverride(Player6,Face(E))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+  GiveItemCreate("C0CR#WLK",Player1,1,0,0)
+  XEquipItem("C0CR#WLK",Player1,SLOT_ARMOR,EQUIP)
+	StartCutSceneMode()
+	StartCutScene("C0CR#009")
+	SetGlobal("C0CandleReClassStartBlackguard","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END

@@ -1,0 +1,11 @@
+IF
+	See(Player1)
+	Global("C0CandleReTethtorilSpeech","GLOBAL",1)
+THEN
+  RESPONSE #100
+	SetGlobal("C0CandleReTethtorilSpeech","GLOBAL",2)
+	StartCutSceneMode()
+	MoveViewObject(Myself,INSTANT)
+	Wait(1)
+	Dialogue(Player1)
+END

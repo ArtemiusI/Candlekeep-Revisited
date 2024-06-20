@@ -91,13 +91,19 @@ COPY_EXISTING ~mordai.cre~ ~override~
   SAY BIO ~MORDAINE is a young elven mage who you recall entering Candlekeep as a child with her father and has lived within its walls ever since. Though you have never seen her father after the day you met her, you know Mordaine has never questioned being left alone in the castle, nor does she spare time to tell you her father's reasons for leaving her, as she oft spends too many long hours delving into the library's innumerable tomes of knowledge.~
 
 COPY_EXISTING ~osprey.cre~ ~override~
-		WRITE_BYTE CRE_strength 14 // strength
-		WRITE_BYTE CRE_dexterity 10 // dexterity
-		WRITE_BYTE CRE_constitution 16 // constitution
-		WRITE_BYTE CRE_intelligence 17 // intelligence
-		WRITE_BYTE CRE_wisdom 17 // wisdom
-		WRITE_BYTE CRE_charisma 14  // charisma
+		WRITE_BYTE 0x238 14 // strength
+		WRITE_BYTE 0x23c 10 // dexterity
+		WRITE_BYTE 0x23d 16 // constitution
+		WRITE_BYTE 0x23a 17 // intelligence
+		WRITE_BYTE 0x23b 17 // wisdom
+		WRITE_BYTE 0x23e 14  // charisma
   SAY BIO ~OSPREY is a trainee scribe and a childhood friend of yourself and Imoen. A devout—perhaps exceedingly so—worshipper of Deneir, god of scholars and knowledge, nobody could be less out of place in a place such as Candlekeep as Osprey. Capable in both arcane and divine magic, Osprey is an eager student and loves knowledge of all sorts.~
+
+COPY_EXISTING ~tethto.cre~ ~override~
+		WRITE_ASCII DEATHVAR ~TETHTORIL~
+
+COPY_EXISTING ~ulraun.cre~ ~override/C0CR#ULR.CRE~
+		WRITE_ASCII DIALOG ~C0CR#ULR~ #8
 
 COPY_EXISTING ~imoen1.cre~ ~override/imoen.cre~
 		WRITE_ASCII DIALOG ~IMOEN~ #8
@@ -112,9 +118,45 @@ COPY_EXISTING ~imoen1.cre~ ~override/imoen.cre~
 EXTEND_TOP ~imoen.bcs~ ~%MOD_FOLDER%/bcs/imoen.baf~
 EXTEND_TOP ~ch1cut01.bcs~ ~%MOD_FOLDER%/bcs/ch1cut01.baf~
 
-COMPILE ~%MOD_FOLDER%/bcs/c0cr#c6s.baf~
+EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600.baf~ EVAL
 
-COMPILE ~%MOD_FOLDER%/dlg/dialog.d~
+COPY_EXISTING ~tethtorl.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+	LPF REPLACE_MULTILINE
+		INT_VAR
+			num = "-1"     //amount of times the pattern should be replaced with string (-1 by default which is at least 1 but without max limit)
+			strict = 0     //set to 1 to enable strict checking (auto escapes $^.*+?[]\ special characters)
+			verbose = 0    //set to 0 to skip printing patching message
+			warn = 1       //set to 0 to skip printing warning message if the function can't do what you ask it to do
+			only_count = 0 //set to to 1 to skip pattern replacing and just return num_matches (COUNT_REGEXP_INSTANCES alternative)
+		STR_VAR
+			pattern = ~("Chapter","GLOBAL",0)~   //pattern that you want to replace
+			string = ~("Chapter","GLOBAL",0)
+			GlobalLT("C0CandleReTethtorilSpeech","GLOBAL",1)~    //string that the pattern will be replaced with
+	END
+END
+BUT_ONLY
+EXTEND_TOP ~tethtorl.bcs~ ~%MOD_FOLDER%/bcs/tethtorl.baf~
+
+// Journal
+
+ADD_JOURNAL TITLE (~A Mystery Letter~) @1 @2 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+OUTER_SET %Quest1_Entry_1% = RESOLVE_STR_REF (@1)
+OUTER_SET %Quest1_Entry_2% = RESOLVE_STR_REF (@2)
+LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
+
+ADD_JOURNAL TITLE (~Missing Medical Supplies~) @3 @4 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+OUTER_SET %Quest2_Entry_1% = RESOLVE_STR_REF (@3)
+OUTER_SET %Quest2_Entry_2% = RESOLVE_STR_REF (@4)
+LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
+
+COMPILE ~%MOD_FOLDER%/bcs/c0cr#c6s.baf~
+COMPILE ~%MOD_FOLDER%/bcs/c0cr#014.baf~
+COMPILE ~%MOD_FOLDER%/bcs/c0cr#015.baf~
+
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/dialog.d~
 COMPILE ~%MOD_FOLDER%/dlg/imoen.d~
 
 COPY_EXISTING ~SCRL2L.ITM~ ~OVERRIDE/C0CR#LET.ITM~
@@ -142,6 +184,14 @@ Equipped abilities:
 – Lore: +10
 
 Weight: 0~
+
+COPY_EXISTING ~SW2H01.ITM~ ~OVERRIDE/SW2H01Q.ITM~
+LPF DELETE_ITEM_EFFECT INT_VAR match_opcode = 146 STR_VAR match_resource = SW2H01 END
+SAY NAME2 ~Quality Two-handed Sword~
+
+COPY_EXISTING ~SW1H20.ITM~ ~OVERRIDE/SW2H20Q.ITM~
+LPF DELETE_ITEM_EFFECT INT_VAR match_opcode = 146 STR_VAR match_resource = SW2H20 END
+SAY NAME2 ~Quality Scimitar~
 
 COPY_EXISTING ~SPWI050.SPL~ ~OVERRIDE/C0CR#VI1.SPL~
 SAY NAME1 #-1
