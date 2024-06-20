@@ -1,7 +1,7 @@
 IF
 	Global("C0CandleReClassStart","GLOBAL",0)
 	Class(Player1,BARD)
-	%warlock_check_3%
+	%warlock_check_2%
 THEN
   RESPONSE #100
     ActionOverride(Player1,LeaveAreaLUA("AR2616","",[441.365],S))
@@ -263,7 +263,6 @@ END
 IF
 	Global("C0CandleReClassStart","GLOBAL",0)
 	%warlock_check_1%
-	%warlock_check_2%
 THEN
   RESPONSE #100
     ActionOverride(Player1,JumpToPoint([745.1746]))
