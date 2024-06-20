@@ -152,6 +152,12 @@ OUTER_SET %Quest2_Entry_1% = RESOLVE_STR_REF (@3)
 OUTER_SET %Quest2_Entry_2% = RESOLVE_STR_REF (@4)
 LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
 
+ADD_JOURNAL TITLE (~Books for the Watchers~) @5 @6 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+OUTER_SET %Quest3_Entry_1% = RESOLVE_STR_REF (@5)
+OUTER_SET %Quest3_Entry_2% = RESOLVE_STR_REF (@6)
+LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
+
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#c6s.baf~
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#014.baf~
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#015.baf~

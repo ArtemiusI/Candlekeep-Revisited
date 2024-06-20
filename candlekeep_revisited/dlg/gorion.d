@@ -519,7 +519,7 @@ CHAIN IF WEIGHT #-1 ~Global("C0CandleReGorionFinal","GLOBAL",1)~ THEN C0CR#ULR C
 ~Gorion.~
 == GORION ~...Ulraunt.~
 == C0CR#ULR ~I see you are here with the... young <CHARNAME>. I take it that means you intend to leave soon, as you've so stubbornly insisted?~
-== GORION ~Indeed. We will we on our way soon.~
+== GORION ~Indeed. We will be on our way soon.~
 == C0CR#ULR ~Well, I would wish you safe journey, but I doubt that will be the case, given what I know of your intentions. Perhaps you have reconsidered since our last discussion?~
 == GORION ~No.~
 == C0CR#ULR ~Foolish... I have said it before, Gorion. There is a much simpler solution to this inanity. You and I know this to be true.~

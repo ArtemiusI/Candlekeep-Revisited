@@ -80,7 +80,7 @@ EscapeAreaMove("AR2600",2843,1895,S)~ EXIT
 // Interjections
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-I_C_T2 HULL 2 C0CandleReImoenInterjectHull
+I_C_T2 HULL 1 C0CandleReImoenInterjectHull
 == IMOEN2 IF ~IsValidForPartyDialog("IMOEN")~ THEN ~Wow, that much gold for just running back and forth for a sword? Maybe I should try to arrange for his sword to 'disappear' for a bit then happen to 'find' it, what d'ya think?~
 END
 

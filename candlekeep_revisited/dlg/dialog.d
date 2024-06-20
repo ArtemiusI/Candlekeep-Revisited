@@ -23,7 +23,7 @@ CHAIN C0CR#ARK C0CandleReArkanis.1
 == IMOEN2 IF ~IsValidForPartyDialog("IMOEN")~ ~You like to read, Arkanis? How come I've never heard you said anything about that before?~
 == C0CR#ARK IF ~IsValidForPartyDialog("IMOEN")~ ~Well... I'm nowhere near as good at it as you, Imoen. But I've been in Candlekeep for a while, so I can't help but take an interest in books after all the years. Makes it worth leaving my clanhold for, having learned so many new things.~
 == C0CR#DED ~Whatever you can get us is fine. Make sure they've got lots of pages, though. We'll need them for a while.~
-DO ~SetGlobal("C0CandleReArkanisQuest","GLOBAL",1)~ EXIT
+DO ~AddJournalEntry(%Quest3_Entry_1%,QUEST) SetGlobal("C0CandleReArkanisQuest","GLOBAL",1)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("Chapter","GLOBAL",0)
 !NumTimesTalkedTo(0)
@@ -49,7 +49,7 @@ DO ~TakePartyItem("BOOK18") TakePartyItem("BOOK35")~
 == C0CR#ARK ~History of Sembia, eh? Isn't that where you're from, Deder? I remember you saying something along those lines.~
 == C0CR#DED ~That was a long time ago. I don't really have the best memories of those days... you can have that one, Arkanis.~
 == C0CR#ARK ~I see. Well, I'd still like to read yours after I'm done with mine. I'm sorry to trouble you for the legwork, <CHARNAME>. Here, take these arrows with you. It's a dangerous world beyond these walls... keep your eyes out for trouble in the distance and bring it down before it gets close to you, and I'm sure you'll do fine.~
-DO ~AddexperienceParty(100) GiveItemCreate("arow02",Player1,30,0,0) SetGlobal("C0CandleReArkanisQuest","GLOBAL",2)~ EXIT
+DO ~AddJournalEntry(%Quest3_Entry_2%,QUEST_DONE) AddexperienceParty(100) GiveItemCreate("arow02",Player1,30,0,0) SetGlobal("C0CandleReArkanisQuest","GLOBAL",2)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~IsGabber("IMOEN")~ THEN C0CR#ARK C0CandleReArkanisImoen
 ~Good to see you, Imoen, my girl. Please stay out of trouble now... it's been a while since I've had to say anything to the watchers, and I hope it'll stay that way.~

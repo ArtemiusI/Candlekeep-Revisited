@@ -118,7 +118,6 @@ THEN
     ActionOverride(Player5,LeaveAreaLUA("AR2616","",[736.261],SW))
     ActionOverride(Player6,LeaveAreaLUA("AR2616","",[716.308],W))
 	FadeToColor([0.0],0)
-  PlaySong(13)
 	StartCutSceneMode()
 	StartCutScene("C0CR#005")
 	SetGlobal("C0CandleReClassStartThief","GLOBAL",1)
