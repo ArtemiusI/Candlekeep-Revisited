@@ -1,0 +1,15 @@
+IF
+	Global("C0SpawnPaloma","AR2612",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0SpawnPaloma","AR2612",1)
+	CreateCreatureImpassable("C0CR#GFM",[720.969],SW)
+END
+
+IF
+	TriggerOverride("C0CR#GFM",Range(Player1,5))
+	Global("C0CandleRePalomaC6","GLOBAL",0)
+THEN
+  RESPONSE #100
+	ActionOverride("C0CR#GFM",StartDialogNoSet(Player1))
+END

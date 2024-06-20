@@ -4,6 +4,7 @@ BEGIN C0CR#DED
 BEGIN C0CR#DE3
 BEGIN C0CR#MOR
 BEGIN C0CR#OSP
+BEGIN C0CR#GFM
 
 // Arkanis
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -465,3 +466,62 @@ END
 CHAIN FIREB1 C0CandleReFirebeadScroll
 ~Here you are, young one. This is but the beginning—the greater secrets of the Weave are out there. Me, I am far too old to be seeking them. But you have immeasurable potential. Good luck.~
 COPY_TRANS FIREB1 2
+
+// Paloma - C6
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CHAIN IF WEIGHT #-1 ~GlobalGT("Chapter","GLOBAL",0)
+Global("C0CandleRePalomaC6","GLOBAL",0)~ THEN C0CR#GFM C0CandleRePalomaC6
+~Zzz... mmm... who is it? Do you have berries and honey water? I already told you... I don't want to see anyone... unless they have honey water...~
+DO ~SetGlobal("C0CandleRePalomaC6","GLOBAL",1)~
+== IMOEN2 IF ~InParty("IMOEN")~ THEN ~Oh no... it's Paloma, Gorion's familiar. Look at how weak she is, <CHARNAME>.~
+== C0CR#GFM ~*sniff* No, wait... I recognize this scent... <CHARNAME>? Is that you? Oh, I must be dreaming... yes, it must be a dream... I've been so tired... ever since Gorion...~
+END
+  ++ ~Oh, Paloma...~ EXTERN C0CR#GFM C0CandleRePalomaC6.1
+  ++ ~It's not a dream. It's me.~ EXTERN C0CR#GFM C0CandleRePalomaC6.2
+  ++ ~Look closer, you stupid little dragon.~ EXTERN C0CR#GFM C0CandleRePalomaC6.3
+
+CHAIN C0CR#GFM C0CandleRePalomaC6.1
+~<CHARNAME>, since you're here, even though I know you're not... let me know... do you remember what happened? Did that day really happen? Or was it a nightmare? I... I remember, I was foraging for fruit... then Gorion called me, told me we needed to go... so I made myself invisible and went scouting...~
+== C0CR#GFM ~Then that horrible, horrible man, in the black and spiky armor... he scared me so much, I had to run away and hide... it was so shameful, Gorion told me to keep an eye out, so I did, both of them... and then... and then—~
+== IMOEN2 IF ~InParty("IMOEN")~ THEN ~...~
+== C0CR#GFM ~I... I don't remember. I just remember hurting... and then everything went black. When I woke up again... I was tucked up here... Tethtoril came to see me, and I told him I was so, so tired, I didn't want to go out and play anymore.~
+== C0CR#GFM ~He just nodded and gave me a pat on the head, and asked me if I wanted anything to eat... and then I've been resting here ever since... it's so strange. I sleep and I sleep, but I'm never any less tired... I just want to sleep more...~
+== C0CR#GFM ~Mmm... I wonder, if I sleep again, will I even wake up...? I don't know... Gorion would know. Where did he go, <CHARNAME>? When will I see him again?~
+END
+  ++ ~He's gone, Paloma. I'm sorry.~ EXTERN C0CR#GFM C0CandleRePalomaC6.4
+  ++ ~Gorion's dead.~ EXTERN C0CR#GFM C0CandleRePalomaC6.5
+  ++ ~Don't worry about it, Paloma. Just rest.~ EXTERN C0CR#GFM C0CandleRePalomaC6.7
+
+CHAIN C0CR#GFM C0CandleRePalomaC6.2
+~Hee hee... <CHARNAME>, you're so silly... you're supposed to have left, remember, so how could you be here? You were with Gorion, on that day...~
+EXTERN C0CR#GFM C0CandleRePalomaC6.1
+
+CHAIN C0CR#GFM C0CandleRePalomaC6.3
+~Oh, you've gotten so mean, <CHARNAME>... but since this is a dream, I'll forgive you. Even though you're being mean, it's nice to see you... again...~
+EXTERN C0CR#GFM C0CandleRePalomaC6.1
+
+CHAIN C0CR#GFM C0CandleRePalomaC6.4
+~Gone...? Gone forever? No, no, I don't believe that, I know I was hurting, but I—~
+EXTERN C0CR#GFM C0CandleRePalomaC6.6
+
+CHAIN C0CR#GFM C0CandleRePalomaC6.5
+~"Dead"? No, no, I don't believe that, I know I was hurting, but I—~
+EXTERN C0CR#GFM C0CandleRePalomaC6.6
+
+CHAIN C0CR#GFM C0CandleRePalomaC6.6
+~Oh. Oh... I understand now... that's right, I'm dreaming. You're not really here, <CHARNAME>... of course I'd imagine something so silly. You're being silly, <CHARNAME>... but that wasn't funny.~
+EXTERN C0CR#GFM C0CandleRePalomaC6.7
+
+CHAIN C0CR#GFM C0CandleRePalomaC6.7
+~Alright, I get it... I should sleep more... and then... when I wake up... I'll see you and Gorion... we'll play together when I'm not tired anymore...~
+== C0CR#GFM ~Hey, <CHARNAME>... I know you're not really here, but Gorion told me once... he had something important... something very, very important, that you should see... just you...~
+== C0CR#GFM ~It's in that chest there... I was told not to look... but when I woke up before, I felt like I *had* to know, but not why... <CHARNAME>, you know I've always been naughty, so... I read it all...~
+== C0CR#GFM ~When you see it... if you didn't already... you'll be surprised... but don't ever forget, <CHARNAME>, you'll always, always, *always*, be Gorion's...~
+== C0CR#GFM ~...~
+DO ~ApplySpellRES("C0CR#SLP",Myself)~
+== C0CR#GFM ~Zzz...~
+END
+  ++ ~Good night, Paloma...~ EXIT
+  ++ ~(Pat the pseudodragon on the head)~ EXIT
+  ++ ~Finally, you've stopped talking.~ EXIT

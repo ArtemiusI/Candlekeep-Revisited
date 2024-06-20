@@ -119,6 +119,7 @@ EXTEND_TOP ~imoen.bcs~ ~%MOD_FOLDER%/bcs/imoen.baf~
 EXTEND_TOP ~ch1cut01.bcs~ ~%MOD_FOLDER%/bcs/ch1cut01.baf~
 
 EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600.baf~ EVAL
+EXTEND_TOP ~%bg1_eet_symbol%2612.bcs~ ~%MOD_FOLDER%/bcs/ar2612.baf~ EVAL
 
 COPY_EXISTING ~tethtorl.bcs~ ~override~
   DECOMPILE_AND_PATCH BEGIN
@@ -207,6 +208,8 @@ SAY NAME1 #-1
 
 COPY_EXISTING ~SPWI052.SPL~ ~OVERRIDE/C0CR#VI3.SPL~
 SAY NAME1 #-1
+
+COPY ~%MOD_FOLDER%/SPL/C0CR#SLP.SPL~ ~OVERRIDE~
 
 COPY_EXISTING ~%bg1_eet_symbol%2600.are~ ~override~
  LPF fj_are_structure

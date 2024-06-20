@@ -3,7 +3,6 @@ BEGIN C0CR#JON
 BEGIN C0CR#ERI
 BEGIN C0CR#ULR
 BEGIN C0CR#DOG
-BEGIN C0CR#GFM
 
 CHAIN IF WEIGHT #-1 ~Global("C0CandleReGorionBegin","GLOBAL",0)~ THEN C0CR#GOR C0CandleReGorion
 ~There you are, my child.~ [GORIN01]
