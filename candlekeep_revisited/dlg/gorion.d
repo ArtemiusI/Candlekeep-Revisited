@@ -44,11 +44,11 @@ END
   ++ ~There will be more opportunity outside of Candlekeep than within. When do we depart, father?~ EXTERN C0CR#GOR C0CandleReGorionBard.2
 
 CHAIN C0CR#GOR C0CandleReGorionBard.1
-~You will, child, I promise you. But for now, I hope that you will consider nothing but your safety. There will be a time for peace, but for now, we must be ready for our journey, which will be a perilous one.~
+~You will, I promise you. But for now, I hope that you will consider nothing but your safety. There will be a time for peace, but for now, we must be ready for our journey, which will be a perilous one.~
 EXTERN C0CR#GOR C0CandleReGorionBard.3
 
 CHAIN C0CR#GOR C0CandleReGorionBard.2
-~It is necessary, child. I am sorry it cannot be otherwise. I, too, find comfort in the peace and knowledge gifted to us in Candlekeep. But our peaceful lives cannot last, even if we were to hide within these walls, even for another month. For your sake, I must take you to where true safety can be found.~
+~It is necessary. I am sorry it cannot be otherwise. I, too, find comfort in the peace and knowledge gifted to us in Candlekeep. But our peaceful lives cannot last, even if we were to hide within these walls, even for another month. For your sake, I must take you to where true safety can be found.~
 EXTERN C0CR#GOR C0CandleReGorionBard.3
 
 CHAIN C0CR#GOR C0CandleReGorionBard.3
@@ -123,7 +123,7 @@ END
  ++ ~What spell was your first, father?~ + C0CandleReGorionMage.4
 
 CHAIN C0CR#GOR C0CandleReGorionMage.4
-~Mine, child? Well, I suppose I could simply show you. I never sought a particular school of study, as I sought the knowledge of every aspect of the Weave. Yet, I remember, clearer than the others, my attempts to master the school of Conjuration.~
+~Mine? Well, I suppose I could simply show you. I never sought a particular school of study, as I sought the knowledge of every aspect of the Weave. Yet, I remember, clearer than the others, my attempts to master the school of Conjuration.~
 = ~Perhaps it was the arrogant youth in myself, that which I have strived to lead you away from, that sought to bend other beings to my will. But such is not the way, as I will show you.~
 = ~The art of conjuration requires focus, and a measure of respect for that which you call forth. Truly understanding the being you are seeking is the key to a successful summoning. Watch...~
 DO ~SetGlobal("C0CandleReGorionFamiliar","GLOBAL",1)
@@ -144,7 +144,7 @@ END
   ++ ~Paloma, come on now. Be reasonable.~ EXTERN C0CR#GFM C0CandleReGorionMageFam.2
 
 CHAIN C0CR#GOR C0CandleReGorionMageFam.1
-~It is hard to decide who is truly the child here. *sigh* I suppose I have little choice... come then, Paloma, you silly creature. As for you, child, I believe you should be able to master the spell after my demonstration. Perhaps your bonded familiar will be less... difficult than this one here.~
+~It is hard to decide who is truly the child here. *sigh* I suppose I have little choice... come then, Paloma, you silly creature. As for you, <CHARNAME>, I believe you should be able to master the spell after my demonstration. Perhaps your bonded familiar will be less... difficult than this one here.~
 END
 IF ~!Class(Player1,SORCERER)~ DO ~ActionOverride(Player1,AddSpecialAbility("SPWI123")~ EXTERN C0CR#GOR C0CandleReGorionMageFam.3
 IF ~Class(Player1,SORCERER)~ DO ~GiveItemCreate("SCRL6D",Player1,1,0,0)~ EXTERN C0CR#GOR C0CandleReGorionMageFam.2
@@ -232,7 +232,7 @@ DO ~SetGlobal("C0CandleReGorionJondalarBegin","GLOBAL",2)~ EXTERN JONDAL 1
 
 CHAIN C0CR#JON C0CandleReGorionFighter
 ~Good <DAYNIGHT>, Gorion, sir. <CHARNAME> and I have just finished our special drills, right as you arrived.~
-== C0CR#GOR ~I can see that. Thank you, Jondalar, and well done, child. I trust that you have treated your training most seriously?~
+== C0CR#GOR ~I can see that. Thank you, Jondalar, and well done, <CHARNAME>. I trust that you have treated your training most seriously?~
 END
   ++ ~Of course. I'm sure I'll need my skills on our journey.~ EXTERN C0CR#GOR C0CandleReGorionFighter.1
   ++ ~It's not as though I have a choice.~ EXTERN C0CR#GOR C0CandleReGorionFighter.2
@@ -479,11 +479,11 @@ END
   ++ ~I'm ready, father. We can leave at any time.~ EXTERN GORION C0CandleReGorionFinal.6
 
 CHAIN GORION C0CandleReGorionFinal.1
-~I know. I have already heard from the Watchers, and they will investigate the origins of the assassins. I am sorry, child. This is like nothing you have known, and I understand, truly. But this will not be the last, and it has proven even the security of Candlekeep is no longer an assuredly safe haven.~
+~I know. I have already heard from the Watchers, and they will investigate the origins of the assassins. I am sorry... this is like nothing you have known, and I understand, truly. But this will not be the last, and it has proven even the security of Candlekeep is no longer an assuredly safe haven.~
 EXTERN GORION C0CandleReGorionFinal.3
 
 CHAIN GORION C0CandleReGorionFinal.2
-~You are not wrong, child. For now. There is indeed great dangers in the world, some as close as outside the gates themselves. But that will not last, and sooner or later, Candlekeep will be swept in the chaos that already plagues the Sword Coast. I wish to spare the people here of that, as much as I can. It is my responsibility.~
+~You are not wrong, my child. For now. There is indeed great dangers in the world, some as close as outside the gates themselves. But that will not last, and sooner or later, Candlekeep will be swept in the chaos that already plagues the Sword Coast. I wish to spare the people here of that, as much as I can. It is my responsibility.~
 EXTERN GORION C0CandleReGorionFinal.3
 
 CHAIN GORION C0CandleReGorionFinal.3
@@ -495,15 +495,15 @@ END
   ++ ~Then let us go. I'm eager to see the world outside as well.~ EXTERN GORION C0CandleReGorionFinal.6
 
 CHAIN GORION C0CandleReGorionFinal.4
-~I cannot tell you yet, child. I wish to trust in the people here, but for absolute certainty, the fewer there are who know of our destination, the safer we will be. It will all make sense soon, once we are in a place where I might explain everything.~
+~I cannot tell you yet, <CHARNAME>. I wish to trust in the people here, but for absolute certainty, the fewer there are who know of our destination, the safer we will be. It will all make sense soon, once we are in a place where I might explain everything.~
 EXTERN GORION C0CandleReGorionFinal.7
 
 CHAIN GORION C0CandleReGorionFinal.5
-~You must understand, child, that there is always the unknown, that which is worthy of fear, no matter the extent of your power or knowledge. For us, and for those who would wish us harm. So long as we are mortal, we cannot avoid fear. But we must face it, and do what is needed to overcome it.~
+~You must understand, <CHARNAME>, that there is always the unknown, that which is worthy of fear, no matter the extent of your power or knowledge. For us, and for those who would wish us harm. So long as we are mortal, we cannot avoid fear. But we must face it, and do what is needed to overcome it.~
 EXTERN GORION C0CandleReGorionFinal.7
 
 CHAIN GORION C0CandleReGorionFinal.6
-~Very good, child. Come, then. We must head to the gates...~
+~Very good, <CHARNAME>. Come, then. We must head to the gates...~
 DO ~ClearAllActions()
 	StartCutSceneMode()
 	StartCutScene("C0CR#014")~ EXIT
@@ -544,11 +544,11 @@ END
   ++ ~Can we go now, father?~ + C0CandleReGorionFinalPostUlraunt.3
 
 CHAIN GORION C0CandleReGorionFinalPostUlraunt.1
-~No. No, you have not, child. Someday, you will understand... the world is full of those who would rather blame you for the fault of others.~
+~No. No, you have not. Someday, you will understand... the world is full of those who would rather blame you for the fault of others.~
 EXTERN GORION C0CandleReGorionFinalPostUlraunt.4
 
 CHAIN GORION C0CandleReGorionFinalPostUlraunt.2
-~Now, now, as your senior I cannot allow that, though I do sympathize, child, truly. We must keep the venerable Keeper's health in consideration. He is getting on in years, after all.~
+~Now, now, as your senior I cannot allow that, though I do sympathize, truly. We must keep the venerable Keeper's health in consideration. He is getting on in years, after all.~
 EXTERN GORION C0CandleReGorionFinalPostUlraunt.4
 
 CHAIN GORION C0CandleReGorionFinalPostUlraunt.3
@@ -558,5 +558,5 @@ EXTERN GORION C0CandleReGorionFinalPostUlraunt.4
 CHAIN GORION C0CandleReGorionFinalPostUlraunt.4
 ~I know this is of little consolation to you, child, but Ulraunt's thoughts on you are not born from malice, not truly. Do not judge him too harshly.~
 = ~Though the Keeper has his shortcomings, his concern is for the security of Candlekeep, so I hope that you may understand, though I know it may be difficult. You are not aware, but there are dark times approaching, and it is in such times that we all struggle the most with our worst sides.~
-= ~Forgive me, child. It was indeed my intention to leave promptly, but encountering Ulraunt has reminded me of a most daunting fact... though we must leave this place for your own good, our eventual homecoming may not be so simple or guaranteed. If there is anything you feel is left undone, whether it be a simple farewell, it is best if you attend to it now. But you must hurry, and return as soon are you are done.~
+= ~Forgive me, <CHARNAME>. It was indeed my intention to leave promptly, but encountering Ulraunt has reminded me of a most daunting fact... though we must leave this place for your own good, our eventual homecoming may not be so simple or guaranteed. If there is anything you feel is left undone, whether it be a simple farewell, it is best if you attend to it now. But you must hurry, and return as soon are you are done.~
 EXTERN GORION 0	
