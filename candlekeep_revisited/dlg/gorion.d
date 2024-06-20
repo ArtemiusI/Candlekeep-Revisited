@@ -256,7 +256,7 @@ EXTERN C0CR#GOR C0CandleReGorionEnd
 
 CHAIN IF WEIGHT #-1 ~Global("C0CandleReDederStart","GLOBAL",1)~ THEN C0CR#DED C0CandleReDederStart
 ~There you go, <CHARNAME>. Lockpicks, pliers, rope, file... all standard tools of the trade. You already know how to use them.~
-= ~Need anything else that isn't there, <CHARNAME>, just give me a call. We can't have you going out into the world without covering all of your bases, you know.~
+= ~Need anything else that isn't there, <CHARNAME>, just give me a holler. We can't have you going out into the world without covering all of your bases, you know.~
 END
   ++ ~Thanks for all your help, Deder.~ EXTERN C0CR#DED C0CandleReDederStart.1
   ++ ~Got any poisons you can share?~ EXTERN C0CR#DED C0CandleReDederStart.2
