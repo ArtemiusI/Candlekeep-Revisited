@@ -1,0 +1,17 @@
+IF
+	Global("HelpHull","GLOBAL",1)
+	Global("HelpFuller","GLOBAL",1)
+	Global("HelpPhlydia","GLOBAL",1)
+	Global("SPRITE_IS_DEADREVRAT","GLOBAL",6)
+	Global("HelpFirebead","GLOBAL",2)
+	Global("C0CandleReArkanisQuest","GLOBAL",2)
+	Global("C0CandleRECanderousQuest","GLOBAL",2)
+	Global("C0CandleReMordaineQuest","GLOBAL",3)
+	Global("HelpDreppin","GLOBAL",1)
+	Global("C0CandleReTethtorilSpeech","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0CandleReTethtorilSpeech","GLOBAL",1)
+	ActionOverride("TETHTORIL",JumpToPoint([2867.1872]))
+	ActionOverride("TETHTORIL",Face(S))
+END

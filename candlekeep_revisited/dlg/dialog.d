@@ -525,3 +525,29 @@ END
   ++ ~Good night, Paloma...~ EXIT
   ++ ~(Pat the pseudodragon on the head)~ EXIT
   ++ ~Finally, you've stopped talking.~ EXIT
+
+// Tethtoril
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CHAIN IF WEIGHT #-1 ~Global("C0CandleReTethtorilSpeech","GLOBAL",2)~ THEN TETHTO C0CandleReTethtorilInsight
+~Well, well, young <CHARNAME>. It looks like you have finally arrived.~
+= ~I was hoping to speak with you one more time before you departed. I was taking my regular walk around the castle courtyard, you see, as I do every day, hearing the daily stories of all the good folk. And I have heard your name repeated often today, in particular.~
+END
+  ++ ~What exactly have you been hearing?~ + C0CandleReTethtorilInsight.1
+  ++ ~I'm sorry, Tethtoril, but I don't have time right now. Gorion's waiting for me.~ + C0CandleReTethtorilInsight.0
+  ++ ~I really don't have time to speak with you right now, old man.~ + C0CandleReTethtorilInsight.0
+
+CHAIN TETHTO C0CandleReTethtorilInsight.0
+~So be it. Go and speak with Gorion then, child. Take care of yourself in the world outside, and... I wish you good luck, for the trials ahead.~
+DO ~SetGlobal("C0CandleReTethtorilSpeech","GLOBAL",3)
+EscapeArea()~ EXIT
+
+CHAIN TETHTO C0CandleReTethtorilInsight.1
+~Well, that would certainly depend on who I have asked. But you have certainly left a good impression on the day of farewell, it seems, with the many simple favors you have made. Delivering swords, bolts and books for the Watchers, clearing rats from peevish Reevor's storehouse, even curing Dreppin's poor cow...~
+= ~Your journey is an urgent one, young <CHARNAME>, and you have seen blood from those who would do you harm even here, where it should be safest. And yet, I am glad to see you have not forgotten to give a helping hand to those who ask.~
+= ~I cannot be sorry enough that we could not have done more for you, child. You will face many dark days ahead, I will not lie, and even with Gorion at your side, your trials will only be greater... but to the end, I hope you will never lose your heart, and always be willing to continue helping others, no matter how petty the concern.~
+= ~Nor do I hope that you ever forget that you are the pride of Candlekeep. Treasure your memories and experiences of this place—of your home and those who call you their friend—and look forward with courage. One day, everyone will welcome your safe return, with your heart and mind abundant with newfound wisdom.~
+= ~Now go, child. Gorion is waiting for you. I do not doubt that we will meet again.~
+DO ~SetGlobal("C0CandleReTethtorilSpeech","GLOBAL",3)
+AddXPObject(Player1,2500)
+EscapeArea()~ EXIT

@@ -18,6 +18,7 @@ THEN
 		CreateVisualEffect("BDETHREA",[587.1580])
 		SmallWait(15)
 		CreateVisualEffect("BDETHREA",[647.1956])
+		Rest()
 		Wait(3)
 		CreateCreature("C0CR#GOR",[742.1269],S)
 		ActionOverride("C0CR#GOR",MoveToPoint([741.1637]))
