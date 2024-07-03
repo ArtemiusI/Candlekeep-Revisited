@@ -4,12 +4,12 @@ IF
 	%warlock_check_2%
 THEN
   RESPONSE #100
-    ActionOverride(Player1,LeaveAreaLUA("AR2616","",[441.365],S))
-    ActionOverride(Player2,LeaveAreaLUA("AR2616","",[488.160],E))
-    ActionOverride(Player3,LeaveAreaLUA("AR2616","",[610.156],SW))
-    ActionOverride(Player4,LeaveAreaLUA("AR2616","",[655.183],SW))
-    ActionOverride(Player5,LeaveAreaLUA("AR2616","",[736.261],SW))
-    ActionOverride(Player6,LeaveAreaLUA("AR2616","",[716.308],W))
+    ActionOverride(Player1,LeaveAreaLUA("%bg1_eet_symbol%2616","",[441.365],S))
+    ActionOverride(Player2,LeaveAreaLUA("%bg1_eet_symbol%2616","",[488.160],E))
+    ActionOverride(Player3,LeaveAreaLUA("%bg1_eet_symbol%2616","",[610.156],SW))
+    ActionOverride(Player4,LeaveAreaLUA("%bg1_eet_symbol%2616","",[655.183],SW))
+    ActionOverride(Player5,LeaveAreaLUA("%bg1_eet_symbol%2616","",[736.261],SW))
+    ActionOverride(Player6,LeaveAreaLUA("%bg1_eet_symbol%2616","",[716.308],W))
 	FadeToColor([0.0],0)
 	StartCutSceneMode()
 	StartCutScene("C0CR#001")
@@ -111,12 +111,12 @@ IF
 	Class(Player1,THIEF)
 THEN
   RESPONSE #100
-    ActionOverride(Player1,LeaveAreaLUA("AR2616","",[231.302],NE))
-    ActionOverride(Player2,LeaveAreaLUA("AR2616","",[488.160],E))
-    ActionOverride(Player3,LeaveAreaLUA("AR2616","",[610.156],SW))
-    ActionOverride(Player4,LeaveAreaLUA("AR2616","",[655.183],SW))
-    ActionOverride(Player5,LeaveAreaLUA("AR2616","",[736.261],SW))
-    ActionOverride(Player6,LeaveAreaLUA("AR2616","",[716.308],W))
+    ActionOverride(Player1,LeaveAreaLUA("%bg1_eet_symbol%2616","",[231.302],NE))
+    ActionOverride(Player2,LeaveAreaLUA("%bg1_eet_symbol%2616","",[488.160],E))
+    ActionOverride(Player3,LeaveAreaLUA("%bg1_eet_symbol%2616","",[610.156],SW))
+    ActionOverride(Player4,LeaveAreaLUA("%bg1_eet_symbol%2616","",[655.183],SW))
+    ActionOverride(Player5,LeaveAreaLUA("%bg1_eet_symbol%2616","",[736.261],SW))
+    ActionOverride(Player6,LeaveAreaLUA("%bg1_eet_symbol%2616","",[716.308],W))
 	FadeToColor([0.0],0)
 	StartCutSceneMode()
 	StartCutScene("C0CR#005")
