@@ -1,0 +1,6 @@
+IF
+	Global("X#ImFriendTalk","GLOBAL",-1)
+THEN
+  RESPONSE #100
+	SetGlobal("X#ImFriendTalk","GLOBAL",0)
+END

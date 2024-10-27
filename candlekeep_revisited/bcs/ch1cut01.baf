@@ -10,8 +10,7 @@ THEN
 		GiveItemCreate("WAND12","imoen",10,1,0)
 		GiveItemCreate("BOW05","imoen",1,1,0)
 		GiveItemCreate("AROW01","imoen",40,1,0)
-		XEquipItem("BOW05",Myself,SLOT_WEAPON0,EQUIP)
-		XEquipItem("AROW01",Myself,SLOT_AMMO0,EQUIP)
 		ActionOverride("imoen",SetItemFlags("WAND12",IDENTIFIED,TRUE))
-		DestroySelf()
+		SmallWait(1)
+		EscapeAreaMove("AR2700",3140,3681,S)
 END

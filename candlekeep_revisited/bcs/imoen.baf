@@ -24,8 +24,9 @@ THEN
 END
 	
 IF
+	Global("C0CandleReImoenJoined","LOCALS",0)
 	Global("Chapter","GLOBAL",1)
-	AreaCheck("AR2700")
+	AreaCheck("%bg1_eet_symbol%2700")
 	Global("C0CandleReImoenJoins","GLOBAL",3)
 THEN
   RESPONSE #100
@@ -33,6 +34,9 @@ THEN
 	MoveGlobalObject("imoen",Myself)
 	ActionOverride("imoen",SetDialog("IMOEN2"))
 	ActionOverride("imoen",SetNumTimesTalkedTo(0))
+	ActionOverride("imoen",XEquipItem("BOW05",Myself,SLOT_WEAPON0,EQUIP))
+	ActionOverride("imoen",XEquipItem("AROW01",Myself,SLOT_AMMO0,EQUIP))
+	ActionOverride("imoen",SetItemFlags("WAND12",IDENTIFIED,TRUE))
 	DestroySelf()
 END
 	

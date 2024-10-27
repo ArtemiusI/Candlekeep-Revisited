@@ -55,6 +55,8 @@ END
 CHAIN IMOEN C0CandleReImoenJoins.2
 ~Right you are. You and me, doin' odd jobs, maybe a prank or two. It'll be good memories for when you go, right?~
 DO ~SetGlobal("C0CandleReImoenJoins","GLOBAL",2)
+SetGlobal("X#ImFriendTalk","GLOBAL",-1)
+SetGlobal("C0CandleReImoenJoined","LOCALS",1)
 JoinParty()~ EXIT
 
 CHAIN IMOEN C0CandleReImoenJoins.3
@@ -145,4 +147,8 @@ EXTERN IMOEN2 C0CandleReImoenAssassin.8
 
 CHAIN IMOEN2 C0CandleReImoenAssassin.8
 ~Sorry, <CHARNAME>, I'm just... really freaked out right now. Whatever you decide to do, it's your choice. I just... don't want my friend to die out there. Be careful, okay?~
+EXIT
+
+CHAIN IF WEIGHT #-1 ~IsGabber(Player1) GlobalLT("Chapter","GLOBAL",1)~ THEN IMOEN2 C0CandleReImoenAssassin
+~C'mon, <CHARNAME>, let's make our rounds through the castle. We're not gonna get another chance like this again, y'know?~
 EXIT
