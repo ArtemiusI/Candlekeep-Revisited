@@ -8,6 +8,8 @@ New content:
 
 – Three minor sidequests involving the NPCs
 
+– An experience reward with words of wisdom from Tethtoril if you complete every optional sidequest in Candlekeep, giving you enough experience to level up. (If you don't want it, tell him you don't have the time to listen.)
+
 – Extra dialogue with the NPCs for your reunion with them in Chapter 6
 
 – Improved Arkanis and Deder in the catacomb sequence in Chapter 6, making them stronger, controllable, and expanding their dialogue
