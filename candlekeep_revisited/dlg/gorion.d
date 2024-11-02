@@ -24,9 +24,9 @@ CHAIN C0CR#GOR C0CandleReGorionEnd
 DO ~GiveGoldForce(400)~
 = ~Gather whatever you feel is necessary and meet me at the front of the castle. I will be waiting for you there, my child.~
 END
-IF ~AreaCheck("AR2617")~ DO ~PlaySong(0) EscapeArea()~ EXIT
-IF ~AreaCheck("AR2616")~ DO ~PlaySong(0) ActionOverride("DEEDER",EscapeAreaObject("Door2600")) EscapeAreaObject("Door2600")~ EXIT
-IF ~AreaCheck("AR2600")~ DO ~PlaySong(0) ActionOverride("C0CR#GFM",EscapeAreaObject("Door2608"))
+IF ~AreaCheck("%bg1_eet_symbol%2617")~ DO ~PlaySong(0) EscapeArea()~ EXIT
+IF ~AreaCheck("%bg1_eet_symbol%2616")~ DO ~PlaySong(0) ActionOverride("DEEDER",EscapeAreaObject("Door2600")) EscapeAreaObject("Door2600")~ EXIT
+IF ~AreaCheck("%bg1_eet_symbol%2600")~ DO ~PlaySong(0) ActionOverride("C0CR#GFM",EscapeAreaObject("Door2608"))
                ActionOverride("C0CR#JON",EscapeAreaObject("Door2608"))
 							 ActionOverride("C0CR#ERI",EscapeAreaObject("Door2608"))
 							 ActionOverride("C0CR#DOG",EscapeAreaObject("Door2608"))
