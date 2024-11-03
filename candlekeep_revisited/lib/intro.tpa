@@ -38,7 +38,12 @@ OUTER_SPRINT warlock_check_2 ~~
 END
 
 EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-intro.baf~ EVAL
-EXTEND_TOP ~%bg1_eet_symbol%2616.bcs~ ~%MOD_FOLDER%/bcs/ar2616-intro.baf~
+
+ACTION_IF GAME_IS ~EET~ THEN BEGIN
+EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-eet.baf~ EVAL
+END
+
+EXTEND_TOP ~%bg1_eet_symbol%2616.bcs~ ~%MOD_FOLDER%/bcs/ar2616-intro.baf~ EVAL
 
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#001.baf~
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#002.baf~
@@ -56,7 +61,7 @@ COMPILE ~%MOD_FOLDER%/bcs/c0cr#013.baf~
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#016.baf~
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#skp.baf~
 
-COMPILE ~%MOD_FOLDER%/dlg/gorion.d~
+COMPILE ~%MOD_FOLDER%/dlg/gorion.d~ EVAL
 
 COPY ~%MOD_FOLDER%/SPL/C0CR#VI4.SPL~ ~OVERRIDE~
 SAY NAME1 ~Find Familiar~

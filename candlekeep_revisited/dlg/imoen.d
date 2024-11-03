@@ -77,7 +77,7 @@ CHAIN IMOENP C0CandleReImoenKicked.1
 ~Okay, well... I'll be heading off then. Maybe we'll see each other around some time? Bye.~
 DO ~SetDialog("IMOEN")
 SetGlobal("C0CandleReImoenJoins","GLOBAL",-1)
-EscapeAreaMove("AR2600",2843,1895,S)~ EXIT
+EscapeAreaMove("%bg1_eet_symbol%2600",2843,1895,S)~ EXIT
 
 // Interjections
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

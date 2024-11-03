@@ -1,4 +1,4 @@
-BACKUP ~candlekeep_revisited/backup~
+BACKUP ~weidu_external/backup/candlekeep_revisited~
 AUTHOR ~The Artisan~
 ALWAYS
   OUTER_SPRINT BGFORGE_LIB_DIR "%MOD_FOLDER%/lib/bgforge"

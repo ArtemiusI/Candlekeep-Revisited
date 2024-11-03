@@ -1,0 +1,12 @@
+IF
+    Global("K#NewGame","BG2600",0)  // Candlekeep
+THEN
+    RESPONSE #100
+        SetGlobal("K#NewGame","BG2600",1)  // Candlekeep
+        MultiPlayerSync()
+        SmallWait(2)
+        RemoveWorldmapAreaFlag("AR0020",ENABLED)  // City Gates
+        ReallyForceSpellRES("K#REMBHA",Player1)  // No such index
+        TakeItemListPartyNum("K#PLOT",99)
+        Continue()
+END

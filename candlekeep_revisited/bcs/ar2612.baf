@@ -1,8 +1,8 @@
 IF
-	Global("C0SpawnPaloma","AR2612",0)
+	Global("C0SpawnPaloma","%bg1_eet_symbol%2612",0)
 THEN
   RESPONSE #100
-	SetGlobal("C0SpawnPaloma","AR2612",1)
+	SetGlobal("C0SpawnPaloma","%bg1_eet_symbol%2612",1)
 	CreateCreatureImpassable("C0CR#GFM",[720.969],SW)
 END
 

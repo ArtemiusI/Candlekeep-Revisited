@@ -92,12 +92,12 @@ THEN
 END
 
 IF
-    Global("start_a_new_game","AR2600",0)
-    Global("start_a_new_game","AR2616",0)
+    Global("start_a_new_game","%bg1_eet_symbol%2600",0)
+    Global("start_a_new_game","%bg1_eet_symbol%2616",0)
 THEN
     RESPONSE #100
-        SetGlobal("start_a_new_game","AR2600",1)
-        SetGlobal("start_a_new_game","AR2616",1)
+        SetGlobal("start_a_new_game","%bg1_eet_symbol%2600",1)
+        SetGlobal("start_a_new_game","%bg1_eet_symbol%2616",1)
         StartTimer(3,30)
         SetGlobalTimer("Tethtoril","GLOBAL",TEN_ROUNDS)
         SetGlobal("BD_Chapter_Save","GLOBAL",-1)
@@ -107,7 +107,7 @@ THEN
 END
 
 IF
-    AreaCheck("AR2616")  // Candlekeep (prologue), exterior
+    AreaCheck("%bg1_eet_symbol%2616")  // Candlekeep (prologue), exterior
     PartyHasItem("BPRNG1")  // Slave Ring
 THEN
     RESPONSE #100
