@@ -2,15 +2,15 @@ IF
     True()
 THEN
     RESPONSE #100
-        CutSceneId("IMOEN")
+        CutSceneId("%bg1_imoen%")
         GivePartyAllEquipment()
         LeaveParty()
-		GiveItemCreate("POTN08","imoen",3,1,0)
-		GiveItemCreate("POTN14","imoen",1,1,0)
-		GiveItemCreate("WAND12","imoen",10,1,0)
-		GiveItemCreate("BOW05","imoen",1,1,0)
-		GiveItemCreate("AROW01","imoen",40,1,0)
-		ActionOverride("imoen",SetItemFlags("WAND12",IDENTIFIED,TRUE))
+		GiveItemCreate("POTN08","%bg1_imoen%",3,1,0)
+		GiveItemCreate("POTN14","%bg1_imoen%",1,1,0)
+		GiveItemCreate("%wand_of_magic_missiles_itm%","%bg1_imoen%",10,1,0)
+		GiveItemCreate("BOW05","%bg1_imoen%",1,1,0)
+		GiveItemCreate("AROW01","%bg1_imoen%",40,1,0)
+		ActionOverride("%bg1_imoen%",SetItemFlags("%wand_of_magic_missiles_itm%",IDENTIFIED,TRUE))
 		SmallWait(1)
-		EscapeAreaMove("AR2700",3140,3681,S)
+		EscapeAreaMove("%bg1_eet_symbol%2700",3140,3681,S)
 END

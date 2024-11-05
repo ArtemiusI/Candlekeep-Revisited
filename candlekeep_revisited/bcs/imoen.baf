@@ -31,12 +31,12 @@ IF
 THEN
   RESPONSE #100
 	SetGlobal("C0CandleReImoenJoins","GLOBAL",4)
-	MoveGlobalObject("imoen",Myself)
-	ActionOverride("imoen",SetDialog("IMOEN2"))
-	ActionOverride("imoen",SetNumTimesTalkedTo(0))
-	ActionOverride("imoen",XEquipItem("BOW05",Myself,SLOT_WEAPON0,EQUIP))
-	ActionOverride("imoen",XEquipItem("AROW01",Myself,SLOT_AMMO0,EQUIP))
-	ActionOverride("imoen",SetItemFlags("WAND12",IDENTIFIED,TRUE))
+	MoveGlobalObject("%bg1_imoen%",Myself)
+	ActionOverride("%bg1_imoen%",SetDialog("%bg1_imoen_dlg%"))
+	ActionOverride("%bg1_imoen%",SetNumTimesTalkedTo(0))
+	ActionOverride("%bg1_imoen%",XEquipItem("BOW05",Myself,SLOT_WEAPON0,EQUIP))
+	ActionOverride("%bg1_imoen%",XEquipItem("AROW01",Myself,SLOT_AMMO0,EQUIP))
+	ActionOverride("%bg1_imoen%",SetItemFlags("WAND12",IDENTIFIED,TRUE))
 	DestroySelf()
 END
 	

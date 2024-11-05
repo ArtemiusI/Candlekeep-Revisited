@@ -21,8 +21,8 @@ END
 CHAIN C0CR#ARK C0CandleReArkanis.1
 ~Anything I need, eh? Well... let me think...~
 == C0CR#ARK ~Well, Deder and I get awfully bored standing guard all day with nothing to do. We like to read to pass the time, but the castle doors are locked right now, so... could you go over to Winthrop's and ask to borrow a couple of books? We're on duty right now, so we can't go wandering off.~
-== IMOEN2 IF ~IsValidForPartyDialog("IMOEN")~ ~You like to read, Arkanis? How come I've never heard you said anything about that before?~
-== C0CR#ARK IF ~IsValidForPartyDialog("IMOEN")~ ~Well... I'm nowhere near as good at it as you, Imoen. But I've been in Candlekeep for a while, so I can't help but take an interest in books after all the years. Makes it worth leaving my clanhold for, having learned so many new things.~
+== IMOEN2 IF ~IsValidForPartyDialog("%bg1_imoen%")~ ~You like to read, Arkanis? How come I've never heard you said anything about that before?~
+== C0CR#ARK IF ~IsValidForPartyDialog("%bg1_imoen%")~ ~Well... I'm nowhere near as good at it as you, Imoen. But I've been in Candlekeep for a while, so I can't help but take an interest in books after all the years. Makes it worth leaving my clanhold for, having learned so many new things.~
 == C0CR#DED ~Whatever you can get us is fine. Make sure they've got lots of pages, though. We'll need them for a while.~
 DO ~AddJournalEntry(%Quest3_Entry_1%,QUEST) SetGlobal("C0CandleReArkanisQuest","GLOBAL",1)~ EXIT
 
@@ -52,7 +52,7 @@ DO ~TakePartyItem("BOOK18") TakePartyItem("BOOK35")~
 == C0CR#ARK ~I see. Well, I'd still like to read yours after I'm done with mine. I'm sorry to trouble you for the legwork, <CHARNAME>. Here, take these arrows with you. It's a dangerous world beyond these walls... keep your eyes out for trouble in the distance and bring it down before it gets close to you, and I'm sure you'll do fine.~
 DO ~AddJournalEntry(%Quest3_Entry_2%,QUEST_DONE) AddexperienceParty(100) GiveItemCreate("arow02",Player1,30,0,0) SetGlobal("C0CandleReArkanisQuest","GLOBAL",2)~ EXIT
 
-CHAIN IF WEIGHT #-1 ~IsGabber("IMOEN")~ THEN C0CR#ARK C0CandleReArkanisImoen
+CHAIN IF WEIGHT #-1 ~IsGabber("%bg1_imoen%")~ THEN C0CR#ARK C0CandleReArkanisImoen
 ~Good to see you, Imoen, my girl. Please stay out of trouble now... it's been a while since I've had to say anything to the watchers, and I hope it'll stay that way.~
 == IMOEN2 ~No worries, pops. Thanks for keeping that... other... thing under wraps for me, by the way.~
 EXIT
@@ -91,7 +91,7 @@ CHAIN IF WEIGHT #-1 ~GlobalGT("Chapter","GLOBAL",0)~ THEN C0CR#ARK C0CandleReArk
 EXIT
 
 INTERJECT ARKANI3 3 C0CandleReArkanisImoenTalk
-== IMOEN2 IF ~IsValidForPartyDialog("IMOEN")~ THEN ~Wait! Arkanis, <CHARNAME>, please don't! <CHARNAME>, I think we can trust them. We need all the help we can get to make it through here... so let's work together, okay?~
+== IMOEN2 IF ~IsValidForPartyDialog("%bg1_imoen%")~ THEN ~Wait! Arkanis, <CHARNAME>, please don't! <CHARNAME>, I think we can trust them. We need all the help we can get to make it through here... so let's work together, okay?~
 END
  ++ ~Fine. If you think they can be trusted, Imoen... they can come with us.~ EXTERN IMOEN2 C0CandleReArkanisImoenTalk.1
  ++ ~I won't hurt them, but I can't trust them. Get out of my sight, the both of you!~ EXTERN ARKANI3 2
@@ -163,7 +163,7 @@ END
 CHAIN C0CR#CAN C0CandleReCanderous.1
 ~I would hate to trouble you on the day of your departure, but there is something, in fact.~
 == C0CR#CAN	~As you can see, the clinic is especially full of patients today. We've almost used up all of our bandages and medicines here. I was informed that we were to receive a new supply of stock this morning, but it has yet to arrive. I have asked the priests of Oghma, and they have told me that the worker in charge of delivery has been late to perform their duties.~
-== IMOEN2 IF ~IsValidForPartyDialog("IMOEN")~ ~What? Don't look at me! I wouldn't steal stuff used for healing people, they're too important. That wouldn't be even slightly funny.~
+== IMOEN2 IF ~IsValidForPartyDialog("%bg1_imoen%")~ ~What? Don't look at me! I wouldn't steal stuff used for healing people, they're too important. That wouldn't be even slightly funny.~
 == C0CR#CAN ~If you could go to the priests' quarters and inquire as to their status, I would be most grateful.~
 DO ~AddJournalEntry(%Quest2_Entry_1%,QUEST) SetGlobal("C0CandleReCanderousQuest","GLOBAL",1)~ EXIT
 
@@ -298,7 +298,7 @@ CHAIN IF WEIGHT #-1 ~Global("Chapter","GLOBAL",0)
 NumTimesTalkedTo(0)
 IsGabber(Player1)~ THEN C0CR#MOR C0CandleReMordaine
 ~Oh, it's you, <CHARNAME>.~
-== IMOEN2 IF ~IsValidForPartyDialog("IMOEN")~ ~Hey, it's Ms. Nose-in-the-books-all-day. With—surprise, surprise—her nose in another book.~
+== IMOEN2 IF ~IsValidForPartyDialog("%bg1_imoen%")~ ~Hey, it's Ms. Nose-in-the-books-all-day. With—surprise, surprise—her nose in another book.~
 == C0CR#MOR ~Still around? I thought you'd have been gone from here by now.~
 END
   ++ ~Hello, Mordaine.~ + C0CandleReMordaine.1
@@ -338,8 +338,8 @@ END
   
 CHAIN C0CR#MOR C0CandleReMordaineQuestComplete.1
 ~Love letter? What are you talking about?~
-== IMOEN2 IF ~IsValidForPartyDialog("IMOEN")~ ~Oh, c'mon, you don't need to deny it. I promise we won't spill your secret... on purpose, heh.~
-== C0CR#MOR IF ~IsValidForPartyDialog("IMOEN")~ ~What's gotten into you two? You're both saying such strange things.~
+== IMOEN2 IF ~IsValidForPartyDialog("%bg1_imoen%")~ ~Oh, c'mon, you don't need to deny it. I promise we won't spill your secret... on purpose, heh.~
+== C0CR#MOR IF ~IsValidForPartyDialog("%bg1_imoen%")~ ~What's gotten into you two? You're both saying such strange things.~
 EXTERN C0CR#MOR C0CandleReMordaineQuestComplete.2
 
 CHAIN C0CR#MOR C0CandleReMordaineQuestComplete.2
@@ -349,7 +349,7 @@ CHAIN C0CR#MOR C0CandleReMordaineQuestComplete.2
 DO ~AddJournalEntry(%Quest1_Entry_2%,QUEST_DONE) AddexperienceParty(100) GiveItemCreate("potn36",Player1,1,0,0)~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("Chapter","GLOBAL",0)
-IsGabber("IMOEN")~ THEN C0CR#MOR C0CandleReMordaineImoen
+IsGabber("%bg1_imoen%")~ THEN C0CR#MOR C0CandleReMordaineImoen
 ~Imoen? Get you gone, child. I've got all these books to read, I don't need to spend attention watching my purse too with you around.~
 == IMOEN2 ~Well, that's rude! I wasn't gonna try anything before, but you'd better watch out now!~
 EXIT
@@ -417,7 +417,7 @@ IsGabber(Player1)~ THEN C0CR#OSP C0CandleReOsprey2
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("Chapter","GLOBAL",0)
-IsGabber("IMOEN")~ THEN C0CR#OSP C0CandleReOspreyImoen
+IsGabber("%bg1_imoen%")~ THEN C0CR#OSP C0CandleReOspreyImoen
 ~Hello, Imoen! I'm glad to see you here to pay your respects to the gods of knowledge. Perhaps you have the time to pray with me for a while? It will only take an hour... perhaps two, if you're inclined...~
 == IMOEN2 ~Er, listen, Osprey... thanks, but I'm busy right now. I've got, um... chores. Yeah, chores! Gotta get to them right now!~
 EXIT
@@ -474,7 +474,7 @@ CHAIN IF WEIGHT #-1 ~GlobalGT("Chapter","GLOBAL",0)
 Global("C0CandleRePalomaC6","GLOBAL",0)~ THEN C0CR#GFM C0CandleRePalomaC6
 ~Zzz... mmm... who is it? Do you have berries and honey water? I already told you... I don't want to see anyone... unless they have honey water...~
 DO ~SetGlobal("C0CandleRePalomaC6","GLOBAL",1)~
-== IMOEN2 IF ~InParty("IMOEN")~ THEN ~Oh no... it's Paloma, Gorion's familiar. Look at how weak she is, <CHARNAME>.~
+== IMOEN2 IF ~InParty("%bg1_imoen%")~ THEN ~Oh no... it's Paloma, Gorion's familiar. Look at how weak she is, <CHARNAME>.~
 == C0CR#GFM ~*sniff* No, wait... I recognize this scent... <CHARNAME>? Is that you? Oh, I must be dreaming... yes, it must be a dream... I've been so tired... ever since Gorion...~
 END
   ++ ~Oh, Paloma...~ EXTERN C0CR#GFM C0CandleRePalomaC6.1
@@ -484,7 +484,7 @@ END
 CHAIN C0CR#GFM C0CandleRePalomaC6.1
 ~<CHARNAME>, since you're here, even though I know you're not... let me know... do you remember what happened? Did that day really happen? Or was it a nightmare? I... I remember, I was foraging for fruit... then Gorion called me, told me we needed to go... so I made myself invisible and went scouting...~
 == C0CR#GFM ~Then that horrible, horrible man, in the black and spiky armor... he scared me so much, I had to run away and hide... it was so shameful, Gorion told me to keep an eye out, so I did, both of them... and then... and then—~
-== IMOEN2 IF ~InParty("IMOEN")~ THEN ~...~
+== IMOEN2 IF ~InParty("%bg1_imoen%")~ THEN ~...~
 == C0CR#GFM ~I... I don't remember. I just remember hurting... and then everything went black. When I woke up again... I was tucked up here... Tethtoril came to see me, and I told him I was so, so tired, I didn't want to go out and play anymore.~
 == C0CR#GFM ~He just nodded and gave me a pat on the head, and asked me if I wanted anything to eat... and then I've been resting here ever since... it's so strange. I sleep and I sleep, but I'm never any less tired... I just want to sleep more...~
 == C0CR#GFM ~Mmm... I wonder, if I sleep again, will I even wake up...? I don't know... Gorion would know. Where did he go, <CHARNAME>? When will I see him again?~

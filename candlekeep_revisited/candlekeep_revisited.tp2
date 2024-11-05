@@ -14,10 +14,16 @@ ALWAYS
   END
   ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
   OUTER_SPRINT "bg1_eet_symbol" AR
+  OUTER_SPRINT "bg1_imoen" imoen
+  OUTER_SPRINT "bg1_imoen_dlg" imoen2
+  OUTER_SPRINT "wand_of_magic_missiles_itm" WAND12
   END
 
   ACTION_IF GAME_IS ~EET~ THEN BEGIN
   OUTER_SPRINT "bg1_eet_symbol" BG
+  OUTER_SPRINT "bg1_imoen" imoen2
+  OUTER_SPRINT "bg1_imoen_dlg" imoen2j
+  OUTER_SPRINT "wand_of_magic_missiles_itm" WAND12_
   END
   
   OUTER_FOR (i=1; i<=10; i=i+1) BEGIN

@@ -115,7 +115,14 @@ COPY_EXISTING ~imoen1.cre~ ~override/imoen.cre~
 		WRITE_ASCII DEATHVAR ~IMOEN~
 		REMOVE_CRE_ITEMS
 
+ACTION_IF !GAME_IS ~EET~ THEN BEGIN
 EXTEND_TOP ~imoen.bcs~ ~%MOD_FOLDER%/bcs/imoen.baf~ EVAL
+END
+
+ACTION_IF GAME_IS ~EET~ THEN BEGIN
+EXTEND_TOP ~imoen_.bcs~ ~%MOD_FOLDER%/bcs/imoen.baf~ EVAL
+END
+
 EXTEND_TOP ~ch1cut01.bcs~ ~%MOD_FOLDER%/bcs/ch1cut01.baf~ EVAL
 
 EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600.baf~ EVAL
@@ -165,7 +172,7 @@ COMPILE ~%MOD_FOLDER%/bcs/c0cr#014.baf~
 COMPILE ~%MOD_FOLDER%/bcs/c0cr#015.baf~
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/dialog.d~
-COMPILE ~%MOD_FOLDER%/dlg/imoen.d~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/imoen.d~ 
 
 COPY_EXISTING ~SCRL2L.ITM~ ~OVERRIDE/C0CR#LET.ITM~
 SAY NAME2 ~Letter from Mordaine~
