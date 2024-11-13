@@ -261,8 +261,32 @@ EXIT
 // Deder
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-CHAIN IF WEIGHT #-1 ~Global("Chapter","GLOBAL",0)~ THEN C0CR#DED C0CandleReDeder
+CHAIN IF WEIGHT #-1 ~Global("Chapter","GLOBAL",0) !PartyHasItem("MISC41")~ THEN C0CR#DED C0CandleReDeder
 ~Hey there, <GABBER>.~
+EXIT
+
+CHAIN IF WEIGHT #-1 ~Global("Chapter","GLOBAL",0) PartyHasItem("MISC41")~ THEN C0CR#DED C0CandleReDeder.1
+~Is that a star sapphire, <CHARNAME>? Never thought someone'd find one here of all places. I know better than to ask where you found it.~
+= ~That'll fetch you a good price once you're out there. If you're interested, though, I've got something here that you might like to trade it for.~
+END
+++ ~What is it?~ + C0CandleReDeder.1-1
+++ ~Maybe some other time.~ + C0CandleReDeder.1-2
+
+CHAIN C0CR#DED C0CandleReDeder.1-1
+~My ma's old dagger. Now wait, I know that sounds like a bad deal, but hear me out. It's nothing fancy, but it cuts faster than any other of its kind you'll ever see. My mother, Isala, used this to survive the hard life in Sembia all those years ago.~
+= ~It's probably not worth as much to most as that gem you've got, but it was made in the East so it'll survive this iron crisis, and that might make it worth a good bit even when you stop gettin' use out of it. I wouldn't offer it to anyone else, given its sentimental value, but I'd hate to let a friend go out into the dangerous world without giving them some more help if I can.~
+= ~Anyways, it's up to you whether you want to make the deal or not. I'm sure you know best.~
+END
+++ ~I'll take the dagger.~ DO ~TakePartyItem("MISC41") DestroyItem("MISC41") GiveItemCreate("C0CR#DAG",Player1,1,0,0)~ + C0CandleReDeder.1-3
+++ ~I think I'll hold onto the gem.~ + C0CandleReDeder.1-2
+
+CHAIN C0CR#DED C0CandleReDeder.1-2
+~Your choice. Offer's still open while you're around.~
+EXIT
+
+CHAIN C0CR#DED C0CandleReDeder.1-3
+~Here. Take care of it... I'm sure my old ma down in Uroglan's realm will be happy if it shanks a few more bandits instead of wasting away here.~
+= ~Good luck, <CHARNAME>. When you come back, we'll talk all about your stories over a few drinks at Winthrop's.~
 EXIT
 
 // Deder - C6
@@ -286,11 +310,29 @@ CHAIN C0CR#DED C0CandleReDederC6.1
 == C0CR#DED ~You'd best steer clear of them. By the Black Hound, I've had half a mind to poison them myself several times just listening to them talk. I can't betray the trust of the Watchers though... hopefully those scum fall prey to some "accidents" on their way back to Sembia, and the world will be better off for it.~
 == C0CR#DED ~That's not what's really concerning me, though. Something is wrong around these parts, and I just don't know what. I know every person who's spent longer than a day in this castle by face and name, and yet sometimes I blink and I feel like the person I'm looking at is someone else entirely. Maybe I'm getting old, but I trust my eyes. And that means it's definitely the people I can't trust.~
 == C0CR#DED ~See you later, <CHARNAME>. I'm going to take another walk around and see if I can't figure out what's making the hairs on my feet stand on end all day.~
-DO ~EscapeArea()~ EXIT
+END
+IF ~!PartyHasItem("C0CR#DAG")~ DO ~EscapeArea()~ EXIT
++ ~PartyHasItem("C0CR#DAG")~ + ~Wait, Deder. I've still got your mother's dagger. You can have it back.~ DO ~TakePartyItem("C0CR#DED") DestroyItem("C0CR#DED") AddExperienceParty(2000)~ + C0CandleReDederC6.3
++ ~PartyHasItem("C0CR#DAG")~ + ~Goodbye.~ DO ~EscapeArea()~ EXIT
 
 CHAIN C0CR#DED C0CandleReDederC6.2
 ~Oh, no. All's fine and dandy. That's what everybody would prefer to believe until this whole thing blows over, at least. Me, my right eye hasn't been able to stop twitching for days now and I can't quite figure out why.~
 EXTERN C0CR#DED C0CandleReDederC6.1
+
+CHAIN C0CR#DED C0CandleReDederC6.3
+~That old thing's still with you, eh? I wasn't sure I'd see it again, but I'm happy to. Was it of help to you out there?~
+END
+++ ~It was.~ + C0CandleReDederC6.4
+++ ~For a while, definitely.~ + C0CandleReDederC6.4
+++ ~Not really. I just thought it'd be wrong to sell it.~ + C0CandleReDederC6.5
+
+CHAIN C0CR#DED C0CandleReDederC6.4
+~I'm glad. I'm sure my ma will be happy to know this memento of her old days was good for something again for a while after all.~
+EXTERN C0CR#DED C0CandleReDederC6.5
+
+CHAIN C0CR#DED C0CandleReDederC6.5
+~Well, in any case, thank you for bringing it back to me, <CHARNAME>. I'll be going now, but watch yourself while you're here. Candlekeep's not all that you remember it to be.~
+EXIT
 
 // Mordaine
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

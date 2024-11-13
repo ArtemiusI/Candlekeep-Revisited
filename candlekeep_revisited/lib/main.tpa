@@ -200,6 +200,25 @@ Equipped abilities:
 
 Weight: 0~
 
+COPY ~%MOD_FOLDER%/ITM/C0CR#DAG.ITM~ ~OVERRIDE~
+SAY NAME1 ~Dagger~
+SAY NAME2 ~Isala's Quickblade~
+SAY DESC ~This dagger once belonged to Deder's mother, Isala. Though it lacks any visible enchantment, its balance and weight are above that of any blade you've seen in the past. According to Deder, the forging of blades such as these originate from somewhere in the distant East, though various liberties have been taken with its design over time.
+
+STATISTICS:
+
+Combat abilities:
+– 2 attacks per round
+
+Damage: 1d4 (piercing)
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+
 COPY_EXISTING ~SW2H01.ITM~ ~OVERRIDE/SW2H01Q.ITM~
 LPF DELETE_ITEM_EFFECT INT_VAR match_opcode = 146 STR_VAR match_resource = SW2H01 END
 SAY NAME2 ~Quality Two-handed Sword~
