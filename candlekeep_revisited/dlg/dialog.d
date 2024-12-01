@@ -313,8 +313,8 @@ CHAIN C0CR#DED C0CandleReDederC6.1
 == C0CR#DED ~See you later, <CHARNAME>. I'm going to take another walk around and see if I can't figure out what's making the hairs on my feet stand on end all day.~
 END
 + ~PartyHasItem("C0CR#DAG")~ + ~Wait, Deder. I've still got your mother's dagger. You can have it back.~ DO ~TakePartyItem("C0CR#DED") DestroyItem("C0CR#DED") AddExperienceParty(2000)~ + C0CandleReDederC6.3
-+ ~PartyHasItem("C0CR#DAG")~ + ~Goodbye.~ + DO ~EscapeArea()~ EXIT
-IF ~!PartyHasItem("C0CR#DAG")~ + DO ~EscapeArea()~ EXIT
++ ~PartyHasItem("C0CR#DAG")~ + ~Goodbye.~ DO ~EscapeArea()~ EXIT
+IF ~!PartyHasItem("C0CR#DAG")~ DO ~EscapeArea()~ EXIT
 
 CHAIN C0CR#DED C0CandleReDederC6.2
 ~Oh, no. All's fine and dandy. That's what everybody would prefer to believe until this whole thing blows over, at least. Me, my right eye hasn't been able to stop twitching for days now and I can't quite figure out why.~
