@@ -2,7 +2,7 @@ COPY ~%MOD_FOLDER%/bam~ ~override~
 
 COPY_EXISTING ~arkani.cre~ ~override~
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~DWARVEN_DEFENDER~))
-  SAY BIO ~ARKANIS is a Watcher of Candlekeep, whom you know to have served dutifully for as long as you can remember. Defying the common perception of dwarves being sullen and difficult to befriend, you have always known Arkanis to be a gentle, fatherly sort who enjoys telling tales, taking care of children, and reading books together with his close companion Deder.~
+  SAY BIO @473
 
 COPY_EXISTING ~arkani3.cre~ ~override~
   WRITE_BYTE 0x24 60 // current hp
@@ -26,7 +26,7 @@ COPY_EXISTING ~arkani3.cre~ ~override~
 
 COPY_EXISTING ~cander.cre~ ~override~
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~GODHELM~))
-  SAY BIO ~CANDEROUS is a cleric of Helm, the Watcher. He is not from the Sword Coast, but has called Candlekeep home for at least a few years. Though trained in combat, he has lived a peaceful life within the keep's walls as a healer, tending to the various minor ailments of the residents.~
+  SAY BIO @474
 
 COPY_EXISTING ~cander.cre~ ~override/C0CR#CA3.cre~
   WRITE_BYTE 0x24 48 // current hp
@@ -61,7 +61,7 @@ COPY_EXISTING ~cander.cre~ ~override/C0CR#CA3.cre~
   ADD_MEMORIZED_SPELL ~SPPR315~ #2 ~PRIEST~ (1)
 
 COPY_EXISTING ~deder.cre~ ~override~
-  SAY BIO ~You know little of DEDER's past outside of the fact that he was born in the merchant state of Sembia. Though he serves as a Watcher, you know him to be adept in the rogue's trade, having taught Imoen the skills of thievery during your childhood. He is a person of few words, yet has a close friendship with his fellow Watcher Arkanis.~
+  SAY BIO @475
   ADD_KNOWN_SPELL ~SPCL423~ #0 ~innate~
   ADD_MEMORIZED_SPELL ~SPCL423~ #0 ~innate~ (1)
 
@@ -88,7 +88,7 @@ COPY_EXISTING ~deder3.cre~ ~override~
 
 COPY_EXISTING ~mordai.cre~ ~override~
   WRITE_BYTE 0x27b 49 // alignment
-  SAY BIO ~MORDAINE is a young elven mage who you recall entering Candlekeep as a child with her father and has lived within its walls ever since. Though you have never seen her father after the day you met her, you know Mordaine has never questioned being left alone in the castle, nor does she spare time to tell you her father's reasons for leaving her, as she oft spends too many long hours delving into the library's innumerable tomes of knowledge.~
+  SAY BIO @476
 
 COPY_EXISTING ~osprey.cre~ ~override~
 		WRITE_BYTE 0x238 14 // strength
@@ -97,7 +97,7 @@ COPY_EXISTING ~osprey.cre~ ~override~
 		WRITE_BYTE 0x23a 17 // intelligence
 		WRITE_BYTE 0x23b 17 // wisdom
 		WRITE_BYTE 0x23e 14  // charisma
-  SAY BIO ~OSPREY is a trainee scribe and a childhood friend of yourself and Imoen. A devout—perhaps exceedingly so—worshipper of Deneir, god of scholars and knowledge, nobody could be less out of place in a place such as Candlekeep as Osprey. Capable in both arcane and divine magic, Osprey is an eager student and loves knowledge of all sorts.~
+  SAY BIO @477
 
 COPY_EXISTING ~tethto.cre~ ~override~
 		WRITE_ASCII DEATHVAR ~TETHTORIL~
@@ -149,19 +149,19 @@ EXTEND_TOP ~tethtorl.bcs~ ~%MOD_FOLDER%/bcs/tethtorl.baf~
 
 // Journal
 
-ADD_JOURNAL TITLE (~A Mystery Letter~) @1 @2 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+ADD_JOURNAL TITLE (@10000) @1 @2 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
 LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
 OUTER_SET %Quest1_Entry_1% = RESOLVE_STR_REF (@1)
 OUTER_SET %Quest1_Entry_2% = RESOLVE_STR_REF (@2)
 LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
 
-ADD_JOURNAL TITLE (~Missing Medical Supplies~) @3 @4 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+ADD_JOURNAL TITLE (@20000) @3 @4 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
 LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
 OUTER_SET %Quest2_Entry_1% = RESOLVE_STR_REF (@3)
 OUTER_SET %Quest2_Entry_2% = RESOLVE_STR_REF (@4)
 LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~
 
-ADD_JOURNAL TITLE (~Books for the Watchers~) @5 @6 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
+ADD_JOURNAL TITLE (@30000) @5 @6 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
 LOAD_TRA ~%MOD_FOLDER%/tra/%LANGUAGE%/journal.tra~
 OUTER_SET %Quest3_Entry_1% = RESOLVE_STR_REF (@5)
 OUTER_SET %Quest3_Entry_2% = RESOLVE_STR_REF (@6)
@@ -175,57 +175,31 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/dialog.d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/imoen.d~ 
 
 COPY_EXISTING ~SCRL2L.ITM~ ~OVERRIDE/C0CR#LET.ITM~
-SAY NAME2 ~Letter from Mordaine~
-SAY DESC ~This tightly-sealed letter was given to you by Mordaine. You were asked to deliver it to the reader who does chores in the clinic.~
+SAY NAME2 @478
+SAY DESC @479
 
 COPY ~%MOD_FOLDER%/ITM/C0CR#BAG.ITM~ ~OVERRIDE~
-SAY NAME1 ~Bag~
-SAY NAME2 ~Bag of Medical Supplies~
-SAY DESC ~This heavy sack is filled with various items for medical purposes, including bandages, medicinal herbs and concoctions, and the like.
-
-STATISTICS:
-
-Weight: 10~
+SAY NAME1 @480
+SAY NAME2 @481
+SAY DESC @482
 
 COPY ~%MOD_FOLDER%/ITM/C0CR#RIN.ITM~ ~OVERRIDE~
-SAY NAME1 ~Silver Ring~
-SAY NAME2 ~Ring of Insight~
-SAY DESC ~Ring of Insight
-Though seemingly just an unremarkable silver band, this ring has a slight magical enchantment which expands the wearer's capacity for storing old knowledge, making it useful for aiding in the memory of the aging scribes and lorekeepers of Candlekeep who wist through hundreds of pages each day. Though its usefulness in combat is nonexistent, it can aid in the identification of rare and magical objects.
-
-STATISTICS:
-
-Equipped abilities:
-– Lore: +10
-
-Weight: 0~
+SAY NAME1 @483
+SAY NAME2 @484
+SAY DESC @485
 
 COPY ~%MOD_FOLDER%/ITM/C0CR#DAG.ITM~ ~OVERRIDE~
-SAY NAME1 ~Dagger~
-SAY NAME2 ~Isala's Quickblade~
-SAY DESC ~This dagger once belonged to Deder's mother, Isala. Though it lacks any visible enchantment, its balance and weight are above that of any blade you've seen in the past. According to Deder, the forging of blades such as these originate from somewhere in the distant East, though various liberties have been taken with its design over time.
-
-STATISTICS:
-
-Combat abilities:
-– 2 attacks per round
-
-Damage: 1d4 (piercing)
-Speed Factor: 0
-Proficiency Type: Dagger
-Type: One-handed
-Requires:
- 3 Strength
-
-Weight: 1~
+SAY NAME1 @600
+SAY NAME2 @601
+SAY DESC @602
 
 COPY_EXISTING ~SW2H01.ITM~ ~OVERRIDE/SW2H01Q.ITM~
 LPF DELETE_ITEM_EFFECT INT_VAR match_opcode = 146 STR_VAR match_resource = SW2H01 END
-SAY NAME2 ~Quality Two-handed Sword~
+SAY NAME2 @486
 
 COPY_EXISTING ~SW1H20.ITM~ ~OVERRIDE/SW2H20Q.ITM~
 LPF DELETE_ITEM_EFFECT INT_VAR match_opcode = 146 STR_VAR match_resource = SW2H20 END
-SAY NAME2 ~Quality Scimitar~
+SAY NAME2 @487
 
 COPY_EXISTING ~SPWI050.SPL~ ~OVERRIDE/C0CR#VI1.SPL~
 SAY NAME1 #-1

@@ -38,19 +38,26 @@ LANGUAGE
   ~English~ 
   ~english~
   ~%MOD_FOLDER%/tra/english/setup.tra~
+  ~%MOD_FOLDER%/tra/english/journal.tra~
+  
+LANGUAGE 
+  ~Simplified Chinese (By Yoshimo0417)~ 
+  ~schinese~
+  ~%MOD_FOLDER%/tra/schinese/setup.tra~
+  ~%MOD_FOLDER%/tra/schinese/journal.tra~
 
-BEGIN ~Candlekeep Revisited: BG1 Prologue Expansion~ DESIGNATED 0
+BEGIN @0 DESIGNATED 0
   REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   
 INCLUDE ~%MOD_FOLDER%/lib/main.tpa~
 
-BEGIN ~Candlekeep Revisited: BG1 Expanded Starting Sequence~ DESIGNATED 1
+BEGIN @10 DESIGNATED 1
   REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   REQUIRE_PREDICATE (MOD_IS_INSTALLED ~candlekeep_revisited.tp2~ ~0~) ~The main component must be installed.~
   
 INCLUDE ~%MOD_FOLDER%/lib/intro.tpa~
 
-BEGIN ~Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey~ DESIGNATED 2
+BEGIN @11 DESIGNATED 2
   REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   
 INCLUDE ~%MOD_FOLDER%/lib/portraits.tpa~

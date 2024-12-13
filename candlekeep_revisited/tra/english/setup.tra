@@ -1,0 +1,588 @@
+@0 = ~Candlekeep Revisited: BG1 Prologue Expansion~
+@10 = ~Candlekeep Revisited: BG1 Expanded Starting Sequence~
+@11 = ~Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey~
+
+//gorion.d
+@12 = ~There you are, my child.~ [GORIN01]
+@13 = ~And take these coins. We will have a chance to buy supplies on the road, but it is best to be prepared. Winthrop keeps a steady stock of equipment, and you will find most of what you need with him.~
+@14 = ~Gather whatever you feel is necessary and meet me at the front of the castle. I will be waiting for you there, my child.~
+@15 = ~Your skills in the musical arts have improved greatly in the recent months. Even I, as untrained in such ways as I am, could not help but be lost in your performance.~
+@16 = ~I only regret that you will have little chance to test them on the road. Were things different, I would like to see you become a proper ministrel, and make your name known in the world.~
+@17 = ~I'm sure I will have my chance one day.~
+@18 = ~Must we go, father? I still have much to learn from the library, both in the arts and otherwise.~
+@19 = ~There will be more opportunity outside of Candlekeep than within. When do we depart, father?~
+@20 = ~You will, I promise you. But for now, I hope that you will consider nothing but your safety. There will be a time for peace, but for now, we must be ready for our journey, which will be a perilous one.~
+@21 = ~It is necessary. I am sorry it cannot be otherwise. I, too, find comfort in the peace and knowledge gifted to us in Candlekeep. But our peaceful lives cannot last, even if we were to hide within these walls, even for another month. For your sake, I must take you to where true safety can be found.~
+@22 = ~I have prepared everything for our journey, but there is still some time for you to say your farewells and set your affairs in order.~
+@23 = ~That, of course, includes those of your admirers. *sigh* One of them〞I will not mention which〞left me this token of what I presume to be affection, to be given to you. They believed you would "know how to use it in the most appropriate, or possibly inappropriate way". Where they even find such things, I do not know...~
+@24 = ~I do hope you will not attract this much attention on our journey. For safety's sake, of course.~
+@25 = ~I do not intend for this kind of attention, father, I swear.~
+@26 = ~Can you say that you yourself were not the same in your youth?~
+@27 = ~I understand, father.~
+@28 = ~I know, child. I do not mean to accuse you. I simply wish you to know that not all who bestow attention to you will do it for benevolent reasons. I hope you will understand.~
+@29 = ~Nonsense! Where did you hear such rumors... *ahem*. What I mean to say, child, is that such things may naturally come of youth, but you must always keep aware of people's intentions along with their attention.~
+@30 = ~As I said, you should seek out your friends to bid them farewell, as I know you are popular around the keep's social circles. Do not take too long, however. Time is of the essence.~
+@31 = ~Forgive me for interrupting your prayers. I understand it is no small misstep to disrupt a person of faith's communion with their deity.~
+@32 = ~Would you care to stand with me for a while, father, and say your own prayers to Mystra?~
+@33 = ~I am close to finished regardless. Is it time to go?~
+@34 = ~This is just a formality. I was looking for an excuse to do something else.~
+@35 = ~Were this any other day, I would perhaps follow your example, <CHARNAME>. But not today.~
+@36 = ~I truly hope you find comfort in your faith, for you will need it in the trials that yet await you. Our journey from Candlekeep awaits, and I trust you are prepared, both physically and spiritually.~
+@37 = ~The priests of Oghma have always supported your path in dedicating your life to faith. Now that you are soon to leave, they have prepared a gift to you which I have here. Take them, child, though I hope you will not need to use them.~
+@38 = ~We must leave soon, but you should have some time to seek your friends and say your farewells.~
+@39 = ~That will not do, child. I may not be a man of the cloth, but I know that though the gentle gods ask nothing unreasonable of their faithful, devotion must still be true, not performative.~
+@40 = ~I see you are deep into your magical study. It is a good thing... would that we had more time, I would like to see your training through to the end.~
+@41 = ~Still, your talent is clear, and even without the assistance of Candlekeep's tutors, I am certain your skills with the Art will flourish.~
+@42 = ~I've mastered the basics, father, but there is still much I do not know. I don't believe I'm fully prepared for my skills to be tested.~
+@43 = ~One day, I hope to be as skilled a mage as you.~
+@44 = ~Is it time to go, father?~
+@45 = ~Few are ever truly prepared fully for what is in store for them, <CHARNAME>. Knowing what you can is enough. Whatever you still feel you lack, I will teach you. I promise that.~
+@46 = ~Hah. My skill cannot be called extraordinary when put alongside those truly great that I have known, <CHARNAME>. Perhaps you may even see that for yourself one day. But I have years of experience, years that I hope you will also gain.~
+@47 = ~We should be considering our journey, child, but I cannot deny myself being distracted by the nostalgic feeling of watching you practice. Each mage remembers the day they mastered their first spell. Regardless of how simple it seemed in hindsight, ~
+@48 = ~What spell was your first, father?~
+@49 = ~Mine? Well, I suppose I could simply show you. I never sought a particular school of study, as I sought the knowledge of every aspect of the Weave. Yet, I remember, clearer than the others, my attempts to master the school of Conjuration.~
+@50 = ~Perhaps it was the arrogant youth in myself, that which I have strived to lead you away from, that sought to bend other beings to my will. But such is not the way, as I will show you.~
+@51 = ~The art of conjuration requires focus, and a measure of respect for that which you call forth. Truly understanding the being you are seeking is the key to a successful summoning. Watch...~
+@52 = ~Wh〞Gorion! Aw, and there I was watching those two cats yowling and scratching at each other, such funny things they are... oh, hello, <CHARNAME>. Have I been called for playtime, or babysitting again?~
+@53 = ~*sigh* Paloma...~
+@54 = ~Just a little joke, master. I can guess you've summoned me as part of a lesson again. But I was having so much fun on my own! I want an apple for compensation. A nice, red, juicy one.~
+@55 = ~Paloma, this is hardly the time.~
+@56 = ~Apple!~
+@57 = ~What am I going to do with you...?~
+@58 = ~Come on, father. Just one apple for her wouldn't hurt.~
+@59 = ~I want an apple too. Magic practice builds up a hunger.~
+@60 = ~Paloma, come on now. Be reasonable.~
+@61 = ~It is hard to decide who is truly the child here. *sigh* I suppose I have little choice... come then, Paloma, you silly creature. As for you, <CHARNAME>, I believe you should be able to master the spell after my demonstration. Perhaps your bonded familiar will be less... difficult than this one here.~
+@62 = ~Your connection to the Art is one of instinct rather than practice, but there is still much to be learned through conventional learning even for one with your gifts. Take this, child, and study it well. A mage can always trust in their closest companion bonded through the Weave.~
+@63 = ~Now, for the most important matter, you should consider what you have left to do before we depart. Our journey will be a long one, and you owe it to your friends a proper farewell.~
+@64 = ~Maybe just a quick snack? It wouldn't take too long.~
+@65 = ~Sorry, father. I tried.~
+@66 = ~Okay, okay, that's enough for now. Put down the staff for a bit and take a break, kid. Nice work.~
+@67 = ~We've gone over all of the basic drills, plus a few more moves you wouldn't learn from the Watchers. I'd say you're more well-trained than any regular bandit on the Sword Coast. And, with Gorion with you... I don't think you'll be in much danger on the road.~
+@68 = ~Thank you for the practice, Jondalar. I know it was sudden.~
+@69 = ~I bet I could knock you into the dirt with this stick too, at this point.~
+@70 = ~No, no, it's no trouble at all, <CHARNAME>. Gorion asked this of me, after all, and I wouldn't ever say no to that. And you've got plenty of talent, enough that you'll probably be way ahead of me in no time.~
+@71 = ~Haha! Big talk, kid. If we had some more time I'd take you up on that challenge, but we're both on a schedule. I've still got all those other younguns to beat into shape, and you've got that journey ahead of you.~
+@72 = ~But, <CHARNAME>. Is this really necessary? I mean, how could anywhere out there be safer than right here? I'm not sure it's better for you to go, and I know all your friends would agree.~
+@73 = ~I don't like it either. But I trust what Gorion says.~
+@74 = ~It's time for me to go out and see the world anyway. Sooner better than later, right?~
+@75 = ~Yeah, no arguing there. Everyone here respects Gorion's word. Well, perhaps that old goat Ulraunt, but you don't need me to tell you that.~
+@76 = ~You're right, and I get how you feel. Anyone would probably get the urge to head out, after living inside the walls of this place all their lives.~
+@77 = ~It's just... you know, all of us from the monks to the Watchers, old Winthrop, Tethtoril and the lot... we've all watched you grow up. And now you're leaving, and we don't know where you're going and when you'll come back.~
+@78 = ~And the world out there... it's all messed up, we've all heard the stories even here. People dying left and right, armor and weapons failing them at the worst of times. It's not all like the stories in the books and songs.~
+@79 = ~Here, kid. I was planning on giving this to you later in the day, as a sort of farewell present, but I'd rather you take it off my hands now so I can think about it less. This iron crisis, it's causing all sorts of chaos in the Sword Coast right now.~
+@80 = ~Most people'll empty their purses just for a reliable weapon that'll stay in one piece. I, uh, called in a few favors from Arkanis and the other smiths to gather some old pieces of metal and reforge them into this. It doesn't look much different from others like it, but I know it's the sort you're comfortable with, and I can promise its iron is pure.~
+@81 = ~Anyways, you should get going. Gorion told me to send him over to you when we were finished with our drills. I've probably kept you longer than I should've as is... oh, there's the old man right there.~
+@82 = ~Hey there, <CHARNAME>! I see you haven't left yet. Gorion asked me one last favor just after we parted ways. Seems like he wants use to have one last spar before you go heading off, so you know what it's like to get in a real fight.~
+@83 = ~Good <DAYNIGHT>, Gorion, sir. <CHARNAME> and I have just finished our special drills, right as you arrived.~
+@84 = ~I can see that. Thank you, Jondalar, and well done, <CHARNAME>. I trust that you have treated your training most seriously?~
+@85 = ~Of course. I'm sure I'll need my skills on our journey.~
+@86 = ~It's not as though I have a choice.~
+@87 = ~Indeed, you will, though I wish you did not, child.~
+@88 = ~No, you do not, child, though it is not for my lectures.~
+@89 = ~I would prefer that you led a life away from death, but it is one we cannot avoid, I fear.~
+@90 = ~I'm certain <CHARNAME>'s skills will keep <PRO_HIMHER> safe, even amidst the dangers of the Sword Coast, sir. I can assure you, <PRO_HESHE> is talented in combat.~
+@91 = ~I do not doubt it, but death can take many forms in the dealing. But that is a matter for another time. You must prepare yourself, child, for we are soon to depart. You have some time to say your farewells, but do not take too long.~
+@92 = ~There you go, <CHARNAME>. Lockpicks, pliers, rope, file... all standard tools of the trade. You already know how to use them.~
+@93 = ~Need anything else that isn't there, <CHARNAME>, just give me a holler. We can't have you going out into the world without covering all of your bases, you know.~
+@94 = ~Thanks for all your help, Deder.~
+@95 = ~Got any poisons you can share?~
+@96 = ~I should get going now.~
+@97 = ~No trouble at all, kid. As long as it helps you survive out in the world. It's a rougher life in the Sword Coast than you might expect. There aren't any rules other than surviving outside of a city's walls. Sometimes, even in it.~
+@98 = ~"Poisons"? *whisper* Listen, kid. It's not that I don't trust you. But the Watchers aren't going to like it if they hear I'm giving you something like poison.~
+@99 = ~That particular skill, it's something I needed to survive during the old days. You wouldn't understand until you've spent a few years out there. I'd still resort to it if necessary, but it's not something I'm proud of knowing, trust me.~
+@100 = ~Besides... I'm sure you know how to concoct a lethal poison even without any more tips. Only Urogalan knows how you've managed to weasel so much knowledge out of me over the years. Plenty of drinks would probably have done it.~
+@101 = ~I know you're a clever sort, <CHARNAME>, just like Imoen. Hells, if you weren't, I wouldn't have taught everything about the rogue's trade to the both of you. Still, I feel like I should warn you anyway. People outside of Candlekeep aren't as kind as they are here.~
+@102 = ~You'll meet all sorts. Some are good, some bad and you just won't know it right away. Keep your guard up and never be afraid to play dirty, and if you're selling to a Sembian, don't ever trust them to count their coins honestly.~
+@103 = ~Anyways, I think I should slip back to my post while I still have time. Arkanis isn't going to like it if I leave him waiting, and much as I respect Gorion, I know he doesn't approve of every trick I've taught you, so it's best if he doesn't see us together...~
+@104 = ~Damn, too late.~
+@105 = ~Gorion... greetings, sir.~
+@106 = ~Master Deder. I would ask what it is you and <CHARNAME> have been exchanging here, but I think I would prefer not to know.~
+@107 = ~Sir, I just...~
+@108 = ~No, do not explain. I know some things of your past, and it is for that reason I would have preferred it had you not taught <CHARNAME> your ways, but I also understand your friendship with <PRO_HIMHER> is deep enough that you value <PRO_HISHER> safety.~
+@109 = ~I can appreciate your efforts in ensuring he is prepared for the journey ahead, regardless of your methods.~
+@110 = ~Thank you, sir. <CHARNAME>... after thinking about it more, I think you should take these as well.~
+@111 = ~If Gorion is vouching for me like this, your path must be even more dangerous than I thought. These will keep you safe, at least for a time, so use them wisely. If there's anything else...~
+@112 = ~That will do, Deder. You have our gratitude.~
+@113 = ~As for you, child, you should meet the rest of your friends in the short time we have left. Most, I would imagine, are just as eager to see you one last time.~
+@114 = ~Alright, <CHARNAME>, I think we've gone through every old lesson I know. Remember, young one, the duties of a ranger isn't only to nature, but to people. Don't forget to lend a helping hand to anyone in need out there.~
+@115 = ~More to the point... wee'll miss you, <PRO_GIRLBOY>. I've been here ever since my retirement, and the new faces that are here to stay could be counted on one hand. I'll be waiting on the day you come back, as will Lily here. Isn't that right, girl?~
+@116 = ~Woof!~
+@117 = ~See that, <CHARNAME>? Old girl here, she's about as close to you as she is with me at this point. Go on, give her a pat on the head before you go.~
+@118 = ~I've always wondered, Erik, why did a ranger like you choose Candlekeep as a place to retire?~
+@119 = ~Goodbye, Lily.~
+@120 = ~I'll be going now, old man.~
+@121 = ~Heh... it ain't as exciting a story as you might hope for, <CHARNAME>. I spent years as a scout in the army until my eyesight started failing, and after I was honorably discharged, I made a living by escorting caravans across the Sword Coast.~
+@122 = ~Then, one day, I was hired to escort some scribes to here, and the First Reader figured the place needed someone with my skills. I figured this was a good enough place to spend my remaining years, so I accepted.~
+@123 = ~Not to say I haven't had my share of adventures that are worth telling stories about, but I'll save those for when you come back so I won't be the only one talking. We'll spend some time at Winthrop's with a few tankards of ale, how's that sound to you?~
+@124 = ~I'm not sure if I will come back...~
+@125 = ~Alright. Just make sure you don't keel over during that time.~
+@126 = ~You will, I'm sure of it. You're a more talented ranger than I was at your age, and you've got Gorion with you.~
+@127 = ~Hah! That sharp tongue of yours... fear not, dear <PRO_GIRLBOY>. A tough old man like me isn't meeting my ancestors that quickly.~
+@128 = ~Right, I know you're probably eager to head off at this point. I don't blame you, <CHARNAME>. There's not much of a life for a ranger in here, safe as it may be.~
+@129 = ~Here, <CHARNAME>. Take these before you head off. I fletched them myself last night. Don't worry, I know what sort of weapon you're comfortable with. It's not much, but you won't have to buy it yourself at least.~
+@130 = ~You'd better get going, <CHARNAME>. Gorion's waiting for you... ah, or he's searching around for you already. Look over there.~
+@131 = ~Nice one, kid, you caught on fast. Guess even I can't catch you off guard anymore. You should go talk to the Gatewarden if you want some experience in fighting with a group of people. You can find him just south of here. Out there it can be pretty important to know how to fight with allies at your side.~
+@132 = ~Master Gorion! I had just finished helping <CHARNAME> do a quick runthrough of the ranging skills <PRO_HESHE>'s learned. I can leave <PRO_HIMHER> to you, if that is what you need.~
+@133 = ~I am truly grateful, Erik, but you are welcome to stay if you prefer. I know your fondness of <CHARNAME>, as your only pupil, rivals my own.~
+@134 = ~You flatter me, sir. I would not presume to call <PRO_HIMHER> like a <PRO_SONDAUGHTER> to me given who I'm speaking to, but I do value <PRO_HIMHER> greatly. And it is because of that I have to ask, if it is truly necessary that <PRO_HESHE> leaves us?~
+@135 = ~It is. I am sorry I cannot explain my reasons, but you must trust in my word.~
+@136 = ~Beg pardon. I do, of course. There's not a soul in Candlekeep with any wisdom who'd doubt you. It's just... hard to accept.~
+@137 = ~I would gather that there are many who feel the same. You should meet them, <CHARNAME>, while you still have a chance, and say your farewells. We have some time, but not much.~
+@138 = ~The kine appear to be soothed by your presence. They, and all the animals of the keep, owe much to your presence.~
+@139 = ~How you felt drawn to the ways of nature's servant, even in these walls, I doubt I will ever truly understand... though perhaps it is for the best. You walk the path well.~
+@140 = ~I suppose it was always meant to be.~
+@141 = ~How I was raised doesn't matter. Nature knows her children best.~
+@142 = ~Are you here to take me away, father?~
+@143 = ~Aye, that may be... fate is unescapable, in some ways, though we can alter the path.~
+@144 = ~Hoh. When you state it as such, I cannot help but feel a touch of envy. Has my hand in nurturing you not played any part in your current person? No, I jest, my child. No matter what led you to this path, my pride in you is unchanged.~
+@145 = ~Your devotion to nature reminds me of a friend I know, my child. You will meet her before long, I am sure. She once left something in my possession, hoping it would allow me to understand her calling to an extent.~
+@146 = ~There is not much power left within it, but I will give what is left to you. The beasts of the wild can be dangerous, but they can also be an indispensable ally. I have understood that much.~
+@147 = ~I fear that devotion will be tested soon, <CHARNAME>. Our journey ahead of us awaits, and you will see the Sword Coast in all its untamed entirety.~
+@148 = ~I am certain you will be relieved to finally escape the confinements of the castle, but do not be unattentive of the dangers that await. We have some time left to us, and you should use it to properly greet your friends.~
+@149 = ~I hope I have not disrupted your meditations. Your training is one of both martial and spiritual focus, I understand.~
+@150 = ~In truth, I was originally opposed to you practicing the old scriptures of the ascetic's ways when you discovered them in the library's deepest sections, but as I can see now, the effect it has had on your discipline and bodily prowess has been an exceptional one.~
+@151 = ~Have you met others with similar training, father? I thought there were few within the Sword Coast.~
+@152 = ~I think you could do well if you practiced the same techniques with me.~
+@153 = ~Is it time to leave?~
+@154 = ~In the Sword Coast, few indeed, but farther south, closer to Amn... in my younger years, I once spent time learning from the monks of a certain monastery in the Calim desert, and so I understand some more than the others here.~
+@155 = ~Oh, I am far too old to attempt such pursuits. Perhaps, were I even twenty years younger, I would not be opposed to at least learning the theory of such ascetic ways, considering what I have seen of others of your trade...~
+@156 = ~There was one man in particular whose skill was exceptional, as though he had transcended the limits of the mortal body. Sometimes, when I look upon you, I wonder if you will achieve the same. Regardless...~
+@157 = ~I hope your training has honed your mind and body well, my child, for the chaotic journey we have ahead of us will sorely test both. There will be little peace in our future.~
+@158 = ~In what time you have left, you should take one last walk around the castle and reflect upon your teachings, greet your friends, and say your farewells.~
+@159 = ~The Watchers were unaware of where you were, but I knew before long to find you here, away from others.~
+@160 = ~I do not intend to criticise your path, <CHARNAME>, but it often concerns me to know you spend this much time alone, and how it has affected your peers' impressions of you.~
+@161 = ~I am never alone, father. The spirits follow me wherever I go.~
+@162 = ~They do not understand. They cannot hear nor see what I can.~
+@163 = ~What brings you to me, father?~
+@164 = ~I understand, <CHARNAME>, or... well, I do not doubt your conviction. But as your guardian, I still hope you may find common ground with the mortal, as you do with the realm of spirits.~
+@165 = ~We are soon to leave Candlekeep. I know you will not be afraid, not so long as you have the companionship of the spirits, but regardless, I hope you would at least say farewell to your friends here in the castle.~
+@166 = ~In truth, I truly did hope I would not find you here. I have never wished to believe the Watchers' rumors that you hear echoes of dark voices, but your actions often give them more cause to believe such things.~
+@167 = ~Let them believe what they may. I do not care.~
+@168 = ~The fools know nothing. I will be glad to be away from them.~
+@169 = ~Are we to leave now, father?~
+@170 = ~*sigh* We will have to address this side of you one day or another... though it is of little true concern right now, I fear what it may lead to in the coming days.~
+@171 = ~We will depart soon. I hope you will take the time to greet the others in Candlekeep, and leave them a fond impression of you before you leave. There have been many misunderstandings in the past years, but their concern for you is true, my child, I promise you.~
+@172 = ~There you are, my child. I trust you've prepared everything. We must be away soon, before time runs out.~
+@173 = ~Father, I was attacked by a stranger! Right here, in this castle!~
+@174 = ~I've been considering things. Must we really go? There must be much more danger out there than in here.~
+@175 = ~I'm ready, father. We can leave at any time.~
+@176 = ~I know. I have already heard from the Watchers, and they will investigate the origins of the assassins. I am sorry... this is like nothing you have known, and I understand, truly. But this will not be the last, and it has proven even the security of Candlekeep is no longer an assuredly safe haven.~
+@177 = ~You are not wrong, my child. For now. There is indeed great dangers in the world, some as close as outside the gates themselves. But that will not last, and sooner or later, Candlekeep will be swept in the chaos that already plagues the Sword Coast. I wish to spare the people here of that, as much as I can. It is my responsibility.~
+@178 = ~I promise you, where we go will be a safer place than even here, and you will find it in yourself to grow and learn from the experiences ahead.~
+@179 = ~I know you, my dear <CHARNAME>. You have talent, and are fated for greater things than here. But first, I must ensure your safety, and we will not find that in Candlekeep forever.~
+@180 = ~Where will we go?~
+@181 = ~You sound afraid, father. I've never heard you like this before.~
+@182 = ~Then let us go. I'm eager to see the world outside as well.~
+@183 = ~I cannot tell you yet, <CHARNAME>. I wish to trust in the people here, but for absolute certainty, the fewer there are who know of our destination, the safer we will be. It will all make sense soon, once we are in a place where I might explain everything.~
+@184 = ~You must understand, <CHARNAME>, that there is always the unknown, that which is worthy of fear, no matter the extent of your power or knowledge. For us, and for those who would wish us harm. So long as we are mortal, we cannot avoid fear. But we must face it, and do what is needed to overcome it.~
+@185 = ~Very good, <CHARNAME>. Come, then. We must head to the gates...~
+@186 = ~Now, come with me. We will have time to talk later, but for now, we must go to the gates...~
+@187 = ~Gorion.~
+@188 = ~...Ulraunt.~
+@189 = ~I see you are here with the... young <CHARNAME>. I take it that means you intend to leave soon, as you've so stubbornly insisted?~
+@190 = ~Indeed. We will be on our way soon.~
+@191 = ~Well, I would wish you safe journey, but I doubt that will be the case, given what I know of your intentions. Perhaps you have reconsidered since our last discussion?~
+@192 = ~No.~
+@193 = ~Foolish... I have said it before, Gorion. There is a much simpler solution to this inanity. You and I know this to be true.~
+@194 = ~We do not see eye to eye on this, Ulraunt, nor have we ever in many things. I am not blind to the dangers that stand ahead of <PRO_HIMHER>... us, but this is the right path to take, and thus it is my duty to do so.~
+@195 = ~I would have thought age and comfort would have ridded you of your urge for meddling in affairs that are beyond you. You have chosen peace for all these years, and you will throw it all away for your sentimentality?~
+@196 = ~If you insist upon seeing things through that perspective, Ulraunt, then yes. That is how it is.~
+@197 = ~Bah!~
+@198 = ~Fine. On your own head be it, foolish Harper.~
+@199 = ~Good <DAYNIGHT>, Ulraunt.~
+@200 = ~If you are set in your absurd ways, then I shall not expect either of your returns with optimism. But I will repeat my generous advice〞you would do best to leave <PRO_HIMHER> in some forgotten ravine and be done with it.~
+@201 = ~Now then, you two have a long journey to take, and I have proper business to attend to. Out of my way.~
+@202 = ~*sigh* Do not dwell on his words, child. You are not the one at fault.~
+@203 = ~Why does Ulraunt hate me so much? I have never done anything to deserve it.~
+@204 = ~Father, I am asking your permission to go inside and kick him between his legs.~
+@205 = ~Can we go now, father?~
+@206 = ~No. No, you have not. Someday, you will understand... the world is full of those who would rather blame you for the fault of others.~
+@207 = ~Now, now, as your senior I cannot allow that, though I do sympathize, truly. We must keep the venerable Keeper's health in consideration. He is getting on in years, after all.~
+@208 = ~Yes, we should. The sooner the better. Once you are prepared, we must leave with haste.~
+@209 = ~I know this is of little consolation to you, child, but Ulraunt's thoughts on you are not born from malice, not truly. Do not judge him too harshly.~
+@210 = ~Though the Keeper has his shortcomings, his concern is for the security of Candlekeep, so I hope that you may understand, though I know it may be difficult. You are not aware, but there are dark times approaching, and it is in such times that we all struggle the most with our worst sides.~
+@211 = ~Forgive me, <CHARNAME>. It was indeed my intention to leave promptly, but encountering Ulraunt has reminded me of a most daunting fact... though we must leave this place for your own good, our eventual homecoming may not be so simple or guaranteed. If there is anything you feel is left undone, whether it be a simple farewell, it is best if you attend to it now. But you must hurry, and return as soon are you are done.~
+
+//imoen.d
+@212 = ~I'm ready to go right now.~
+@213 = ~So... guess this is it, huh?~
+@214 = ~I wish you could come with me.~
+@215 = ~Goodbye, Imoen.~
+@216 = ~Nah, I know that's not possible. Gorion would say it's too dangerous. I can guess what kind of trouble you're probably getting yourself into.~
+@217 = ~Take care of yourself, and, uh... aw, heck. I'm no good at this parting stuff. Never had to do it before. Not like this.~
+@218 = ~Just... make sure you come back in one piece, okay? I'm sure it won't be too long. And then show me the new stuff you've picked up!~
+@219 = ~See ya, <CHARNAME>.~
+@220 = ~So, you headin' out with Mr. G right away? Said your farewells an' all?~
+@221 = ~Not yet. I was just about to.~
+@222 = ~Yep. I'll be off soon.~
+@223 = ~Alright, then... guess this is goodbye. Keep in touch if you can, alright? Tell me what it's like out there. Maybe one day I'll be seein' it for myself!~
+@224 = ~Yeah, you better make sure you say goodbye to everyone. They'll sure miss you. Who knows when you'll be back.~
+@225 = ~Actually... if you've got a bit more time, why don't I tag along? I'll take any excuse to get away from my chores for the day. One last run 'round the castle before you go, what d'ya say?~
+@226 = ~Sure. Let's hang out together one more time.~
+@227 = ~Thanks, Imoen, but I can meet everyone on my own.~
+@228 = ~I don't have time to babysit you today, Imoen. Go away!~
+@229 = ~Right you are. You and me, doin' odd jobs, maybe a prank or two. It'll be good memories for when you go, right?~
+@230 = ~Alright, fine. If ya say so. Just make sure you talk to everybody, okay? Spent all your life here, people won't like it if you head off without a word. Go on then, you.~
+@231 = ~Hmph! Well, that's some gratitude, and when I was bein' all considerate. Fine, I'll do my own thing now. You get going then if you're feelin' so cranky.~
+@232 = ~Hey, what's up? You done hanging around, and it's time for you to go?~
+@233 = ~No, not yet. You can stay for a bit longer.~
+@234 = ~Yeah. See you around, Imoen.~
+@235 = ~Okay, well... I'll be heading off then. Maybe we'll see each other around some time? Bye.~
+@236 = ~Wow, that much gold for just running back and forth for a sword? Maybe I should try to arrange for his sword to 'disappear' for a bit then happen to 'find' it, what d'ya think?~
+@237 = ~Whoa, looks like someone woke up on the wrong side of the bed this morning. Don't worry, <CHARNAME>, I'm sure the verbal whipping the Gatewarden's gonna give him will be way harsher than what he's saying to you. And maybe I'll slip some coins out of his purse too, heh heh.~
+@238 = ~Oho, and I see a familiar face taggin' along with you too. Imoen, girl, does my memory fail me, or did I not entrust you with the cleanin' of the rooms upstairs, eh?~
+@239 = ~Puffguts! Um... I'll get to it... later! Yeah, just need to find, um... a cleaning rag somewhere...~
+@240 = ~Now, haven't I always told you to be honest to your old man? You're spendin' time with <CHARNAME> before <PRO_HESHE> goes, I don't mind it. Just make sure you don't forget before the day's through, aye? You know this old back ain't as good at bendin' over to reach the corners as it used to be.~
+@241 = ~Aww... come on. Alright, alright... I'll get to it after I'm done sendin' off <CHARNAME>.~
+@242 = ~That's a good girl.~
+@243 = ~Beware, rat nation. <CHARNAME> be here with <PRO_HISHER> mighty broom to claim all that is yours. Isn't this what we have cats for?~
+@244 = ~Wh-what the heck was that?!~
+@245 = ~That man... he was trying to *kill* you, <CHARNAME>! No, worse, he was trying to kill *you* specifically! What is going on?~
+@246 = ~I don't know. I've never met him in my life.~
+@247 = ~Maybe this has something to do with Gorion.~
+@248 = ~Don't know, don't care. He's dead now.~
+@249 = ~Well, he sure knew who you were! He recognized you on sight!~
+@250 = ~But he was after you, <CHARNAME>! He said he's after "Gorion's ward"!~
+@251 = ~Wait, wait. Don't you understand what a big deal this is? Someone's after *your* life, <CHARNAME>!~
+@252 = ~We need to tell someone, <CHARNAME>. Someone just slipped into Candlekeep just to try and kill you. Maybe... maybe you shouldn't go, after all. You need people to protect you.~
+@253 = ~Then they'll be in as much danger as me.~
+@254 = ~But I want to go.~
+@255 = ~Maybe you're right. I'll have to talk to Gorion.~
+@256 = ~You're... right, but... nobody would be happy to leave you to face danger alone, either.~
+@257 = ~You serious? Even after just now, with someone trying to put a knife in you? <CHARNAME>...~
+@258 = ~Yeah. Do that. Gorion wouldn't want you to get hurt, either. Gorion would...~
+@259 = ~Sorry, <CHARNAME>, I'm just... really freaked out right now. Whatever you decide to do, it's your choice. I just... don't want my friend to die out there. Be careful, okay?~
+
+//dialog.d
+@260 = ~<CHARNAME>! It's good to see you, my <PRO_GIRLBOY>. The two of us were worried you'd left with Gorion before we had a chance to see you off.~
+@261 = ~It's going to be sad to watch you go, after seeing you grow up in these walls, but we know you'll be fine. And don't worry, the keep'll still be standing once you come back. All of us〞Hull, Deder, and the lot〞we'll make sure of it.~
+@262 = ~I'm helping out around the place one more time before I go. Do you need anything?~
+@263 = ~Thank you. See you, Arkanis, Deder.~
+@264 = ~Anything I need, eh? Well... let me think...~
+@265 = ~Well, Deder and I get awfully bored standing guard all day with nothing to do. We like to read to pass the time, but the castle doors are locked right now, so... could you go over to Winthrop's and ask to borrow a couple of books? We're on duty right now, so we can't go wandering off.~
+@266 = ~You like to read, Arkanis? How come I've never heard you said anything about that before?~
+@267 = ~Well... I'm nowhere near as good at it as you, Imoen. But I've been in Candlekeep for a while, so I can't help but take an interest in books after all the years. Makes it worth leaving my clanhold for, having learned so many new things.~
+@268 = ~Whatever you can get us is fine. Make sure they've got lots of pages, though. We'll need them for a while.~
+@269 = ~Hello again, <CHARNAME>.~
+@270 = ~I've got the books you asked for.~
+@271 = ~As you were, Arkanis.~
+@272 = ~Hello again, <CHARNAME>. Thanks again for the books, by the way.~
+@273 = ~Thank you, my <PRO_GIRLBOY>. We'll have much less trouble standing guard with these.~
+@274 = ~History of Sembia, eh? Isn't that where you're from, Deder? I remember you saying something along those lines.~
+@275 = ~That was a long time ago. I don't really have the best memories of those days... you can have that one, Arkanis.~
+@276 = ~I see. Well, I'd still like to read yours after I'm done with mine. I'm sorry to trouble you for the legwork, <CHARNAME>. Here, take these arrows with you. It's a dangerous world beyond these walls... keep your eyes out for trouble in the distance and bring it down before it gets close to you, and I'm sure you'll do fine.~
+@277 = ~Good to see you, Imoen, my girl. Please stay out of trouble now... it's been a while since I've had to say anything to the watchers, and I hope it'll stay that way.~
+@278 = ~No worries, pops. Thanks for keeping that... other... thing under wraps for me, by the way.~
+@279 = ~Do you have any spare books you could lend, Winthrop? Arkanis and Deder were asking.~
+@280 = ~Show me what you've got, Winthrop.~
+@281 = ~Aye, there's some books in the guest room for those who are bored and lookin' for something to read. It's got nothin' on the great library, of course, but it's somethin'. They be on the shelf, go ahead and take them, child. They're mostly gatherin' dust these days.~
+@282 = ~<CHARNAME>, my <PRO_GIRLBOY>! I couldn't believe my ears when the other Watchers told me you'd found your way home. Let old Arkanis give you a tight hug and see how much you've grown, come here!~
+@283 = ~Come now, Arkanis, you don't need to hold me to check my growth, it's clear as day. By the way, you don't usually stand guard around here. What's the occasion?~
+@284 = ~Stop coddling me, Arkanis. I'm far from the child who first stepped out of the keep and don't need your attempts at fatherly affection.~
+@285 = ~I see the world outside has not only tempered but greatly hardened you, <CHARNAME>. So be it... you are, as you say, a child no longer and I should not treat you as such. Still, welcome back, <CHARNAME>. This old dwarf is still heartened by your return.~
+@286 = ~Aye, well... this is a special day, <CHARNAME>, and your return is only one of the reasons why. We have had far more visitors than usual lately, many powerful and respected... though when facing those of the Iron Throne, I cannot help but stay on my guard.~
+@287 = ~Deder is more the expert when it comes to their history, but even I know of them by reputation. Untrustworthy lot, they are. Best you not get anywhere close to them, my <PRO_GIRLBOY>, and I mean this both for your safety and theirs. By Moradin, even talking to them briefly makes me want to bury an axe in their heads for their arrogance and flagrant disrespect shown to the humble folk of this place.~
+@288 = ~But come, we should not spoil this happy occasion by dwelling on such matters. You should go around and greet all your old friends. The news has spread, and I am certain they are all eager to see you.~
+@289 = ~Keep your wits about you, my <PRO_GIRLBOY>, and don't hesitate to come running to me something concerns you. You may have grown much from traveling out there, but you'll always be a ward of Candlekeep.~
+@290 = ~Wait! Arkanis, <CHARNAME>, please don't! <CHARNAME>, I think we can trust them. We need all the help we can get to make it through here... so let's work together, okay?~
+@291 = ~Fine. If you think they can be trusted, Imoen... they can come with us.~
+@292 = ~I won't hurt them, but I can't trust them. Get out of my sight, the both of you!~
+@293 = ~No, I won't risk any chance of a trap. They die!~
+@294 = ~Thank you, <CHARNAME>. Arkanis, Deder... please help us get through here. We can trust you, right?~
+@295 = ~We'd better move quickly, <CHARNAME>. There'll be more of these shapeshifting fiends ahead. Best watch for traps as well〞who knows what's been done to this place.~
+@296 = ~Aye... don't trust a word from anyone else we find here... I'll put my axe through their skulls first. Fear not, child... we'll see you through this.~
+@297 = ~Bah! Lies, <CHARNAME>, heed them not. The Watchers never heard anyone speak of such a thing!~
+@298 = ~Calm yourself, Arkanis. There was reason to keep this secret from the Watchers, as well. Until we had full knowledge of the threat, some things had to be kept secret.~
+@299 = ~By Moradin's hammer! Young Hull, too? This is truly a waking nightmare...~
+@300 = ~This is as far as we can go, my <PRO_GIRLBOY>. The Watchers must know of what has transpired here... but the end of the path will not be too far ahead.~
+@301 = ~It pains us that we cannot protect you any further, but you have grown much since you first left. Even though your journey will undoubtedly only become more difficult... I can see you won't need the two of us any longer.~
+@302 = ~Don't worry, <CHARNAME>. We'll do everything we can to clear out these filth from Candlekeep's walls. You can rest assured of that.~
+@303 = ~Aye... this is goodbye once more, but I know we will meet again, someday.~
+@304 = ~Thank you, Arkanis, Deder. Take care of yourselves.~
+@305 = ~Just get going, the both of you.~
+@306 = ~Go now, <PRO_GIRLBOY>... go, and live well.~
+@307 = ~The path to the surface isn't far, <CHARNAME>. You'll be able to find your way out from here.~
+@308 = ~I'm going to head back now. Someone'll need to report everything that's happened here. Sorry I can't help you more, but I know you'll be fine.~
+@309 = ~Good luck, <CHARNAME>. Find the bastard who set this up and give him what he deserves... and come back alive.~
+@310 = ~That should take care of your wounds. <CHARNAME>. But how could you be injured like this here in the keep? Did something happen?~
+@311 = ~The worker attacked me! He was an assassin after my life.~
+@312 = ~It's nothing. I had an accident, that is all.~
+@313 = ~Good <DAYNIGHTALL>, <CHARNAME>. I'm glad we got a chance to see each other before you leave. May Helm watch over you and Gorion on your journey.~
+@314 = ~You look as busy as ever, Canderous. Is there anything I can do to help you?~
+@315 = ~Thank you. I'll be going now.~
+@316 = ~I would hate to trouble you on the day of your departure, but there is something, in fact.~
+@317 = ~As you can see, the clinic is especially full of patients today. We've almost used up all of our bandages and medicines here. I was informed that we were to receive a new supply of stock this morning, but it has yet to arrive. I have asked the priests of Oghma, and they have told me that the worker in charge of delivery has been late to perform their duties.~
+@318 = ~What? Don't look at me! I wouldn't steal stuff used for healing people, they're too important. That wouldn't be even slightly funny.~
+@319 = ~If you could go to the priests' quarters and inquire as to their status, I would be most grateful.~
+@320 = ~You have returned, <CHARNAME>. Forgive me, but there is much to be done right now, so I do not have time for longer conversation.~
+@321 = ~I've found your medical supplies.~
+@322 = ~Then I should leave you to your work.~
+@323 = ~Thank you, <CHARNAME>. These people should not suffer their ailments and injuries any longer than they must.~
+@324 = ~Wait... you are injured, <CHARNAME>! Please hold still. I will tend to your wounds.~
+@325 = ~I must go back to my patients, but... are you well, <CHARNAME>? You appear tense, somehow. Did something happen?~
+@326 = ~It's nothing. Take care, Canderous.~
+@327 = ~An assassin? That cannot be... here within this place?~
+@328 = ~I see Gorion has good reason to take you away, if even the walls of Candlekeep can no longer keep you safe. With him, you will undoubtedly be shielded from danger.~
+@329 = ~Hmm... if you say so, <CHARNAME>. But remember, you are a ward of Candlekeep. For as long as you stay here, it is the duty of the people here to ensure your well-being.~
+@330 = ~There are many here who will miss your presence, <CHARNAME>, myself included. I hope you may never forget that you have a home to return to, and friends to welcome you.~
+@331 = ~Safe journey, <CHARNAME>.~
+@332 = ~Good <DAYNIGHTALL> to you, <GABBER>.~
+@333 = ~<CHARNAME>! I heard from the Watchers that you had returned. It is so good to see you back, and in good health.~
+@334 = ~Canderous? Canderous Leighsfeld?~
+@335 = ~Ajantis Ilvastarr? By Helm, it truly is you! How many years has it been?~
+@336 = ~Indeed, it has been a long time, old friend! We've not met for almost a decade. So this is where you have been serving all these years since you left Waterdeep.~
+@337 = ~Aye, Candlekeep is my home now. I see you have earned your place in the Order. Good for you, Ajantis...~
+@338 = ~What of you, Canderous? Do you not intend to return and complete your training? I see your wound has long healed... our seniors would undoubtedly be pleased to see your return.~
+@339 = ~No... perhaps if fate had been slightly different, we would have served as fellow squires, but I am content with my current place. This is far from Waterdeep, but I find the quiet of the library's halls a comforting haven from the battles that led to my injury, and even people in such a peaceful place always need healing.~
+@340 = ~I see. A worthy cause it is, and I am certain the monks of Candlekeep greatly value you for it. I respect your decision, my friend. Hopefully we may meet again in the future, outside of this castle.~
+@341 = ~That may be, my brother. I intend to return home to Waterdeep when I have a chance... perhaps then, once you have taken your oaths and become a knight proper, we can have a proper celebration.~
+@342 = ~Candlekeep doesn't look any different, <CHARNAME>, but I can tell things have changed in subtle ways. I've been trying to stay so vigilant I can barely get peaceful sleep... if you know anything of use, please let me know.~
+@343 = ~I'll need to look around to know exactly what's going on, but I know the Iron Throne's behind a lot of the troubles in the region.~
+@344 = ~Things are quite complicated around the Sword Coast, and I'm still in the midst of untangling this mess. I'll tell you what I know when I know.~
+@345 = ~So it is the Iron Throne... by Helm, my instinct was correct. You may already know, <CHARNAME>, but several leaders of that foul group have recently entered the castle halls.~
+@346 = ~They acted civil enough in talk, but the stench of evil upon them was poignant. I do not trust them... but as guests of the keep, I cannot bring accusations to the First Reader or the Keeper without evidence of wrongdoing.~
+@347 = ~Be wary of their actions, <CHARNAME>, but do not act rashly. You have only just returned. I hope you are not forced to leave again so quickly.~
+@348 = ~As you say, <CHARNAME>. But please, tell me if I can ever be of assistance.~
+@349 = ~Be vigilant, <GABBER>. Evil has made its stealthy entrance in this sacred place.~
+@350 = ~Hey there, <GABBER>.~
+@351 = ~It's good to see you back, <CHARNAME>. I knew the rough-and-tumble world out there wouldn't be enough to keep you down.~
+@352 = ~If it were any other day, I'd gather up all the old faces and throw you a proper welcome. Unfortunately, today is a special occasion... tch. *spit*~
+@353 = ~You're obviously frustrated, Deder. What's changed around here?~
+@354 = ~Someone angered you? Did you already poison them?~
+@355 = ~I don't have time to listen to your problems right now, Deder. We'll catch up some other time.~
+@356 = ~As you wish, <CHARNAME>. Just watch out for those Iron Throne scum upstairs. Much as I'd like to stir up some trouble, I don't think the monks would appreciate it. I'll be off now. There's something else that I can't put my finger on that's been bothering me.~
+@357 = ~Everything is as it was... on the surface, at least. The only thing standing out are those bastards from the Iron Throne.~
+@358 = ~I hoped I'd heard the last of them after I left Sembia... never did I think they'd choose this of all places for their scheming. Hmph, excuse me〞"peaceful negotiations". I've been eavesdropping on their meetings every chance I get, and it's all just honeyed words coming from serpents' tongues.~
+@359 = ~You'd best steer clear of them. By the Black Hound, I've had half a mind to poison them myself several times just listening to them talk. I can't betray the trust of the Watchers though... hopefully those scum fall prey to some "accidents" on their way back to Sembia, and the world will be better off for it.~
+@360 = ~That's not what's really concerning me, though. Something is wrong around these parts, and I just don't know what. I know every person who's spent longer than a day in this castle by face and name, and yet sometimes I blink and I feel like the person I'm looking at is someone else entirely. Maybe I'm getting old, but I trust my eyes. And that means it's definitely the people I can't trust.~
+@361 = ~See you later, <CHARNAME>. I'm going to take another walk around and see if I can't figure out what's making the hairs on my feet stand on end all day.~
+@362 = ~Oh, no. All's fine and dandy. That's what everybody would prefer to believe until this whole thing blows over, at least. Me, my right eye hasn't been able to stop twitching for days now and I can't quite figure out why.~
+@363 = ~Oh, it's you, <CHARNAME>.~
+@364 = ~Hey, it's Ms. Nose-in-the-books-all-day. With〞surprise, surprise〞her nose in another book.~
+@365 = ~Still around? I thought you'd have been gone from here by now.~
+@366 = ~Hello, Mordaine.~
+@367 = ~Still heavy on the books, I see.~
+@368 = ~Just saying my farewells.~
+@369 = ~I beg your pardon for not sounding more agitated. I've been up all night reading, as you might expect, so my focus is a little... *yaaaawn*... actually, yesterday I found a certain reading particularly fascinating, I'd have recommended it to you had you the time to spare.~
+@370 = ~*sigh* To be quite blunt, I envy you a little, you know. I know your journey isn't for leisure, but there's a wealth of knowledge out there for the gathering. Who knows when it'll be my time to go out and see it.~
+@371 = ~Well, in any case, this is farewell for now. I suspect, however, that we'll meet again sooner than either of us expect.~
+@372 = ~Is there anything I can do for you before I go?~
+@373 = ~I hope that's the case.~
+@374 = ~Goodbye.~
+@375 = ~Actually, there is one thing. I hate to ask this of you, and it's certainly not an urgent matter, but should you have a chance... could you deliver this letter to the clinic for me?~
+@376 = ~Just hand it over to the reader that does chores there. Young man, short, yellow robes... probably soaked with dishwater. Thanks in advance.~
+@377 = ~Hello again, <CHARNAME>. You'd better get going. Gorion won't be happy with you if you're any more late.~
+@378 = ~I delivered your letter.~
+@379 = ~You're right. See you, Mordaine.~
+@380 = ~You did? Great. I'll just wait for the silly boy to reach out to me again.~
+@381 = ~Did you really need me to deliver your love letter for you?~
+@382 = ~I hope that love letter helps you two get together.~
+@383 = ~What exactly was in that letter?~
+@384 = ~Love letter? What are you talking about?~
+@385 = ~Oh, c'mon, you don't need to deny it. I promise we won't spill your secret... on purpose, heh.~
+@386 = ~What's gotten into you two? You're both saying such strange things.~
+@387 = ~I asked that reader to bring me some of the potions I asked for during the last delivery to the castle. Things to bolster memory, keep fatigue at bay, you get the idea. He gave me the wrong ones, and it's all sorts of nonsense that I've no use for.~
+@388 = ~I told him, he'd better find where my order went and get it to me, or else I'll make sure he'll still be washing dishes in his current position for the next decade. I paid a good bit of gold for those potions!~
+@389 = ~You know what, <CHARNAME>? Here, take this with you. I couldn't find the intended owner for this bottle, and I can't use it myself. It's a very strange concoction... but I don't think it's dangerous. Maybe it'll do you some good out there.~
+@390 = ~Imoen? Get you gone, child. I've got all these books to read, I don't need to spend attention watching my purse too with you around.~
+@391 = ~Well, that's rude! I wasn't gonna try anything before, but you'd better watch out now!~
+@392 = ~I have a letter from Mordaine for you.~
+@393 = ~From Mordaine? To me? Okay, let me have a look...~
+@394 = ~Oh. Oh... um, well... right, er... thanks for delivering it. I've got to get things ready, quickly...~
+@395 = ~So, you've finally come back home, <CHARNAME>. The songs of your exploits have reached even here.~
+@396 = ~They're already recording the manuscripts and lyrics in the scrolls upstairs, of course. And I'll wager they'll have to write even more in the future, thanks to you.~
+@397 = ~It has been a very eventful journey. What's new around here?~
+@398 = ~You have always been interested in every piece of writing in these halls, Mordaine. Any new fascinating texts you'd like to share?~
+@399 = ~The books are old, but the faces around here are always changing. Perhaps it is my lack of sleep, but at moments I cannot help but believe that I mean it literally... still, I would prefer to think it a trick of the eyes. Better that, than what it would mean were I truly seeing what I think I do. Aside from that, there are the visitors, though they are all from the way of commerce. They do not interest me, aside from that one... odd fellow.~
+@400 = ~Koveras, I believe his name is. A polite enough man, certainly, and with a wealth of knowledge that can challenge even myself. Still, there is something off about him... and he's spoken at length with Ulraunt as well... though of what, I could not say. Perhaps be wary of the Keeper if you come across him here.~
+@401 = ~Still, I doubt there is much to be concerned of. Candlekeep has gone without incident for many years... I cannot imagine that would simply change in one day.~
+@402 = ~Now, which of these books have I not read all the way through yet...?~
+@403 = ~<CHARNAME>! Good <DAYNIGHTALL>. May your day be blessed with knowledge and wisdom.~
+@404 = ~As you see, I have been making my daily prayer to lord Deneir. Perhaps I should pray for you, as well, for you are soon to embark upon a long journey.~
+@405 = ~Thank you, Osprey.~
+@406 = ~I doubt prayers will suffice for what's ahead.~
+@407 = ~Well, it is within your right to believe so, but the road will be dark and twisted without the guiding light of wisdom and the stones of knowledge to pave the way... ugh, perhaps that was just a little forced. I merely thought to provide a useful metaphor for you. In any case, I was hoping our parting would be somewhat friendlier, but have it your way. Have a pleasant journey, <CHARNAME>, I must return to my prayers.~
+@408 = ~I do hope to see you returning from your journey with the glimmers of wisdom clearly visible within your eyes. Or, well, to see you return safely at all, my friend. We will all be eagerly awaiting the day of our reunion... oh, please do take this. I have found it most useful while meditating on my daily learnings, but I think it will be more useful in your hands, little as it is. Go with Deneir's blessing, <CHARNAME>.~
+@409 = ~I do hope to see you returning from your journey with the glimmers of wisdom clearly visible within your eyes. Or, well, to see you return safely at all, my friend. We will all be eagerly awaiting the day of our reunion. Go with Deneir's blessing, <CHARNAME>.~
+@410 = ~May the First Scribe's illuminating candle of wisdom always light your path, my dear friend.~
+@411 = ~Hello, Imoen! I'm glad to see you here to pay your respects to the gods of knowledge. Perhaps you have the time to pray with me for a while? It will only take an hour... perhaps two, if you're inclined...~
+@412 = ~Er, listen, Osprey... thanks, but I'm busy right now. I've got, um... chores. Yeah, chores! Gotta get to them right now!~
+@413 = ~Oh, <CHARNAME>! I'm so very glad to see you've come home. I only just heard that you were here, and I was terribly worried I'd end up missing you!~
+@414 = ~Missing me? Are you going somewhere, with that big backpack you're carrying?~
+@415 = ~It's been a while, Osprey. Why don't we meet up later to catch up?~
+@416 = ~I'm... leaving Candlekeep today. High Librarian Cadderly Bonaduce wanted me to follow him to the Spirit Soaring to become one of his glyphscribes, and the First Reader approved it. You know what he said to me? "It's time for this little bird to fly". I didn't think he could say such silly things!~
+@417 = ~It's going to be a long journey, and it'll probably be years before I come back, but I couldn't say no to such a rare opportunity. My biggest regret was... well, I guess it wasn't a problem after all. I got to see you again before I went.~
+@418 = ~I'm happy for you, Osprey. I'm sure you'll do well.~
+@419 = ~Go, then. I'd hate to keep you for too long.~
+@420 = ~Thank you, <CHARNAME>... I'm so nervous, and I don't want to disappoint Cadderly with my inexperience... but I'll do my best regardless.~
+@421 = ~Well, I think it's time for me to be off now. I still have to say my farewells to the other scribes and the rest of my friends. Take care of yourself, <CHARNAME>, and write to me in the future so I know where you are. Goodbye!~
+@422 = ~Oh, no, I... I can't, <CHARNAME>, I'm sorry. I'd really, really love to, but I don't want to risk being left behind if I'm late.~
+@423 = ~From what I hear, you're also an aspiring arcanist. You almost remind me of myself as a fledging apprentice, such a nostalgic time... I feel as your senior in the practice of the Art, I should do more for you, especially as I hear you will be going on quite the journey.~
+@424 = ~Though I do not wish to overreach in your development as a mage, I can still give you a head start... here, I have an assortment of spell scrolls that may be useful to you. Pick one, any one. Will it be the scroll of Burning Hands, Friends, Spook, Protection from Evil, or Shield?~
+@425 = ~I'll take the scroll of Burning Hands.~
+@426 = ~I'll take the scroll of Friends.~
+@427 = ~I'll take the scroll of Spook.~
+@428 = ~I'll take the scroll of Protection from Evil.~
+@429 = ~I'll take the scroll of Shield.~
+@430 = ~Here you are, young one. This is but the beginning〞the greater secrets of the Weave are out there. Me, I am far too old to be seeking them. But you have immeasurable potential. Good luck.~
+@431 = ~Zzz... mmm... who is it? Do you have berries and honey water? I already told you... I don't want to see anyone... unless they have honey water...~
+@432 = ~Oh no... it's Paloma, Gorion's familiar. Look at how weak she is, <CHARNAME>.~
+@433 = ~*sniff* No, wait... I recognize this scent... <CHARNAME>? Is that you? Oh, I must be dreaming... yes, it must be a dream... I've been so tired... ever since Gorion...~
+@434 = ~Oh, Paloma...~
+@435 = ~It's not a dream. It's me.~
+@436 = ~Look closer, you stupid little dragon.~
+@437 = ~<CHARNAME>, since you're here, even though I know you're not... let me know... do you remember what happened? Did that day really happen? Or was it a nightmare? I... I remember, I was foraging for fruit... then Gorion called me, told me we needed to go... so I made myself invisible and went scouting...~
+@438 = ~Then that horrible, horrible man, in the black and spiky armor... he scared me so much, I had to run away and hide... it was so shameful, Gorion told me to keep an eye out, so I did, both of them... and then... and then〞~
+@439 = ~...~
+@440 = ~I... I don't remember. I just remember hurting... and then everything went black. When I woke up again... I was tucked up here... Tethtoril came to see me, and I told him I was so, so tired, I didn't want to go out and play anymore.~
+@441 = ~He just nodded and gave me a pat on the head, and asked me if I wanted anything to eat... and then I've been resting here ever since... it's so strange. I sleep and I sleep, but I'm never any less tired... I just want to sleep more...~
+@442 = ~Mmm... I wonder, if I sleep again, will I even wake up...? I don't know... Gorion would know. Where did he go, <CHARNAME>? When will I see him again?~
+@443 = ~He's gone, Paloma. I'm sorry.~
+@444 = ~Gorion's dead.~
+@445 = ~Don't worry about it, Paloma. Just rest.~
+@446 = ~Hee hee... <CHARNAME>, you're so silly... you're supposed to have left, remember, so how could you be here? You were with Gorion, on that day...~
+@447 = ~Oh, you've gotten so mean, <CHARNAME>... but since this is a dream, I'll forgive you. Even though you're being mean, it's nice to see you... again...~
+@448 = ~Gone...? Gone forever? No, no, I don't believe that, I know I was hurting, but I〞~
+@449 = ~"Dead"? No, no, I don't believe that, I know I was hurting, but I〞~
+@450 = ~Oh. Oh... I understand now... that's right, I'm dreaming. You're not really here, <CHARNAME>... of course I'd imagine something so silly. You're being silly, <CHARNAME>... but that wasn't funny.~
+@451 = ~Alright, I get it... I should sleep more... and then... when I wake up... I'll see you and Gorion... we'll play together when I'm not tired anymore...~
+@452 = ~Hey, <CHARNAME>... I know you're not really here, but Gorion told me once... he had something important... something very, very important, that you should see... just you...~
+@453 = ~It's in that chest there... I was told not to look... but when I woke up before, I felt like I *had* to know, but not why... <CHARNAME>, you know I've always been naughty, so... I read it all...~
+@454 = ~When you see it... if you didn't already... you'll be surprised... but don't ever forget, <CHARNAME>, you'll always, always, *always*, be Gorion's...~
+@455 = ~Zzz...~
+@456 = ~Good night, Paloma...~
+@457 = ~(Pat the pseudodragon on the head)~
+@458 = ~Finally, you've stopped talking.~
+@459 = ~Well, well, young <CHARNAME>. It looks like you have finally arrived.~
+@460 = ~I was hoping to speak with you one more time before you departed. I was taking my regular walk around the castle courtyard, you see, as I do every day, hearing the daily stories of all the good folk. And I have heard your name repeated often today, in particular.~
+@461 = ~What exactly have you been hearing?~
+@462 = ~I'm sorry, Tethtoril, but I don't have time right now. Gorion's waiting for me.~
+@463 = ~I really don't have time to speak with you right now, old man.~
+@464 = ~So be it. Go and speak with Gorion then, child. Take care of yourself in the world outside, and... I wish you good luck, for the trials ahead.~
+@465 = ~Well, that would certainly depend on who I have asked. But you have certainly left a good impression on the day of farewell, it seems, with the many simple favors you have made. Delivering swords, bolts and books for the Watchers, clearing rats from peevish Reevor's storehouse, even curing Dreppin's poor cow...~
+@466 = ~Your journey is an urgent one, young <CHARNAME>, and you have seen blood from those who would do you harm even here, where it should be safest. And yet, I am glad to see you have not forgotten to give a helping hand to those who ask.~
+@467 = ~I cannot be sorry enough that we could not have done more for you, child. You will face many dark days ahead, I will not lie, and even with Gorion at your side, your trials will only be greater... but to the end, I hope you will never lose your heart, and always be willing to continue helping others, no matter how petty the concern.~
+@468 = ~Nor do I hope that you ever forget that you are the pride of Candlekeep. Treasure your memories and experiences of this place〞of your home and those who call you their friend〞and look forward with courage. One day, everyone will welcome your safe return, with your heart and mind abundant with newfound wisdom.~
+@469 = ~Now go, child. Gorion is waiting for you. I do not doubt that we will meet again.~
+
+//creatures & items &spells
+@470 = ~Paloma~
+@471 = ~Dog~
+@472 = ~Find Familiar~
+@473 = ~ARKANIS is a Watcher of Candlekeep, whom you know to have served dutifully for as long as you can remember. Defying the common perception of dwarves being sullen and difficult to befriend, you have always known Arkanis to be a gentle, fatherly sort who enjoys telling tales, taking care of children, and reading books together with his close companion Deder.~
+@474 = ~CANDEROUS is a cleric of Helm, the Watcher. He is not from the Sword Coast, but has called Candlekeep home for at least a few years. Though trained in combat, he has lived a peaceful life within the keep's walls as a healer, tending to the various minor ailments of the residents.~
+@475 = ~You know little of DEDER's past outside of the fact that he was born in the merchant state of Sembia. Though he serves as a Watcher, you know him to be adept in the rogue's trade, having taught Imoen the skills of thievery during your childhood. He is a person of few words, yet has a close friendship with his fellow Watcher Arkanis.~
+@476 = ~MORDAINE is a young elven mage who you recall entering Candlekeep as a child with her father and has lived within its walls ever since. Though you have never seen her father after the day you met her, you know Mordaine has never questioned being left alone in the castle, nor does she spare time to tell you her father's reasons for leaving her, as she oft spends too many long hours delving into the library's innumerable tomes of knowledge.~
+@477 = ~OSPREY is a trainee scribe and a childhood friend of yourself and Imoen. A devout〞perhaps exceedingly so〞worshipper of Deneir, god of scholars and knowledge, nobody could be less out of place in a place such as Candlekeep as Osprey. Capable in both arcane and divine magic, Osprey is an eager student and loves knowledge of all sorts.~
+@478 = ~Letter from Mordaine~
+@479 = ~This tightly-sealed letter was given to you by Mordaine. You were asked to deliver it to the reader who does chores in the clinic.~
+@480 = ~Bag~
+@481 = ~Bag of Medical Supplies~
+@482 = ~This heavy sack is filled with various items for medical purposes, including bandages, medicinal herbs and concoctions, and the like.
+
+STATISTICS:
+
+Weight: 10~
+@483 = ~Silver Ring~
+@484 = ~Ring of Insight~
+@485 = ~Ring of Insight
+Though seemingly just an unremarkable silver band, this ring has a slight magical enchantment which expands the wearer's capacity for storing old knowledge, making it useful for aiding in the memory of the aging scribes and lorekeepers of Candlekeep who wist through hundreds of pages each day. Though its usefulness in combat is nonexistent, it can aid in the identification of rare and magical objects.
+
+STATISTICS:
+
+Equipped abilities:
+每 Lore: +10
+
+Weight: 0~
+@486 = ~Quality Two-handed Sword~
+@487 = ~Quality Scimitar~
+@488 = ~Monk Robes~
+@489 = ~Monastery Robes~
+@490 = ~These robes are based off the simple design of the Candlekeep monk robes, with slight alterations to allow for more ease of movement for the martially inclined ascetic. Light enchantments have been additionally placed upon it to improve the wearer's protection.
+
+STATISTICS:
+
+Equipped abilities:
+每 Armor Class: +1
+每 Saving Throws: +1
+
+Weight: 3~
+@491 = ~Amulet~
+@492 = ~Totem of Primality~
+@493 = ~When <CHARNAME> first became aware of the influence of spirits, <PRO_HESHE> required a physical item to meditate on to better enhance their focus and communicate with the beings that they were sensitive to. Thus, <PRO_HESHE> crafted this amulet out of simple material, and though <PRO_HISHER> ability to communicate with spirits has progressed enough that <PRO_HESHE> no longer needs its assistance, it has stayed by <PRO_HISHER> side, and slightly enhances <PRO_HISHER> grasp on primal magic when worn.
+
+STATISTICS:
+
+Equipped abilities:
+每 Can memorize one extra 1st-level priest spell
+
+Weight: 1~
+@494 = ~Bracers~
+@495 = ~Bracers of Violence~
+@496 = ~These bracers were once like any other, but after being in <CHARNAME>'s possession for a prolonged amount of time following <PRO_HISHER> service to <PRO_HISHER> dark patron, it has gathered a tiny amount of unholy power, and when worn makes its wearer more inclined towards acts of brutality against those of nonevil alignment.
+
+STATISTICS:
+
+Equipped abilities:
+每 THAC0 vs. Good and Neutral Creatures: +1
+每 Damage vs. Good and Neutral Creatures: +1
+
+Weight: 2~
+@497 = ~Leather Armor~
+@498 = ~Leather Armor of Darkness~
+@499 = ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a Ranger's boots or a Druid's robe. That kind of leather offers no better protection than common clothing.
+
+This particular set of leather was dyed a dark hue by <CHARNAME> not long ago after <PRO_HESHE> apparently received a certain 'dark boon', and while most of those within Candlekeep considered it merely a typical adolescent phase that they would inevitably tire of, <PRO_HESHE> continues to wear this armor comfortably.
+
+STATISTICS:
+
+Equipped abilities:
+每 Save vs. Death: +1
+
+Armor Class: 8 (10 vs. piercing and missile)
+Requires:
+ 4 Strength
+
+Weight: 5~
+
+//new lines in imoen.d & dialog.d
+@500 = ~C'mon, <CHARNAME>, let's make our rounds through the castle. We're not gonna get another chance like this again, y'know?~
+@501 = ~Is that a star sapphire, <CHARNAME>? Never thought someone'd find one here of all places. I know better than to ask where you found it.~
+@502 = ~That'll fetch you a good price once you're out there. If you're interested, though, I've got something here that you might like to trade it for.~
+@503 = ~What is it?~
+@504 = ~Maybe some other time.~
+@505 = ~My ma's old dagger. Now wait, I know that sounds like a bad deal, but hear me out. It's nothing fancy, but it cuts faster than any other of its kind you'll ever see. My mother, Isala, used this to survive the hard life in Sembia all those years ago.~
+@506 = ~It's probably not worth as much to most as that gem you've got, but it was made in the East so it'll survive this iron crisis, and that might make it worth a good bit even when you stop gettin' use out of it. I wouldn't offer it to anyone else, given its sentimental value, but I'd hate to let a friend go out into the dangerous world without giving them some more help if I can.~
+@507 = ~Anyways, it's up to you whether you want to make the deal or not. I'm sure you know best.~
+@508 = ~I'll take the dagger.~
+@509 = ~I think I'll hold onto the gem.~
+@510 = ~Your choice. Offer's still open while you're around.~
+@511 = ~Here. Take care of it... I'm sure my old ma down in Uroglan's realm will be happy if it shanks a few more bandits instead of wasting away here.~
+@512 = ~Good luck, <CHARNAME>. When you come back, we'll talk all about your stories over a few drinks at Winthrop's.~
+@513 = ~Wait, Deder. I've still got your mother's dagger. You can have it back.~
+@514 = ~That old thing's still with you, eh? I wasn't sure I'd see it again, but I'm happy to. Was it of help to you out there?~
+@515 = ~It was.~
+@516 = ~For a while, definitely.~
+@517 = ~Not really. I just thought it'd be wrong to sell it.~
+@518 = ~I'm glad. I'm sure my ma will be happy to know this memento of her old days was good for something again for a while after all.~
+@519 = ~Well, in any case, thank you for bringing it back to me, <CHARNAME>. I'll be going now, but watch yourself while you're here. Candlekeep's not all that you remember it to be.~
+
+//new lines in main.tpa
+@600 = ~Dagger~
+@601 = ~Isala's Quickblade~
+@602 = ~This dagger once belonged to Deder's mother, Isala. Though it lacks any visible enchantment, its balance and weight are above that of any blade you've seen in the past. According to Deder, the forging of blades such as these originate from somewhere in the distant East, though various liberties have been taken with its design over time.
+
+STATISTICS:
+
+Combat abilities:
+每 2 attacks per round
+
+Damage: 1d4 (piercing)
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
