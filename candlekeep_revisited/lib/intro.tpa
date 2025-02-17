@@ -7,8 +7,8 @@ COPY_EXISTING ~fampsd.cre~ ~override/c0cr#gfm.cre~
 		WRITE_ASCII DEATHVAR ~C0CR#GFM~
     WRITE_BYTE 0x270 128
     WRITE_BYTE 0x275 2
-    SAY NAME1 ~Paloma~
-    SAY NAME2 ~Paloma~
+    SAY NAME1 @470
+    SAY NAME2 @470
 	REMOVE_CRE_ITEMS
 
 COPY_EXISTING ~jondal.cre~ ~override/c0cr#jon.cre~
@@ -24,8 +24,8 @@ COPY_EXISTING ~DOGWI.cre~ ~override/C0CR#DOG.CRE~
     WRITE_BYTE 0x275 2
 		WRITE_ASCII DIALOG ~C0CR#DOG~ #8
 		WRITE_ASCII DEATHVAR ~C0CR#DOG~ #8
-    SAY NAME1 ~Dog~
-    SAY NAME2 ~Dog~
+    SAY NAME1 @471
+    SAY NAME2 @471
 
 ACTION_IF FILE_EXISTS_IN_GAME ~C0CLABWL.2DA~ THEN BEGIN
 OUTER_SPRINT warlock_check_1 ~Kit(Player1,C0WLOCK)~
@@ -64,45 +64,22 @@ COMPILE ~%MOD_FOLDER%/bcs/c0cr#skp.baf~
 COMPILE ~%MOD_FOLDER%/dlg/gorion.d~ EVAL
 
 COPY ~%MOD_FOLDER%/SPL/C0CR#VI4.SPL~ ~OVERRIDE~
-SAY NAME1 ~Find Familiar~
+SAY NAME1 @472
 
 COPY ~%MOD_FOLDER%/ITM/C0CR#MON.ITM~ ~OVERRIDE~
-SAY NAME1 ~Monk Robes~
-SAY NAME2 ~Monastery Robes~
-SAY DESC ~These robes are based off the simple design of the Candlekeep monk robes, with slight alterations to allow for more ease of movement for the martially inclined ascetic. Light enchantments have been additionally placed upon it to improve the wearer's protection.
-
-STATISTICS:
-
-Equipped abilities:
-– Armor Class: +1
-– Saving Throws: +1
-
-Weight: 3~
+SAY NAME1 @488
+SAY NAME2 @489
+SAY DESC @490
 
 COPY ~%MOD_FOLDER%/ITM/C0CR#SHA.ITM~ ~OVERRIDE~
-SAY NAME1 ~Amulet~
-SAY NAME2 ~Totem of Primality~
-SAY DESC ~When <CHARNAME> first became aware of the influence of spirits, <PRO_HESHE> required a physical item to meditate on to better enhance their focus and communicate with the beings that they were sensitive to. Thus, <PRO_HESHE> crafted this amulet out of simple material, and though <PRO_HISHER> ability to communicate with spirits has progressed enough that <PRO_HESHE> no longer needs its assistance, it has stayed by <PRO_HISHER> side, and slightly enhances <PRO_HISHER> grasp on primal magic when worn.
-
-STATISTICS:
-
-Equipped abilities:
-– Can memorize one extra 1st-level priest spell
-
-Weight: 1~
+SAY NAME1 @491
+SAY NAME2 @492
+SAY DESC @493
 
 COPY ~%MOD_FOLDER%/ITM/C0CR#BLK.ITM~ ~OVERRIDE~
-SAY NAME1 ~Bracers~
-SAY NAME2 ~Bracers of Violence~
-SAY DESC ~These bracers were once like any other, but after being in <CHARNAME>'s possession for a prolonged amount of time following <PRO_HISHER> service to <PRO_HISHER> dark patron, it has gathered a tiny amount of unholy power, and when worn makes its wearer more inclined towards acts of brutality against those of nonevil alignment.
-
-STATISTICS:
-
-Equipped abilities:
-– THAC0 vs. Good and Neutral Creatures: +1
-– Damage vs. Good and Neutral Creatures: +1
-
-Weight: 2~
+SAY NAME1 @494
+SAY NAME2 @495
+SAY DESC @496
 
 ACTION_IF FILE_EXISTS_IN_GAME ~C0CLABWL.2DA~ THEN BEGIN
 COPY ~%MOD_FOLDER%/ITM/C0CR#WLK.ITM~ ~OVERRIDE~
@@ -116,20 +93,7 @@ COPY ~%MOD_FOLDER%/ITM/C0CR#WLK.ITM~ ~OVERRIDE~
 	  power = 1
 	  special = RESOLVE_STR_REF (~Warlock~)
 END
-SAY NAME1 ~Leather Armor~
-SAY NAME2 ~Leather Armor of Darkness~
-SAY DESC ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a Ranger's boots or a Druid's robe. That kind of leather offers no better protection than common clothing.
-
-This particular set of leather was dyed a dark hue by <CHARNAME> not long ago after <PRO_HESHE> apparently received a certain 'dark boon', and while most of those within Candlekeep considered it merely a typical adolescent phase that they would inevitably tire of, <PRO_HESHE> continues to wear this armor comfortably.
-
-STATISTICS:
-
-Equipped abilities:
-– Save vs. Death: +1
-
-Armor Class: 8 (10 vs. piercing and missile)
-Requires:
- 4 Strength
-
-Weight: 5~
+SAY NAME1 @497
+SAY NAME2 @498
+SAY DESC @499
 END
