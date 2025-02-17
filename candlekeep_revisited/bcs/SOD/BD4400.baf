@@ -1,0 +1,15 @@
+  
+/* bd4400_commenting.baf */
+/* Comment upon entering Avernus */
+IF
+	GlobalLT("bd_plot","global",505)
+	IfValidForPartyDialog("C0CR2OS")  
+	Global("C0Osprey_bd_avernus_bark","bd4400",0) 
+THEN
+	RESPONSE #50  //Remove this if your NPC should say their line always
+		Continue() //Remove this if your NPC should say their line always
+	RESPONSE #50 //change this to #100 if your NPC should say their line always
+		DisplayStringWait("C0CR2OS",~Avernus, the First of the Nine Hells... mortals were never meant to tread here. My lord Deneir, if you hear us in this unholy place... protect us.~) 
+	    SetGlobal("C0Osprey_bd_avernus_bark","bd4400",1)  
+		SmallWait(8)
+END

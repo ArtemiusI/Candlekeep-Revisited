@@ -1,0 +1,29 @@
+IF
+  Global("bd_plot","global",591)
+  !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")
+  Global("bd_C02Osprey_ot","bd4100",0)
+  ReputationLT(Player1,10)
+  InParty("C0CR2OS")
+THEN
+  RESPONSE #100
+    SetGlobal("bd_C02Osprey_ot","bd4100",1)
+  RESPONSE #100
+    SetGlobal("bd_C02Osprey_ot","bd4100",1)
+    SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",ONE_ROUND)
+    DisplayStringHead("C02Osprey",~You... what have you done, <CHARNAME>? I thought I knew you!~)
+END
+
+IF
+  Global("bd_plot","global",591)
+  !GlobalTimerNotExpired("bd_mdd1352_ot_timer","bd4100")
+  Global("bd_C02Osprey_ot","bd4100",0)
+  !ReputationLT(Player1,10)
+  InParty("C0CR2OS")
+THEN
+  RESPONSE #100
+    SetGlobal("bd_C02Osprey_ot","bd4100",1)
+  RESPONSE #100
+    SetGlobal("bd_C02Osprey_ot","bd4100",1)
+    SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",9)
+    DisplayStringHead("C02Osprey",~This... Deneir preserve us, this can't be right. <CHARNAME>... <PRO_HESHE> would never...~)
+END

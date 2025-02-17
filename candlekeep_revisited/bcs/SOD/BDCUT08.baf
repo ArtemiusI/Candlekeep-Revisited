@@ -1,0 +1,12 @@
+/* C0Kvel08_patch.baf
+march out of BG city: make Biff move when the coalition start marching out of BG city */
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("C0CR2OS")  
+		ApplySpellRES("BDSLOW",Myself)  // sets the movement rate to "6" for 15 realtime seconds
+		Wait(2)
+		SmallWait(109)
+		MoveToPoint([1090.1100]) //leave these in or chose a point in direction of the southeast area exit of bd0010.are, depending on where your NPC is waiting.
+END

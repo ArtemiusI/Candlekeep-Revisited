@@ -1,0 +1,10 @@
+/* Warn about the place being a dead magic zone (mages only): */
+IF
+	Global("BD_NPC01","MYAREA",0) //neither Edwin, Baeloth, Dynaheir, nor Neera gave a warning about dead magic zone
+	IfValidForPartyDialog("C0CR2OS")  
+	Delay(3)
+THEN
+	RESPONSE #100
+		SetGlobal("BD_NPC01","MYAREA",1)
+		DisplayStringHead("C0CR2OS",~By Deneir... a dead magic zone, <CHARNAME>. Neither my arcane magic nor prayers will be of any use here!~)  
+END

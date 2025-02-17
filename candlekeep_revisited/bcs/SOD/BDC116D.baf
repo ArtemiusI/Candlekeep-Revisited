@@ -1,0 +1,22 @@
+/* bdc116d_patch.baf */
+/* Move the PC in the cutscene of the plotting nobles in Three Old Kegs (bdc116d.bcs) */
+IF
+	Global("bd_uncovered_seditious_plot","BD0108",1)  
+	InParty("C0CR2OS")  
+THEN
+	RESPONSE #100
+		CutSceneId("C0CR2OS")  
+		JumpToPoint([503.343]) //use coordinates at the left side of the northwest room. For example, Minsc is placed at [296.246]
+		Face(N) //adjust facing position accordingly, so the NPC looks into the room
+END
+
+IF
+	Global("bd_uncovered_seditious_plot","BD0108",2)  
+	InParty("C0CR2OS")  
+THEN
+	RESPONSE #100
+		CutSceneId("C0CR2OS")  
+		JumpToPoint([608.215]) //use coordinates in the middle of the northwest room. For example, Minsc is placed at [424.186]
+		Face(SW) //adjust facing position accordingly, so the NPC looks into the room
+END
+	

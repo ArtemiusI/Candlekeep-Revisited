@@ -1,0 +1,36 @@
+
+IF
+    InParty("C0CR2OS")
+    Global("C0KvelSoDAndroszEventSpawn","MYAREA",0)
+THEN
+    RESPONSE #100
+        SetGlobal("C0KvelSoDAndroszEventSpawn","MYAREA",1)
+        CreateCreature("C02KVD01",[3100.2050],E)
+        CreateCreature("C02ANDRO",[1210.2310],S)
+	    ActionOverride("C02ANDRO",XEquipItem("C0KVSW01",Myself,SLOT_WEAPON,EQUIP))
+	    ActionOverride("C02ANDRO",XEquipItem("C0KVSW02",Myself,SLOT_SHIELD,EQUIP))
+        CreateCreature("C02KVC02",[1135.2375],NE)
+        CreateCreature("C02KVC03",[1205.2400],NNE)
+        CreateCreature("C02KVC01",[1261.2389],NNW)
+        CreateCreature("C02KVC04",[1313.2349],NW)
+END
+
+IF
+    InMyArea("C02ANDRO")
+    OR(6)
+	NearLocation(Player1,1212,2354,30)
+	NearLocation(Player2,1212,2354,30)
+	NearLocation(Player3,1212,2354,30)
+	NearLocation(Player4,1212,2354,30)
+	NearLocation(Player5,1212,2354,30)
+	NearLocation(Player6,1212,2354,30)
+    GlobalLT("C0KvelSoDAndroszEvent","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetInterrupt(FALSE)
+	SetGlobal("C0KvelSoDAndroszEvent","GLOBAL",3)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("C02KVC03")
+	SetInterrupt(TRUE)
+END

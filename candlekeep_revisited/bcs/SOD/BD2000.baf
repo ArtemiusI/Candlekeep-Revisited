@@ -1,0 +1,34 @@
+/* bd2000_commenting_et.baf */
+/* PC surrendered Bridgefort to the Crusaders */
+IF
+	Global("bd_plot","global",260)
+	Global("C0Kvel_betrayal_discussion","GLOBAL",0) //same variable as in the I_C_T so this doesn't fire if the dialogue happened
+	!GlobalTimerNotExpired("bd_betrayal_discuss_timer","bd2000") //in case there are more mod NPCs commenting
+	!IsValidForPartyDialogue("KHALID") //only if Khalid cannot start his dialogue
+	IsValidForPartyDialogue("C0CR2OS")
+	OR(2) 
+		!IsValidForPartyDialogue("CORWIN") //Corwin is either not here
+		Global("bd_betrayal_discussion","bd2000",1) //or Corwin's dialogue fired already
+THEN
+	RESPONSE #100
+		SetGlobal("C0Kvel_betrayal_discussion","GLOBAL",1)
+		SetGlobalTimer("bd_betrayal_discuss_timer","bd2000",ONE_MINUTE) //to space all the other NPC comments
+		DisplayStringHead("C0CR2OS",~I can't believe we just... let the crusade take them.~)
+		Continue()
+END
+
+/* bd2000_commenting.baf */
+/* Battle at Bridgefort starts */
+IF
+	Global("bd_plot","global",250)
+	!GlobalTimerNotExpired("bd_mdd410z_ot_timer","bd2000")  
+	Global("C0Kvel_bd_ot","bd2000",0)  
+	IfValidForPartyDialog("C0CR2OS")  
+	TriggerOverride("C0CR2OS",Range([ENEMY.0.0.0.CRUSADERS],30))
+THEN
+	RESPONSE #100
+		SetGlobalTimer("bd_mdd410z_ot_timer","bd2000",THREE_MINUTES)  // Boareskyr Bridge & Bridgefort
+		SetGlobal("C0Kvel_bd_ot","bd2000",1)  
+		DisplayStringHead("C0CR2OS",~Fighting a siege is a lot harder than reading about one.~)  
+		Continue()
+END

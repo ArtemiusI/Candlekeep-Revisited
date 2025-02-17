@@ -97,7 +97,16 @@ COPY_EXISTING ~osprey.cre~ ~override~
 		WRITE_BYTE 0x23a 17 // intelligence
 		WRITE_BYTE 0x23b 17 // wisdom
 		WRITE_BYTE 0x23e 14  // charisma
+    REMOVE_MEMORIZED_SPELL ~SPIN118~
+    REMOVE_KNOWN_SPELL ~SPIN118~
+    ADD_KNOWN_SPELL ~C0CR#OSS~ #0 ~INNATE~
+    ADD_MEMORIZED_SPELL ~C0CR#OSS~ #0 ~INNATE~ (3)
   SAY BIO ~OSPREY is a trainee scribe and a childhood friend of yourself and Imoen. A devout—perhaps exceedingly so—worshipper of Deneir, god of scholars and knowledge, nobody could be less out of place in a place such as Candlekeep as Osprey. Capable in both arcane and divine magic, Osprey is an eager student and loves knowledge of all sorts.~
+
+COPY_EXISTING ~SPPR304.SPL~ ~OVERRIDE/C0CR#OSS.SPL~
+WRITE_SHORT 0X34 2
+WRITE_SHORT 0X1C 4
+LPF ALTER_SPELL_HEADER INT_VAR location = 4 END
 
 COPY_EXISTING ~tethto.cre~ ~override~
 		WRITE_ASCII DEATHVAR ~TETHTORIL~

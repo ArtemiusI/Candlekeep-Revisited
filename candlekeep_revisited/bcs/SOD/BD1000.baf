@@ -1,0 +1,41 @@
+IF
+  Global("C0OspreySoDSpawn","GLOBAL",1)
+  Global("C0Osprey_MoveCamp","MYAREA",0)
+  !Dead("C0CR2OS")
+  !InPartyAllowDead("C0CR2OS")
+THEN
+  RESPONSE #100
+    SetGlobal("C0Osprey_MoveCamp","MYAREA",1)
+    MoveGlobal("bd1000","C0CR2OS",[843.3366]) 
+    ActionOverride("C0CR2OS",Face(SE))
+    ReallyForceSpellDeadRES("bdrejuve","C0CR2OS")
+    ChangeEnemyAlly("C0CR2OS",NEUTRAL)
+    ChangeSpecifics("C0CR2OS",ALLIES)
+    ActionOverride("C0CR2OS",SetGlobal("bd_joined","locals",0))
+    ActionOverride("C0CR2OS",SetGlobal("bd_retreat","locals",0))
+    ActionOverride("C0CR2OS",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("C0CR2OS",ChangeAIScript("C0CR2OS",OVERRIDE))
+    ActionOverride("C0CR2OS",ChangeAIScript("bdasc3",CLASS))
+    ActionOverride("C0CR2OS",ChangeAIScript("BDSHOUT",RACE))
+    ActionOverride("C0CR2OS",ChangeAIScript("BDMAGE01",GENERAL))
+    ActionOverride("C0CR2OS",ChangeAIScript("",DEFAULT))
+    ActionOverride("C0CR2OS",SetDialogue("C0CR2OS"))
+    Continue()
+END
+
+/* bd1000_commenting.baf: 
+Reaction to Caelar */
+
+IF
+	Global("bd_plot","global",170) //after talking to Bence, this will be at Global("bd_plot","global",175) 
+	Global("C0Osprey_bd_mdd016b","bd1000",0)
+	!GlobalTimerNotExpired("bd_mdd016b_timer","bd1000") //timer to space the NPC comments
+	IsValidForPartyDialog("C0CR2OS")  
+	TriggerOverride("C0CR2OS",Detect(Player1))
+THEN
+	RESPONSE #100
+		SetGlobal("C0Osprey_bd_mdd016b","bd1000",1)
+		SetGlobalTimer("bd_mdd016b_timer","bd1000",ONE_ROUND)
+		DisplayStringHead("C0CR2OS",~So, that was Caelar Argent, champion of the Aster... I'll have to transcribe what she's said into my records while I can still remember it.~)  
+    Continue()
+END

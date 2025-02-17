@@ -1,0 +1,516 @@
+// BAELOTH
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyBaeloth1","MYAREA",0)
+	Switch("C02OspreyBaeloth1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Baeloth",~Cease your confounded chattering, chanter! You are distracting me from my diligent deliberations.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyBaeloth1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~I must make my daily commune to my lord Deneir, Baeloth. Besides, we're far enough apart that I can't surely be bothering you that much.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyBaeloth1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Baeloth",~My hearing is more acute than a half-breed surfacer such as you may comprehend. I can hear every muttered word under your breath.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyBaeloth1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~Really? That must be very convenient. You're making me jealous.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyBaeloth1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Baeloth",~As you very well should be. Alas, it is an astronomic aspiration to achieve my amount of awe.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyBaeloth1","MYAREA",50)
+END
+
+// CORWIN
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyCorwin1","MYAREA",0)
+	Switch("C02OspreyCorwin1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Corwin",~You have an untied bootlace, Osprey. Leave it dangling like and you're going to trip over it sooner or later.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyCorwin1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~Oh, you're right... er, I mean, thank you for your attention, captain!~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyCorwin1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Corwin",~There's no need to be this formal. You may have signed on with the Fist, but there's no hierarchy between us here.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyCorwin1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~Sorry. It's just... I have a great respect for the Watchers in Candlekeep. I miss quite a few of them, so when I'm near an authority figure, I, erm...~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyCorwin1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Corwin",~It's alright, I understand. Sometimes I have difficulty separating my father from the officer as well, when I'm at home.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyCorwin1","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("Corwin",~But we're not doing drills at headquarters or patrolling the city walls. Here, we're just comrades, and we look out for each other. To do that, we need to act as equals.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+RESPONSE #60
+	DisplayStringHead("C0CR2OS",~Understood, capt—I mean, Corwin. I'll be sure to look out for you as well.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyCorwin1","MYAREA",-1)
+END
+
+// DORN
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyDorn1","MYAREA",0)
+	Switch("C02OspreyDorn1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Dorn",~Your incessant humming is irritating. Be silent, or I will encourage you to do so.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDorn1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~Do you never seek some peace of mind, Dorn? I find that some rhythm helps me to focus.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDorn1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Dorn",~No.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDorn1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~*sigh* All I need to know about you, I suppose. I try to see the best in others, but sometimes it's hard.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDorn1","MYAREA",-1)
+END
+
+// DYNAHEIR
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyDynaheir1","MYAREA",0)
+	Switch("C02OspreyDynaheir1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Dynaheir",~Thou'rt a student of Cadderly, I hear. ~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDynaheir1","MYAREA",2)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~Yes, I am. I've only learned from him for a brief time, though.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDynaheir1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Dynaheir",~If learned men such as he and Candlekeep's greatest scholars have seen fit to take thee under their wing, they must see great potential in thee.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDynaheir1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~Oh, I'm not so sure. My friends used to tell me I'm just something of a teachers' pet.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDynaheir1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Dynaheir",~To seek guidance from th' learned is a step towards wisdom. I would also be pleased to assist, if thou consider me deserving.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDynaheir1","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~Do you really mean it? I'd be happy to learn from someone like you.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyDynaheir1","MYAREA",-1)
+END
+
+// EDWIN
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyEdwin1","MYAREA",0)
+	Switch("C02OspreyEdwin1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Edwin",~Keep your distance from me, scribbler.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyEdwin1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~Edwin! I haven't done anything to offend you, have I?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyEdwin1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Edwin",~You may pretend otherwise, but I see naught but disaster in your wake. Nothing escapes my eyes.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyEdwin1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~This is about when I dropped my inkwell in the fire and it exploded, isn't it? I told you, I'm sorry about that!~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyEdwin1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Edwin",~A feeble apology will not compensate for those scrolls. Nor the hideous stains on my robes.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyEdwin1","MYAREA",-1)
+END
+/*
+// GLINT
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyGlint1","MYAREA",0)
+	Switch("C02OspreyGlint1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Glint",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyGlint1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyGlint1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Glint",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyGlint1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyGlint1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Glint",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyGlint1","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyGlint1","MYAREA",60)
+RESPONSE #60
+	DisplayStringHead("Glint",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyGlint1","MYAREA",61)
+END
+*/
+/*
+// JAHEIRA
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyJaheira1","MYAREA",0)
+	Switch("C02OspreyJaheira1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Jaheira",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyJaheira1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyJaheira1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Jaheira",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyJaheira1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyJaheira1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Jaheira",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyJaheira1","MYAREA",60)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyJaheira1","MYAREA",-1)
+END
+*/
+/*
+// KHALID
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyKhalid1","MYAREA",0)
+	Switch("C02OspreyKhalid1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Khalid",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Khalid",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Khalid",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid1","MYAREA",-1)
+END
+*/
+/*
+// M'KHIIN
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyMkhiin1","MYAREA",0)
+	Switch("C02OspreyMkhiin1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Mkhiin",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",2)
+RESPONSE #3
+	DisplayStringHead("Baeloth",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",5)
+RESPONSE #5
+	DisplayStringHead("Mkhiin",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Mkhiin",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Mkhiin",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",-1)
+END
+*/
+// MINSC
+/*
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyMinsc1","MYAREA",0)
+	Switch("C02OspreyMinsc1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMinsc1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("Minsc",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMinsc1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMinsc1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("Minsc",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMinsc1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMinsc1","MYAREA",-1)
+END
+*/
+/*
+// NEERA
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	!GlobalGT("bd_neera_plot","GLOBAL",13)
+	GlobalGT("C02OspreyNeera1","MYAREA",0)
+	Switch("C02OspreyNeera1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Neera",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Neera",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Neera",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",-1)
+END
+*/
+// RASAAD
+
+/*
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyRasaad1","MYAREA",0)
+	Switch("C02OspreyRasaad1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyRasaad1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("Rasaad",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyRasaad1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyRasaad1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("Rasaad",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyRasaad1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyRasaad1","MYAREA",-1)
+END
+*/
+// SAFANA
+/*
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreySafana1","MYAREA",0)
+	Switch("C02OspreySafana1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Safana",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreySafana1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreySafana1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Safana",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreySafana1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreySafana1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Safana",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreySafana1","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreySafana1","MYAREA",60)
+RESPONSE #60
+	DisplayStringHead("Safana",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreySafana1","MYAREA",-1)
+END
+*/
+// VICONIA
+/*
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyViconia1","MYAREA",0)
+	Switch("C02OspreyViconia1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Viconia",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyViconia1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyViconia1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Viconia",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyViconia1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyViconia1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Viconia",~~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyViconia1","MYAREA",-1)
+END
+*/
+// VOGHILN
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyVoghiln1","MYAREA",0)
+	Switch("C02OspreyVoghiln1","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Voghiln",~Osprey, fair scholar! Would you care to spend a few moments and tell me of yourself?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",3)
+	SetGlobal("C02OspreyVoghiln1","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~I, well, *ahem*, I'd love to, Voghiln, but I'm absolutely parched right now. I'd rather give my voice a rest for a moment.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",3)
+	SetGlobal("C02OspreyVoghiln1","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Voghiln",~Well, what about a drink to sooth the throat, eh?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",3)
+	SetGlobal("C02OspreyVoghiln1","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~No, no, I couldn't. I have a very low tolerance... not to mention, bad things happen when I get drunk.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyVoghiln1","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("C0CR2OS",~I start climbing on tables, doing vulgar dances, bump into shelves and knock things over... it's never a fun night after I start drinking.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",3)
+	SetGlobal("C02OspreyVoghiln1","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("Voghiln",~Ha! Such things may be seen as poor courtesy here, but you'd be right at home at the celebrations I know of.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyVoghiln1","MYAREA",-1)
+END
+
+IF
+  !GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+THEN
+  RESPONSE #100
+    SetAreaScript("",GENERAL)
+END

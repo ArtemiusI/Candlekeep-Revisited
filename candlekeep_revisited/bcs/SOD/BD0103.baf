@@ -1,0 +1,20 @@
+
+/* bd0103_commenting_et.baf
+after Skie woke the PC up on the day of departure */
+IF
+	Global("bd_plot","global",55)
+	Global("C0Kvel_BD_PLAY_ONCE","BD0103",0)
+	Global("BD_OT_DELAY","BD0103",0)
+	IsValidForPartyDialog("C0CR2OS")  
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_OT_DELAY","BD0103",1)
+		SetGlobal("C0Kvel_BD_PLAY_ONCE","BD0103",1)
+		Wait(1)
+		DisplayStringWait("C0CR2OS",~We're off, then? Let me just finish writing this last bit in my journal, and then—aaah, I knocked over the inkwell...~)
+		SetGlobal("BD_OT_DELAY","BD0103",0)
+		SetInterrupt(TRUE)
+		Continue()
+END	
+	

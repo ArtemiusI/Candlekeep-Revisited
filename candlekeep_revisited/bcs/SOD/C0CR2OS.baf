@@ -1,0 +1,400 @@
+// EXPERIENCE
+
+IF
+  Global("BD_JOINXP","LOCALS",1)
+  Global("BD_SAFEHOUSE_DONE","GLOBAL",1)
+  Global("BDSODXP","LOCALS",0)
+  InParty(Myself)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BDSODXP","LOCALS",1)
+    SetGlobal("BD_JOINXP","LOCALS",0)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,249999)
+  XPLT(Myself,250000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,199999)
+  XPLT(Myself,200000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,200000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,160999)
+  XPLT(Myself,161000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,161000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,134999)
+  XPLT(Player1,161000)
+  XPLT(Myself,135000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,135000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,109999)
+  XPLT(Player1,135000)
+  XPLT(Myself,110000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,110000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,89999)
+  XPLT(Player1,110000)
+  XPLT(Myself,90000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,90000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPLT(Player1,90000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    SetInterrupt(TRUE)
+END
+
+// BANTERS
+
+// Baeloth
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Baeloth")
+	Global("C0CR2OSBaeloth","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C0CR2OSBaelothTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C0CR2OSBaeloth","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Baeloth")
+	Global("C0CR2OSBaeloth","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C0CR2OSBaeloth","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C0CR2OSBaeloth_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C0CR2OSBaelothTalk","LOCALS")
+	OR(2)
+		Global("C0CR2OSBaeloth_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C0CR2OSBaeloth","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Baeloth")  
+	AreaType(OUTDOOR)
+	OR(2)
+	TimeOfDay(DAY)
+	TimeOfDay(MORNING)
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C0CR2OSBaeloth","LOCALS",2)
+	    SetGlobal("C0CR2OSBaeloth1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Corwin
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Corwin")
+	Global("C02OspreyCorwin","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyCorwinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyCorwin","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Corwin")
+	Global("C02OspreyCorwin","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyCorwin","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyCorwin_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyCorwinTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyCorwin_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyCorwin","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Corwin")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyCorwin","LOCALS",2)
+	    SetGlobal("C02OspreyCorwin1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Dorn
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Dorn")
+	Global("C02OspreyDorn","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyDornTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyDorn","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Dorn")
+	Global("C02OspreyDorn","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyDorn","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyDorn_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyDornTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyDorn_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyDorn","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Dorn")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyDorn","LOCALS",2)
+	    SetGlobal("C02OspreyDorn1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Dynaheir
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Dynaheir")
+	Global("C02OspreyDynaheir","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyDynaheirTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyDynaheir","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Dynaheir")
+	Global("C02OspreyDynaheir","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyDynaheir","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyDynaheir_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyDynaheirTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyDynaheir_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyDynaheir","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Dynaheir")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyDynaheir","LOCALS",2)
+	    SetGlobal("C02OspreyDynaheir1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Edwin
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Edwin")
+	Global("C02OspreyEdwin","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyEdwinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyEdwin","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Edwin")
+	Global("C02OspreyEdwin","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyEdwin","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyEdwin_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyEdwinTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyEdwin_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyEdwin","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Edwin")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyEdwin","LOCALS",2)
+	    SetGlobal("C02OspreyEdwin1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Voghiln
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Voghiln")
+	Global("C02OspreyVoghiln","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyVoghilnTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyVoghiln","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Voghiln")
+	Global("C02OspreyVoghiln","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyVoghiln","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyVoghiln_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyVoghilnTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyVoghiln_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyVoghiln","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Voghiln")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyVoghiln","LOCALS",2)
+	    SetGlobal("C02OspreyVoghiln1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END

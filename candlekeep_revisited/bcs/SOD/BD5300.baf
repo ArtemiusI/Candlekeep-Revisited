@@ -1,0 +1,14 @@
+/* bd5300_commenting.baf */
+/* Comment when battle starts in Kanaglym (bd5300.are, Underground River) */
+IF
+	Global("BD_AREA_HOSTILE","BD5300",1)  // Kanaglym
+	!GlobalTimerNotExpired("bd_sdd350b_ot_timer","bd5300")  // The original timer has the area code from Boareskyr Bridge & Bridgefort - I *think* this is a bug so I corrected it
+	Global("C0Osprey_bd_ot","bd5300",0)  
+	IfValidForPartyDialog("C0CR2OS")  
+	TriggerOverride("C0CR2OS",Range([ENEMY.0.0.0.HOSTILES3],30))
+THEN
+	RESPONSE #100
+		SetGlobalTimer("bd_sdd350b_ot_timer","bd5300",THREE_MINUTES)  // The original timer has the area code from Boareskyr Bridge & Bridgefort - I *think* this is a bug so I corrected it
+		SetGlobal("C0Osprey_bd_ot","bd5300",1)  
+		DisplayStringHead("C0CR2OS",~Practitioners of fell magic will face justice!~)
+END

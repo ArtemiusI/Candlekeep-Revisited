@@ -1,0 +1,34 @@
+IF
+    Global("bd_npc_camp","locals",1)
+    Name("C0CR2OS",Myself)
+    Switch("bd_npc_camp_chapter","global")
+    OR(2)
+        !Range("ff_camp",999)
+        !TriggerOverride("ff_camp",IsOverMe("C0CR2OS"))
+THEN
+    RESPONSE #2
+        EscapeAreaMove("bd1000",843,3366,S)  // Coast Way Crossing
+    RESPONSE #3
+        EscapeAreaMove("bd7100",346,3338,SE)  // Troll Forest
+    RESPONSE #4
+        EscapeAreaMove("bd3000",860,1683,NE)  // Allied Siege Camp
+END
+
+IF
+    GlobalLT("bd_npc_camp","locals",2)
+    Global("bd_joined","locals",0)
+    Name("C0CR2OS",Myself)
+    TriggerOverride("ff_camp",IsOverMe("C0CR2OS"))
+    Switch("bd_npc_camp_chapter","global")
+THEN
+    RESPONSE #2
+        SetGlobal("bd_npc_camp","locals",2)
+        SaveLocation("LOCALS","bd_default_loc",[843.3366])
+    RESPONSE #3
+        SetGlobal("bd_npc_camp","locals",2)
+        SaveLocation("LOCALS","bd_default_loc",[346.3338])
+    RESPONSE #4
+        SetGlobal("bd_npc_camp","locals",2)
+        SaveLocation("LOCALS","bd_default_loc",[860.1683])
+        ChangeAIScript("bdasc3",CLASS)
+END

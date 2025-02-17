@@ -1,0 +1,10 @@
+IF
+  Global("C0Osprey_kicked_bd4700","global",1)
+  !Dead("C0CR2OS")
+  !InParty("C0CR2OS")
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveGlobal("bd4400","C0CR2OS",[1104.1299])
+    ActionOverride("C0CR2OS",Face(NE))
+END

@@ -1,0 +1,152 @@
+
+LAF HANDLE_AUDIO END
+
+COPY_EXISTING ~osprey.cre~ ~override~
+  SAY INITIAL_MEETING ~Mmm?~ [C0CR2Of]
+  SAY MORALE ~We must run!~ [C0CR2Ou_]
+  SAY LEADER ~Follow me!~ [C0CR2Ot]
+  SAY TIRED ~I need to rest, just for a moment.~ [C0CR2Oc]
+  SAY BORED ~We're going to do something soon, I hope?~ [C0CR2Od]
+  SAY BATTLE_CRY1 ~I shall be victorious!~ [C0CR2Og_]
+  SAY DAMAGE ~Uff!~ [C0CR2Ol]
+  SAY DYING ~Hhhhh... ahhhhh...~ [C0CR2Om]
+  SAY HURT ~I need healing!~ [C0CR2Oe]
+  SAY SELECT_COMMON1 ~Mmm?~ [C0CR2Of]
+  SAY SELECT_ACTION1 ~Alright.~ [C0CR2Oi]
+  SAY SELECT_ACTION2 ~It's finished.~ [C0CR2Oj]
+  SAY SELECT_ACTION3 ~Indeed.~ [C0CR2Ok]
+  SAY CRITICAL_HIT ~Take that!~ [C0CR2O8]
+  SAY CRITICAL_MISS ~Blast!~ [C0CR2O1]
+  SAY TARGET_IMMUNE ~My weapon is of no use!~ [C0CR2O2]
+  SAY INVENTORY_FULL ~Enough! I can carry no more.~ [C0CR2O3]
+  SAY SPELL_DISRUPTED ~My spell has failed!~ [C0CR2O6]
+  SAY HIDDEN_IN_SHADOWS ~Like a shadow.~ [C0CR2O5]
+
+COPY ~%MOD_FOLDER%/cre/C0CR2OS.cre~ ~override~
+  SAY NAME1 ~Osprey~
+  SAY NAME2 ~Osprey~
+  WRITE_ASCII 0x248 ~C0CR2OS~ #8  //override script
+  WRITE_ASCII 0x280 ~C0CR2OS~ #32  //DV
+  WRITE_ASCII 0x2cc ~C0CR2OS~ #8   //pre-joining dialogue file
+  SAY BIO ~OSPREY is a trainee scribe and a childhood friend of yourself and Imoen. A devout—perhaps exceedingly so—worshipper of Deneir, god of scholars and knowledge, nobody could be less out of place in a place such as Candlekeep as Osprey. Capable in both arcane and divine magic, Osprey is an eager student and loves knowledge of all sorts.
+  
+From what you recall, Osprey is the daughter of an elderly Candlekeep scribe, and like you and Imoen, has lived within the castle's walls for most of her life. Aside from being a faithful Deneirrath, she is one of Tethtoril's favored students, and is a devoted scholar of literature, history and magical knowledge. As such, Osprey has a deeply academic understanding of the arcane arts, and views knowledge as the greatest blessing can be bestowed upon mortals. Though often clumsy and prone to preaching, Osprey has a gentle disposition and considers it her duty to use her skills to aid those in need.
+  
+When you last met Osprey, she had left Candlekeep with the famed priest of Deneir, Cadderly Bonaduce, to study under him at the Spirit Soaring monastery. However, after the news of the impending war on the Sword Coast and the crusade reached the Spirit Soaring, Osprey received Cadderly's blessing to return home and join the Flaming Fist to protect her homeland.~
+  SAY INITIAL_MEETING ~Mmm?~ [C0CR2Of]
+  SAY MORALE ~We must run!~ [C0CR2Ou_]
+  SAY LEADER ~Follow me!~ [C0CR2Ot]
+  SAY TIRED ~I need to rest, just for a moment.~ [C0CR2Oc]
+  SAY BORED ~We're going to do something soon, I hope?~ [C0CR2Od]
+  SAY BATTLE_CRY1 ~Watch out!~ [C0CR2Oa]
+  SAY BATTLE_CRY2 ~You are nothing, nothing at all!~ [C0CR2Oh_]
+  SAY BATTLE_CRY3 ~For glory!~ [C0CR2O9]
+  SAY BATTLE_CRY4 ~I shall be victorious!~ [C0CR2Og_]
+  SAY DAMAGE ~Uff!~ [C0CR2Ol]
+  SAY DYING ~Hhhhh... ahhhhh...~ [C0CR2Om]
+  SAY HURT ~I need healing!~ [C0CR2Oe]
+  SAY SELECT_COMMON1 ~Mmm?~ [C0CR2Of]
+  SAY SELECT_COMMON2 ~Greetings.~ [C0CR2Og]
+  SAY SELECT_COMMON3 ~I'll keep an eye out.~ [C0CR2Ov]
+  SAY SELECT_ACTION1 ~Alright.~ [C0CR2Oi]
+  SAY SELECT_ACTION2 ~It's finished.~ [C0CR2Oj]
+  SAY SELECT_ACTION3 ~Indeed.~ [C0CR2Ok]
+  SAY SELECT_ACTION4 ~I'll take a look at that.~ [C0CR2Ou]
+  SAY CRITICAL_HIT ~Take that!~ [C0CR2O8]
+  SAY CRITICAL_MISS ~Blast!~ [C0CR2O1]
+  SAY TARGET_IMMUNE ~My weapon is of no use!~ [C0CR2O2]
+  SAY INVENTORY_FULL ~Enough! I can carry no more.~ [C0CR2O3]
+  SAY SPELL_DISRUPTED ~My spell has failed!~ [C0CR2O6]
+  SAY HIDDEN_IN_SHADOWS ~Like a shadow.~ [C0CR2O5]
+    ADD_KNOWN_SPELL ~C0CR#OSS~ #0 ~INNATE~
+    ADD_MEMORIZED_SPELL ~C0CR#OSS~ #0 ~INNATE~ (1)
+
+ACTION_IF FILE_EXISTS_IN_GAME ~C0CR#OSP.BMP~ THEN BEGIN
+COPY_EXISTING ~C0CR2OS.cre~ ~override~
+  WRITE_ASCII 0x34 ~C0CR#OSP~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#OSP~ #8   //medium portrait
+  END
+
+COPY ~%MOD_FOLDER%/itm/SOD/C0CR2LE.ITM~ ~OVERRIDE~
+SAY NAME2 ~Leather Armor of the Scribe~
+SAY DESC ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a Ranger's boots or a Druid's robe. That kind of leather offers no better protection than common clothing. This particular suit of bluish-grey armor has the colors and symbol commonly worn by followers of Deneir, the Great Scribe.
+
+STATISTICS:
+
+Equipped abilities:
+– Does not disable spellcasting
+– Save vs. Spells: +2
+
+Armor Class: 7 (9 vs. piercing and missile)
+Requires:
+ 4 Strength
+
+Weight: 10~
+
+COPY ~%MOD_FOLDER%/itm/SOD/C0CR2HA.EFF~ ~OVERRIDE~
+COPY ~%MOD_FOLDER%/itm/SOD/C0CR2HA.ITM~ ~OVERRIDE~
+SAY NAME2 ~Hammer of Justice~
+SAY DESC ~The zealous but good-hearted warrior known only as "The Law" gained fame when he created this set of magic weapons to arm the forces of law and discipline. Each was fueled by his burning desire to eradicate chaotic behavior and, as such, they became powerful tools in the maintenance of order.
+
+STATISTICS:
+
+THAC0: +1, +3 vs. chaotic
+Damage: 1d4+2, +4 vs. chaotic
+Damage type: crushing
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY ~%MOD_FOLDER%/itm/SOD/C0CR2RI.ITM~ ~OVERRIDE~
+SAY NAME2 ~Ring of Theology~
+SAY DESC ~Ring of Theology
+This ring bears the mark of the Edificant Library, a once-revered center of knowledge. Scholars serving the church of Deneir specializing in the study of the gods and the divine wore them as a symbol of their field of study, and many at least held a theoretical understanding of the arcane arts. Though the Edificant Library was destroyed by the machinations of dark powers, Cadderly Bonaduce built the Spirit Soaring in its place and preserved much of their knowledge and mementos. This ring is one such example.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize one extra 1st- and 2nd-level wizard spell and one extra 1st- and 2nd-level priest spell.
+
+Weight: 0~
+
+APPEND ~bddialog.2da~
+~C0CR2OS        C0CR2OS	C0CR2OSJ	C0CR2OSD~
+UNLESS ~C0CR2OS~
+
+ACTION_FOR_EACH scripts IN BD0020 BD0063 BD0103 BD1000 BD2000 BD3000 BD4100 BD4300 BD4400 BD5100 BD5300 BD7100 BDASC3 BDC116D BDCUT08 BDCUT58 BDCUT59B BDCUT61 BDPARTY BEGIN
+EXTEND_TOP ~%scripts%.BCS~ ~%MOD_FOLDER%/SCRIPTS/%scripts%.BAF~ EVAL
+END
+
+ACTION_FOR_EACH new_bcs IN C0CR2OS C0CR2OSB C02OSCV1 BEGIN
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bcs/SOD/%new_bcs%.baf~
+END
+
+ACTION_FOR_EACH new_dlg IN C0CR2OS C0CR2OSJ BEGIN
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bcs/SOD/%new_dlg%.d~
+END
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+  INCLUDE ~EET/other/EET_functions.tph~ //this function will be in the player's own EET folder
+  LAF ~EET_NPC_TRANSITION~ 
+    INT_VAR
+      type = 1 //Biff is only available in BG:EE/SoD. Adapt this if needed; including the additional STR_VARs
+    STR_VAR
+      dv = "C0CR2OS" //Biff's scriptname (death variable)
+      override_BG1 = "C0CR2OS" /* OVERRIDE script in BG:EE. Put your NPC's BG:EE script here UNLESS you use the same script for BG:EE and SoD 
+(adds a "destruct in Chapter greater than 7" scriptblock, for example if your NPC was spawned in BG:EE but was never in party (although "BeenInParty" is not being checked by this scriptblock)). 
+If your NPC is SoD only like Biff, leave this open. */
+      override_SoD = "C0CR2OS" //OVERRIDE script in SoD. This will add a "DestroySelf()" in Chapter greater than 13 to the SoD script.
+      traFile = "%MOD_FOLDER%/tra/%LANGUAGE%/GAME-C0CR2OS.tra" //path to the text line for the ToB Fate Spirit summoning
+      string = "@0" /* ~Bring me Biff the Understudy.~ */ //from the above specified tra file
+      stringPosDV = "Neera" //Name after which Biff's should be put into the order of reply options at the fate spirit summoning dialogue. 
+/* From the "Modder's Notes for Baldur's Gate: Enhanced Edition Trilogy (EET)":
+      //Aerie, Ajantis, Alora, Anomen, Baeloth, Branwen, Cernd, Coran, Corwin, Dorn, Dynaheir, Edwin, Eldoth, Faldorn, Garrick,
+      //Glint, HaerDalis, Hexxat, Imoen2, Jaheira, Jan, Kagain, Keldorn, Khalid, Kivan, Korgan, MKhiin, Mazzy, Minsc, Montaron,
+      //Nalia, Neera, Quayle, Rasaad, Safana, SharTeel, Skie, Tiax, Valygar, Viconia, Voghiln, Wilson, Xan, Xzar, Yeslick, Yoshimo
+      //variable not set (default) = NPC name appended at the end of summoning list */
+  END
+END	

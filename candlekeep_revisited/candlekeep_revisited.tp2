@@ -40,19 +40,26 @@ LANGUAGE
   ~%MOD_FOLDER%/tra/english/setup.tra~
 
 BEGIN ~Candlekeep Revisited: BG1 Prologue Expansion~ DESIGNATED 0
-  REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   REQUIRE_PREDICATE !FILE_EXISTS ~Reflections/Reflections.tp2~ ~Do not use with 'Reflections of Destiny'.~
+  REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   
 INCLUDE ~%MOD_FOLDER%/lib/main.tpa~
 
 BEGIN ~Candlekeep Revisited: BG1 Expanded Starting Sequence~ DESIGNATED 1
-  REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   REQUIRE_PREDICATE !FILE_EXISTS ~Reflections/Reflections.tp2~ ~Do not use with 'Reflections of Destiny'.~
+  REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   REQUIRE_PREDICATE (MOD_IS_INSTALLED ~candlekeep_revisited.tp2~ ~0~) ~The main component must be installed.~
   
 INCLUDE ~%MOD_FOLDER%/lib/intro.tpa~
 
-BEGIN ~Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey~ DESIGNATED 2
+BEGIN ~Candlekeep Revisited: Osprey joinable NPC for SoD~ DESIGNATED 2
+  REQUIRE_PREDICATE !FILE_EXISTS ~Reflections/Reflections.tp2~ ~Do not use with 'Reflections of Destiny'.~
+  REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) ~This mod is made for Siege of Dragonspear.~
+  REQUIRE_PREDICATE (MOD_IS_INSTALLED ~candlekeep_revisited.tp2~ ~0~) ~The main component must be installed.~
+  
+INCLUDE ~%MOD_FOLDER%/lib/osprey_sod.tpa~
+
+BEGIN ~Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey~ DESIGNATED 3
   REQUIRE_PREDICATE (GAME_IS ~BGEE EET~) ~This mod must be installed on BG:EE or EET.~
   
 INCLUDE ~%MOD_FOLDER%/lib/portraits.tpa~

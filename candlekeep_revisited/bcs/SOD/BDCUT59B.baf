@@ -1,0 +1,25 @@
+/* bdcut59b_patch.baf */
+
+/* Global("C0Osprey_kicked_bd4700","global",1): Biff was left standing in hell dimension - make sure he's coming back to the castle, too */
+IF
+  Global("C0Osprey_kicked_bd4700","global",1) //set in C0OspreysP.dlg
+  !Dead("C0CR2OS")
+  !InParty("C0CR2OS")
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveGlobal("bd4300","C0CR2OS",[884.358]) //coordinates above the portal. For example: Minsc's are [685.310]
+    ActionOverride("C0CR2OS",Face(S))
+END
+
+/* This moves Biff into the castle in case he was left standing somewhere else (not in hell dimension) because the other areas cannot be visited again (for plain SoD) */
+IF
+  Global("C0Osprey_kicked_bd4700","global",0)
+  !Dead("C0CR2OS")
+  !InParty("C0CR2OS")
+THEN
+  RESPONSE #100
+  CutSceneId(Player1)
+  MoveGlobal("bd4300","C0CR2OS",[1417.1523]) //coordinates wherever Biff should be waiting if he wasn't with the PC to Avernus. For example near Rayphus who is at [1840.1260], in the room to the northeast.
+  ActionOverride("C0CR2OS",DestroySelf())
+END

@@ -1,0 +1,13 @@
+IF
+	Global("bd_battle","global",1)
+	Global("bd_move_npcs","bd3000",1)
+	Global("bd_move_to_entrance","locals",0)
+	Name("C0CR2OS",Myself)  
+	Global("C0Osprey_MoveCamp","MYAREA",1)
+THEN
+	RESPONSE #100
+		SetGlobal("bd_move_to_entrance","locals",1)
+		JumpToPoint([1496.360]) //Coordinates at the entrance of the Siege Camp. Minsc for example jumps to [1465.400]
+		Face(N)
+		SaveObjectLocation("LOCALS","bd_default_loc",Myself)
+END

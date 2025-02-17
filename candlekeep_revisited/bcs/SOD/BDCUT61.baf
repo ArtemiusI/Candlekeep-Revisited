@@ -1,0 +1,9 @@
+IF
+  InParty("C0CR2OS")
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    SetGlobal("C0Osprey_party_epilogue","global",1)
+    ActionOverride("C0CR2OS",LeaveParty())
+    ActionOverride("C0CR2OS",DestroyAllDestructableEquipment())
+END

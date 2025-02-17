@@ -1,0 +1,72 @@
+/* bd4300_commenting_et.baf */
+/* 1 Hephernaan discovered the group inside the castle */
+IF
+	Global("bd_plot","global",370)
+	!GlobalTimerNotExpired("bd_mdd905a_ot_timer","bd4300")  
+	Global("C0Osprey_bd_ot","bd4300",0)  
+	IfValidForPartyDialog("C0CR2OS")  
+THEN
+	RESPONSE #100
+		SetGlobalTimer("bd_mdd905a_ot_timer","bd4300",THREE_MINUTES)  
+		SetGlobal("C0Osprey_bd_ot","bd4300",1)  
+		DisplayStringHead("C0CR2OS",~We won't survive to tell what we've learned if we don't run now, <CHARNAME>!~)
+		SmallWait(8)  
+		Continue()  
+END
+
+/* 2 Portal is opened after Hephernaan's scheme */
+IF
+	AreaCheck("BD4300")
+	Global("bd_plot","global",495)
+	Global("C0Osprey_SoDPortalComment","bd4300",0) 
+	IfValidForPartyDialog("C0CR2OS")  
+THEN
+	RESPONSE #100
+		SetGlobal("C0Osprey_SoDPortalComment","bd4300",1)
+		DisplayStringHead("C0CR2OS",~A devil invasion, just like in the legends... we have to do something to stop it!~) 
+		SmallWait(8) 
+		Continue()
+END
+
+/* 3 PC killed the crusaders at the portal */
+IF
+	Global("C0Osprey_bd_MDD892a_ot","bd4300",0)  
+	Global("bd_poison_dsc_supplies","global",0)
+	Dead("bdbelben")  // Belben
+	CombatCounter(0)
+	IfValidForPartyDialog("C0CR2OS")  
+THEN
+	RESPONSE #100
+		SetGlobal("C0Osprey_bd_MDD892a_ot","bd4300",1)  
+		SetGlobalTimer("bd_MDD892a_ot_timer","bd4300",ONE_MINUTE) //timer will be checked for Corwin 
+		DisplayStringHead("C0CR2OS",~Why will they never listen to reason?~)   
+		Continue() 
+END
+
+/* 4 Comment after first wave of demons if PC lingers */
+IF
+	GlobalLT("bd_plot","global",499)
+	Global("bd_mdd1290d_ot","bd4300",1)  
+	Global("C0Osprey_bd_mdd1290d_ot","bd4300",0)  
+	IfValidForPartyDialog("C0CR2OS")  
+THEN
+	RESPONSE #100
+		DisplayStringHead("C0CR2OS",~Maybe the only choice is to jump in and attack the source... even though I hate to imagine it.~)  
+		SetGlobal("C0Osprey_bd_mdd1290d_ot","bd4300",1)    
+		SmallWait(8)
+		Continue()
+END
+
+/* 5 Comment after return from Avernus: portal is closed */
+IF
+	Global("bd_plot","global",586)
+	!GlobalTimerNotExpired("bd_mdd1341a_ot_timer","bd4300")  
+	Global("C0Osprey_bd_ot2","bd4300",0)  
+	IfValidForPartyDialog("C0CR2OS")  
+THEN
+	RESPONSE #100
+		SetGlobalTimer("bd_mdd1341a_ot_timer","bd4300",2)  // Dragonspear Castle Basement
+		SetGlobal("C0Osprey_bd_ot2","bd4300",1)  
+		DisplayStringHead("C0CR2OS",~We won... I'm going to have to put off sleep for the next week in order to record all of this as accurately as it deserves.~)  
+		Continue()
+END

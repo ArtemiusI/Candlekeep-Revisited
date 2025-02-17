@@ -1,0 +1,11 @@
+IF
+	NearLocation(Player1,468,655,20)
+	Global("C0CandleReSoDOspreySpawn","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0CandleReSoDOspreySpawn","GLOBAL",1)
+	CreateCreature("C0CR2OS",[506.664],SE)
+	Wait(1)
+	DisplayStringHead("C0CR2OS",~Move over, move over please—yes, Deneir bless you, sir, but I really need to—OW! Watch where you're going, you!~)
+	ActionOverride("C0CR2OS",Dialogue(Player1))
+END

@@ -1,0 +1,32 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId("C0CR2OS")  // Baeloth
+        MoveViewPoint([955.1015],BD_NORMAL)
+        MoveToPoint([955.1015])
+        FaceObject("Bd2100gl")
+        TakePartyItem("BDSCRL02")  // Arcane Scroll of Impactful Doom
+        DestroyItem("BDSCRL02")  // Arcane Scroll of Impactful Doom
+        SmallWait(5)
+        SetSequence(SEQ_CONJURE)
+        PlaySound("cha_mm07")
+        SmallWait(25)
+        CreateVisualEffect("sprotect",[1010.980])
+        SetSequence(SEQ_CONJURE)
+        SmallWait(32)
+        SetSequence(SEQ_CAST)
+        SmallWait(5)
+        CreateVisualEffect("ohbglyph",[1010.960])
+        SmallWait(3)
+        AmbientActivate("GlowingRock",FALSE)
+        SmallWait(25)
+        PlaySound("EFF_M89")
+        SmallWait(5)
+        CreateVisualEffect("spfleshs",[1028.1030])
+        SmallWait(5)
+        Activate("BDWRAITH")
+        SmallWait(25)
+        ActionOverride("bdwynan",StartDialogueNoSet(Myself))
+END
+
