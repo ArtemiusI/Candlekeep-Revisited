@@ -102,6 +102,12 @@ I_C_T2 REEVOR 0 C0CandleReImoenInterjectReevor
 == %bg1_imoen_dlg% IF ~IsValidForPartyDialog("%bg1_imoen%")~ THEN ~Beware, rat nation. <CHARNAME> be here with <PRO_HISHER> mighty broom to claim all that is yours. Isn't this what we have cats for?~
 END
 
+I_C_T2 OBE 0 C0CandleReImoenObe
+== %bg1_imoen_dlg% IF ~IsValidForPartyDialog("%bg1_imoen%")~ THEN ~Looks like a fun party. I don't wanna get in your way with everybody else here, so I'll just wait outside until you're finished.~
+DO ~SetGlobal("C0CandleReImoenObeLeave","GLOBAL",1)
+EscapeAreaMove("%bg1_eet_symbol%2600",3233,2853,SW)~
+END
+
 // Assassin
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -151,4 +157,10 @@ EXIT
 
 CHAIN IF WEIGHT #-1 ~IsGabber(Player1) GlobalLT("Chapter","GLOBAL",1)~ THEN %bg1_imoen_dlg% C0CandleReImoenAssassin
 ~C'mon, <CHARNAME>, let's make our rounds through the castle. We're not gonna get another chance like this again, y'know?~
+EXIT
+
+ADD_STATE_TRIGGER GATEWARD 5 ~!InParty("%bg1_imoen%")~ 
+
+CHAIN IF WEIGHT #-1 ~InParty("%bg1_imoen%") NumInPartyGT(2)~ THEN GATEWARD C0CandleReGatewarden
+~Hello there! I thought I should tell you that Gorion has been looking to talk to <CHARNAME> and all of <PRO_HISHER> friends. You should go talk to Gorion as soon as possible.~
 EXIT

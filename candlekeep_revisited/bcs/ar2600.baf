@@ -15,3 +15,14 @@ THEN
 	ActionOverride("TETHTORIL",JumpToPoint([2867.1872]))
 	ActionOverride("TETHTORIL",Face(S))
 END
+
+IF
+	InMyArea(Player1)
+	InMyArea("%bg1_imoen%")
+	Global("C0CandleReImoenObeLeave","GLOBAL",1)
+THEN
+  RESPONSE #100
+	SetGlobal("C0CandleReImoenObe","GLOBAL",0)
+	SetGlobal("C0CandleReImoenObeLeave","GLOBAL",0)
+	ActionOverride("%bg1_imoen%",JoinParty())
+END

@@ -3,6 +3,8 @@ COPY ~%MOD_FOLDER%/bam~ ~override~
 COPY_EXISTING ~arkani.cre~ ~override~
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~DWARVEN_DEFENDER~))
   SAY BIO ~ARKANIS is a Watcher of Candlekeep, whom you know to have served dutifully for as long as you can remember. Defying the common perception of dwarves being sullen and difficult to befriend, you have always known Arkanis to be a gentle, fatherly sort who enjoys telling tales, taking care of children, and reading books together with his close companion Deder.~
+  WRITE_ASCII 0x34 ~GENDWRFM~ #8   //small portrait
+  WRITE_ASCII 0x3C ~GENDWRFL~ #8   //medium portrait
 
 COPY_EXISTING ~arkani3.cre~ ~override~
   WRITE_BYTE 0x24 60 // current hp
@@ -27,6 +29,8 @@ COPY_EXISTING ~arkani3.cre~ ~override~
 COPY_EXISTING ~cander.cre~ ~override~
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~GODHELM~))
   SAY BIO ~CANDEROUS is a cleric of Helm, the Watcher. He is not from the Sword Coast, but has called Candlekeep home for at least a few years. Though trained in combat, he has lived a peaceful life within the keep's walls as a healer, tending to the various minor ailments of the residents.~
+  WRITE_ASCII 0x34 ~MAN2M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~MAN2L~ #8   //medium portrait
 
 COPY_EXISTING ~cander.cre~ ~override/C0CR#CA3.cre~
   WRITE_BYTE 0x24 48 // current hp
@@ -64,6 +68,8 @@ COPY_EXISTING ~deder.cre~ ~override~
   SAY BIO ~You know little of DEDER's past outside of the fact that he was born in the merchant state of Sembia. Though he serves as a Watcher, you know him to be adept in the rogue's trade, having taught Imoen the skills of thievery during your childhood. He is a person of few words, yet has a close friendship with his fellow Watcher Arkanis.~
   ADD_KNOWN_SPELL ~SPCL423~ #0 ~innate~
   ADD_MEMORIZED_SPELL ~SPCL423~ #0 ~innate~ (1)
+  WRITE_ASCII 0x34 ~GENMELFM~ #8   //small portrait
+  WRITE_ASCII 0x3C ~GENMELFL~ #8   //medium portrait
 
 COPY_EXISTING ~deder3.cre~ ~override~
   WRITE_BYTE 0x24 40 // current hp
@@ -89,6 +95,8 @@ COPY_EXISTING ~deder3.cre~ ~override~
 COPY_EXISTING ~mordai.cre~ ~override~
   WRITE_BYTE 0x27b 49 // alignment
   SAY BIO ~MORDAINE is a young elven mage who you recall entering Candlekeep as a child with her father and has lived within its walls ever since. Though you have never seen her father after the day you met her, you know Mordaine has never questioned being left alone in the castle, nor does she spare time to tell you her father's reasons for leaving her, as she oft spends too many long hours delving into the library's innumerable tomes of knowledge.~
+  WRITE_ASCII 0x34 ~WOMAN1M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~WOMAN1L~ #8   //medium portrait
 
 COPY_EXISTING ~osprey.cre~ ~override~
 		WRITE_BYTE 0x238 14 // strength
@@ -102,6 +110,8 @@ COPY_EXISTING ~osprey.cre~ ~override~
     ADD_KNOWN_SPELL ~C0CR#OSS~ #0 ~INNATE~
     ADD_MEMORIZED_SPELL ~C0CR#OSS~ #0 ~INNATE~ (3)
   SAY BIO ~OSPREY is a trainee scribe and a childhood friend of yourself and Imoen. A devout—perhaps exceedingly so—worshipper of Deneir, god of scholars and knowledge, nobody could be less out of place in a place such as Candlekeep as Osprey. Capable in both arcane and divine magic, Osprey is an eager student and loves knowledge of all sorts.~
+  WRITE_ASCII 0x34 ~WOMAN2M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~WOMAN2L~ #8   //medium portrait
 
 COPY_EXISTING ~SPPR304.SPL~ ~OVERRIDE/C0CR#OSS.SPL~
 WRITE_SHORT 0X34 2
