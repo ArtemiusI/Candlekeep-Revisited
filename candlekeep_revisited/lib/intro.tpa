@@ -27,19 +27,6 @@ COPY_EXISTING ~DOGWI.cre~ ~override/C0CR#DOG.CRE~
     SAY NAME1 ~Dog~
     SAY NAME2 ~Dog~
 
-ACTION_IF FILE_EXISTS_IN_GAME ~C0CLABWL.2DA~ THEN BEGIN
-OUTER_SPRINT warlock_check_1 ~OR(2)
-Kit(Player1,C0WLOCK)
-Kit(Player1,C0FILL_WLOCK)~
-OUTER_SPRINT warlock_check_2 ~!Kit(Player1,C0FILL_WLOCK)
-!Kit(Player1,C0WLOCK)~
-END
-
-ACTION_IF NOT FILE_EXISTS_IN_GAME ~C0CLABWL.2DA~ THEN BEGIN
-OUTER_SPRINT warlock_check_1 ~False()~
-OUTER_SPRINT warlock_check_2 ~~
-END
-
 EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-intro.baf~ EVAL
 
 ACTION_IF GAME_IS ~EET~ THEN BEGIN
@@ -135,4 +122,8 @@ Requires:
  4 Strength
 
 Weight: 5~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~C0CLABWL.2DA~ THEN BEGIN
+EXTEND_TOP ~ar2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-warlock.baf~
 END

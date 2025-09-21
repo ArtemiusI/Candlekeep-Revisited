@@ -1,0 +1,28 @@
+IF
+	Global("C0CandleReClassStart","GLOBAL",0)
+  OR(2)
+  Kit(Player1,C0FILL_WLOCK)
+	Kit(Player1,C0WLOCK)
+THEN
+  RESPONSE #100
+    ActionOverride(Player1,JumpToPoint([745.1746]))
+    ActionOverride(Player2,JumpToPoint([1045.2106]))
+    ActionOverride(Player3,JumpToPoint([1102.2140]))
+    ActionOverride(Player4,JumpToPoint([1096.2195]))
+    ActionOverride(Player5,JumpToPoint([1095.2254]))
+    ActionOverride(Player6,JumpToPoint([1114.2315]))
+    ActionOverride(Player1,Face(W))
+    ActionOverride(Player2,Face(E))
+    ActionOverride(Player3,Face(E))
+    ActionOverride(Player4,Face(E))
+    ActionOverride(Player5,Face(E))
+    ActionOverride(Player6,Face(E))
+	FadeToColor([0.0],0)
+  PlaySong(13)
+  GiveItemCreate("C0CR#WLK",Player1,1,0,0)
+  XEquipItem("C0CR#WLK",Player1,SLOT_ARMOR,EQUIP)
+	StartCutSceneMode()
+	StartCutScene("C0CR#009")
+	SetGlobal("C0CandleReClassStartBlackguard","GLOBAL",1)
+	SetGlobal("C0CandleReClassStart","GLOBAL",1)
+END
