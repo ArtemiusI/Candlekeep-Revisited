@@ -117,7 +117,7 @@ APPEND ~bddialog.2da~
 ~C0CR2OS        C0CR2OS	C0CR2OSJ	C0CR2OSD~
 UNLESS ~C0CR2OS~
 
-ACTION_FOR_EACH scripts IN BD0020 BD0063 BD0103 BD1000 BD2000 BD3000 BD4100 BD4300 BD4400 BD5100 BD5300 BD7100 BDASC3 BDC116D BDCUT08 BDCUT58 BDCUT59B BDCUT61 BDPARTY BEGIN
+ACTION_FOR_EACH scripts IN BD0020 BD0063 BD0103 BD1000 BD2000 BD3000 BD4100 BD4300 BD4400 BD5300 BD7100 BDASC3 BDC116D BDCUT08 BDCUT58 BDCUT59B BDCUT61 BDPARTY BEGIN
 EXTEND_TOP ~%scripts%.BCS~ ~%MOD_FOLDER%/bcs/SOD/%scripts%.BAF~ EVAL
 END
 
@@ -136,9 +136,6 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       type = 1 //Biff is only available in BG:EE/SoD. Adapt this if needed; including the additional STR_VARs
     STR_VAR
       dv = "C0CR2OS" //Biff's scriptname (death variable)
-      override_BG1 = "C0CR2OS" /* OVERRIDE script in BG:EE. Put your NPC's BG:EE script here UNLESS you use the same script for BG:EE and SoD 
-(adds a "destruct in Chapter greater than 7" scriptblock, for example if your NPC was spawned in BG:EE but was never in party (although "BeenInParty" is not being checked by this scriptblock)). 
-If your NPC is SoD only like Biff, leave this open. */
       override_SoD = "C0CR2OS" //OVERRIDE script in SoD. This will add a "DestroySelf()" in Chapter greater than 13 to the SoD script.
       traFile = "%MOD_FOLDER%/tra/%LANGUAGE%/GAME-C0CR2OS.tra" //path to the text line for the ToB Fate Spirit summoning
       string = "@0" /* ~Bring me Biff the Understudy.~ */ //from the above specified tra file

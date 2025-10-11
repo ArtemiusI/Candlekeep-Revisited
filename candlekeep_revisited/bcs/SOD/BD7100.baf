@@ -1,5 +1,30 @@
 IF
-  Global("C0OspreySoDSpawn","GLOBAL",1)
+  !BeenInParty("C0CR2OS")
+  Global("C0Osprey_MoveCamp","MYAREA",0)
+  !Dead("C0CR2OS")
+  !InPartyAllowDead("C0CR2OS")
+THEN
+  RESPONSE #100
+    SetGlobal("C0Osprey_MoveCamp","MYAREA",1)
+    CreateCreature("C0CR2OS",[346.3338],SE) 
+    ReallyForceSpellDeadRES("bdrejuve","C0CR2OS")
+    ChangeEnemyAlly("C0CR2OS",NEUTRAL)
+    ChangeSpecifics("C0CR2OS",ALLIES)
+    ActionOverride("C0CR2OS",SetGlobal("bd_joined","locals",0))
+    ActionOverride("C0CR2OS",SetGlobal("bd_retreat","locals",0))
+    ActionOverride("C0CR2OS",SetGlobal("C0CandleReSoDOspreyStart","GLOBAL",1))
+    ActionOverride("C0CR2OS",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("C0CR2OS",ChangeAIScript("C0CR2OS",OVERRIDE))
+    ActionOverride("C0CR2OS",ChangeAIScript("bdasc3",CLASS))
+    ActionOverride("C0CR2OS",ChangeAIScript("BDSHOUT",RACE))
+    ActionOverride("C0CR2OS",ChangeAIScript("BDMAGE01",GENERAL))
+    ActionOverride("C0CR2OS",ChangeAIScript("",DEFAULT))
+    ActionOverride("C0CR2OS",SetDialogue("C0CR2OS"))
+    Continue()
+END
+
+IF
+  BeenInParty("C0CR2OS")
   Global("C0Osprey_MoveCamp","MYAREA",0)
   !Dead("C0CR2OS")
   !InPartyAllowDead("C0CR2OS")

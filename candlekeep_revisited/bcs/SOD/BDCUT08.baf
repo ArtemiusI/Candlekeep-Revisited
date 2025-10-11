@@ -1,4 +1,4 @@
-/* C0Kvel08_patch.baf
+/* C0Osprey08_patch.baf
 march out of BG city: make Biff move when the coalition start marching out of BG city */
 IF
 	True()
