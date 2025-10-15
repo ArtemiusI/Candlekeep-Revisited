@@ -1,41 +1,41 @@
 COPY ~%MOD_FOLDER%/bmp~ ~override~
 
 COPY_EXISTING ~arkani.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#ARK~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#ARK~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#01M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#01L~ #8   //medium portrait
 
 COPY_EXISTING ~arkani3.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#ARK~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#ARK~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#01M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#01L~ #8   //medium portrait
 
 COPY_EXISTING ~cander.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#CAN~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#CAN~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#02M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#02L~ #8   //medium portrait
 
 ACTION_IF FILE_EXISTS_IN_GAME ~C0CR#CA3.CRE~ THEN BEGIN
 COPY_EXISTING ~C0CR#CA3.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#CAN~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#CAN~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#02M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#02L~ #8   //medium portrait
 END
 
 COPY_EXISTING ~deder.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#DED~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#DED~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#03M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#03L~ #8   //medium portrait
 
 COPY_EXISTING ~deder3.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#DED~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#DED~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#02M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#02L~ #8   //medium portrait
 
 COPY_EXISTING ~mordai.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#MOR~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#MOR~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#04M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#04L~ #8   //medium portrait
 
 COPY_EXISTING ~osprey.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#OSP~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#OSP~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#05M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#05L~ #8   //medium portrait
 
 ACTION_IF FILE_EXISTS_IN_GAME ~C0CR2OS.CRE~ THEN BEGIN
 COPY_EXISTING ~C0CR2OS.cre~ ~override~
-  WRITE_ASCII 0x34 ~C0CR#OSP~ #8   //small portrait
-  WRITE_ASCII 0x3C ~C0CR#OSP~ #8   //medium portrait
+  WRITE_ASCII 0x34 ~C0CR#05M~ #8   //small portrait
+  WRITE_ASCII 0x3C ~C0CR#05L~ #8   //medium portrait
   END

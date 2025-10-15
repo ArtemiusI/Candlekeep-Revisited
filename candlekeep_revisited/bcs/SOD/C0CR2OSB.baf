@@ -159,7 +159,7 @@ RESPONSE #40
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyEdwin1","MYAREA",-1)
 END
-/*
+
 // GLINT
 
 IF
@@ -170,36 +170,35 @@ IF
 	Switch("C02OspreyGlint1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("Glint",~~)
+	DisplayStringHead("Glint",~Erm, Osprey. I don't mean to be rude, but do those branches in your hair mean anything?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyGlint1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~What? What branches?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyGlint1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Glint",~~)
+	DisplayStringHead("Glint",~You know, the twigs all over your head, behind your ears, and probably where I can't see them too. You're practically shedding leaves.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyGlint1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Aaaah! How long have all those been there? Don't tell me I've been walking around like this all day!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyGlint1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Glint",~~)
+	DisplayStringHead("Glint",~Oh, so they weren't a fashion statement after all. I was starting to wonder if I should find some for myself. Maybe I could weave them into my beard.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyGlint1","MYAREA",50)
 RESPONSE #50
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~No, nononono! It was just an accident. I walked into a bush earlier while I was reading, that's all.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyGlint1","MYAREA",60)
 RESPONSE #60
-	DisplayStringHead("Glint",~~)
+	DisplayStringHead("Glint",~Huh. But you know, I was starting to think you were onto something. Some of the best ideas come from accidents.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
-	SetGlobal("C02OspreyGlint1","MYAREA",61)
+	SetGlobal("C02OspreyGlint1","MYAREA",-1)
 END
-*/
-/*
+
 // JAHEIRA
 
 IF
@@ -210,32 +209,31 @@ IF
 	Switch("C02OspreyJaheira1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("Jaheira",~~)
+	DisplayStringHead("Jaheira",~*sigh* Osprey, I can commend your dedication to learning, but you could do with a bit more common sense as well.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyJaheira1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~I—I beg your pardon, Jaheira?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyJaheira1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Jaheira",~~)
+	DisplayStringHead("Jaheira",~If I have to see you tripping over another rock or vine on the road, as visible as can be, it may exceed my ability to count. Please, watch where you are walking!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyJaheira1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Eek! I—I'm sorry! I'll do my best to not disappoint you from now on! Thank you for reminding me!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyJaheira1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Jaheira",~~)
+	DisplayStringHead("Jaheira",~You do not need to take such a subservient tone with me either! I am not your mother.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyJaheira1","MYAREA",60)
 RESPONSE #50
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~S-sorry. Old habits die hard, I guess...~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyJaheira1","MYAREA",-1)
 END
-*/
-/*
+
 // KHALID
 
 IF
@@ -246,28 +244,124 @@ IF
 	Switch("C02OspreyKhalid1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("Khalid",~~)
+	DisplayStringHead("Khalid",~Y-you wear the colors of a Deneirite p-roudly, Osprey. I know a few acquaintances who would undoubtedly enjoy your c-company.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyKhalid1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~I'm sure I'd enjoy theirs as well. Much like I enjoy yours, Khalid.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyKhalid1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Khalid",~~)
+	DisplayStringHead("Khalid",~You are too k-kind. Though I believe I l-lack the scholarly background to serve as your equal.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyKhalid1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Now you're just being humble. You're a clever man, Khalid. And more educated than meets the eye.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyKhalid1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Khalid",~~)
+	DisplayStringHead("Khalid",~Oh, I would not d-dare to boast of such. It is just a necessity to not let d-down those important to me.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid1","MYAREA",40)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~Hard work means every bit as much as talent does. I think we see eye to eye on more things than you believe, my friend.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyKhalid1","MYAREA",-1)
 END
-*/
-/*
+
+IF
+	Global("C02OspreyKhalid2","MYAREA",2)
+	Global("C02OspreyKhalid2_2","MYAREA",0)
+	InParty("JAHEIRA")
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyKhalid2","MYAREA",3)
+		SetGlobal("C02OspreyKhalid2_2","MYAREA",1)
+END
+
+IF
+	Global("C02OspreyKhalid2","MYAREA",2)
+	Global("C02OspreyKhalid2_2","MYAREA",0)
+	!InParty("JAHEIRA")
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyKhalid2","MYAREA",10)
+		SetGlobal("C02OspreyKhalid2_2","MYAREA",1)
+END
+
+IF
+	Global("C02OspreyKhalid2","MYAREA",61)
+	Global("C02OspreyKhalid2_61","MYAREA",0)
+	InParty("JAHEIRA")
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyKhalid2","MYAREA",62)
+		SetGlobal("C02OspreyKhalid2_61","MYAREA",1)
+END
+
+IF
+	Global("C02OspreyKhalid2","MYAREA",61)
+	Global("C02OspreyKhalid2_61","MYAREA",0)
+	!InParty("JAHEIRA")
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyKhalid2","MYAREA",70)
+		SetGlobal("C02OspreyKhalid2_61","MYAREA",1)
+END
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyKhalid2","MYAREA",0)
+	Switch("C02OspreyKhalid2","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("C0CR2OS",~Thank you for helping me to mend my tunic, Khalid.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",2)
+RESPONSE #3
+	DisplayStringHead("Jaheira",~Again.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~...Again.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Khalid",~N-no trouble at all, I assure you. Just... try to keep it in one piece for longer this... this time.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~I'll try my best to. Your stitchwork is flawless, though. I can barely tell all the other places that I've ripped before.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Khalid",~Just a useful skill I p-picked up in my lifetime. Though I'm surprised your first thought was to ask m-me and not Jaheira.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~I'm worried Jaheira would get tired of me asking. She might scold me and tell me to stop having accidents in the first place.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",60)
+RESPONSE #60
+	DisplayStringHead("Khalid",~She... well, she may indeed.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",61)
+RESPONSE #62
+	DisplayStringHead("Jaheira",~*ahem!*~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",70)
+RESPONSE #70
+	DisplayStringHead("Khalid",~H-however...! It is b-but her way of showing that she c-cares. And she would undoubtedly help in the end anyway.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid2","MYAREA",80)
+RESPONSE #80
+	DisplayStringHead("C0CR2OS",~Yes, I can't argue with that! Still, maybe I'm not mature enough to take all my scoldings just yet. I got enough of that back at the library.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyKhalid1","MYAREA",-1)
+END
+
 // M'KHIIN
 
 IF
@@ -278,37 +372,78 @@ IF
 	Switch("C02OspreyMkhiin1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("Mkhiin",~~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
-	SetGlobal("C02OspreyMkhiin1","MYAREA",2)
-RESPONSE #3
-	DisplayStringHead("Baeloth",~~)
-	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
-	SetGlobal("C02OspreyMkhiin1","MYAREA",5)
-RESPONSE #5
-	DisplayStringHead("Mkhiin",~~)
+	DisplayStringHead("Mkhiin",~You carry a lot of books with you. Looks heavy. Doesn't seem all that useful.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMkhiin1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~I'm a scribe, M'khiin. It's my job to keep records of things. Though you're right, it is all pretty heavy...~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMkhiin1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Mkhiin",~~)
+	DisplayStringHead("Mkhiin",~I don't think I've ever seen so many books in one place. Most goblins just throw them into the fire.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMkhiin1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~That's... oh, I really don't want to be rude. But that just makes me angry.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMkhiin1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Mkhiin",~~)
+	DisplayStringHead("Mkhiin",~Don't need to watch your words around me. Goblins *are* stupid. I know that.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~But you... I don't think you are, M'khiin.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin1","MYAREA",60)
+RESPONSE #60
+	DisplayStringHead("Mkhiin",~Not sure myself. Don't like to think too hard about things. Doesn't mean I don't know how.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMkhiin1","MYAREA",-1)
 END
-*/
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyMkhiin2","MYAREA",0)
+	Switch("C02OspreyMkhiin2","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("C0CR2OS",~Do you know how to read our language, M'khiin?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin2","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("Mkhiin",~I can speak it.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin2","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("C0CR2OS",~Yes, I know. You speak it very well, too! But I meant... have you ever read a book written by humans?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin2","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("Mkhiin",~Never tried.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin2","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("C0CR2OS",~Would you like to start?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin2","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("Mkhiin",~Don't know. Can't see the point.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin2","MYAREA",60)
+RESPONSE #60
+	DisplayStringHead("C0CR2OS",~Well, what if it's just a way for us to become closer friends? You wouldn't object to that, right?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin2","MYAREA",70)
+RESPONSE #70
+	DisplayStringHead("Mkhiin",~Guess I've got no reason to. Why not.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMkhiin2","MYAREA",-1)
+END
+
 // MINSC
-/*
+
 IF
 	InMyArea(Player1)
 	!ActuallyInCombat()
@@ -317,63 +452,121 @@ IF
 	Switch("C02OspreyMinsc1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Minsc, um... about your mouse—I mean, hamster...~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMinsc1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Minsc",~~)
+	DisplayStringHead("Minsc",~You speak of Boo? Do you have something you want to tell him? Here he is!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMinsc1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Ack! No, no no! Please put him away. I was actually going to beg you to keep him out from my pack!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMinsc1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Minsc",~~)
+	DisplayStringHead("C0CR2OS",~I get enough of the mice and bugs that crawl around under the library's shelves! I can't stand them, especially when I find them gnawing on our valued books and scrolls!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMinsc1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("Minsc",~Ho ho! Do not worry about that, Osprey. Boo has higher standards than his more savage cousins. Your books are safe from his teeth!~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMinsc1","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~You sure about that? But isn't he... chewing on something right now as we speak?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyMinsc1","MYAREA",60)
+RESPONSE #60
+	DisplayStringHead("Minsc",~That is just his training for the next evil eyeball that will fall prey to his might! But he will not bare his fangs against a friend, that I can promise!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyMinsc1","MYAREA",-1)
 END
-*/
-/*
+
 // NEERA
 
 IF
 	InMyArea(Player1)
 	!ActuallyInCombat()
 	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
-	!GlobalGT("bd_neera_plot","GLOBAL",13)
 	GlobalGT("C02OspreyNeera1","MYAREA",0)
 	Switch("C02OspreyNeera1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("Neera",~~)
+	DisplayStringHead("Neera",~You keep giving me the stink-eye, Osprey. Are you going to say something yet?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyNeera1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~I'd rather not be rude.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyNeera1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Neera",~~)
+	DisplayStringHead("Neera",~Well, consider me already offended. Why not just let it all out.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyNeera1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Look, Neera, I have nothing against you. But wild magic is harmful to the Weave. I can't just overlook that.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyNeera1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Neera",~~)
+	DisplayStringHead("Neera",~Right... so would you believe me if I said I don't like damaging the Weave or anything?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~Then why practice it at all?~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",60)
+RESPONSE #60
+	DisplayStringHead("Neera",~I dunno, it just... comes more easily to me. It's not like I want to break the whole foundation of what mages depend on or anything. The normal ways just didn't click with me.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",70)
+RESPONSE #70
+	DisplayStringHead("C0CR2OS",~Well, I think you just need to put in a little more effort.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera1","MYAREA",80)
+RESPONSE #80
+	DisplayStringHead("Neera",~I do. Just... in a different way. Maybe wild magic doesn't have to be a danger to the Weave. Someone just has to figure out how to make it work. And that someone might be me.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyNeera1","MYAREA",-1)
 END
-*/
+
+IF
+	InMyArea(Player1)
+	!ActuallyInCombat()
+	!GlobalTimerNotExpired("BD_BANTER_DELAY","MYAREA")
+	GlobalGT("C02OspreyNeera2","MYAREA",0)
+	Switch("C02OspreyNeera2","MYAREA")
+THEN
+RESPONSE #1
+	DisplayStringHead("Neera",~Osprey, can you PLEASE just stop POUTING at me already?!~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera2","MYAREA",10)
+RESPONSE #10
+	DisplayStringHead("C0CR2OS",~Nnnnrrggghh...~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera2","MYAREA",20)
+RESPONSE #20
+	DisplayStringHead("Neera",~Look, I've told you a thousand times already, I'm sorry for setting your scrolls on fire!~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera2","MYAREA",30)
+RESPONSE #30
+	DisplayStringHead("C0CR2OS",~They're still burnt to ashes.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera2","MYAREA",40)
+RESPONSE #40
+	DisplayStringHead("Neera",~Maybe I can fix that too! I know I've learned a spell for it at some point.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera2","MYAREA",50)
+RESPONSE #50
+	DisplayStringHead("C0CR2OS",~You're only going to make it worse!~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera2","MYAREA",60)
+RESPONSE #60
+	DisplayStringHead("Neera",~No! Well... probably yes. Fine, be that way. But if you keep making that face, it'll get stuck like that.~)
+	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
+	SetGlobal("C02OspreyNeera2","MYAREA",-1)
+END
+
 // RASAAD
 
-/*
 IF
 	InMyArea(Player1)
 	!ActuallyInCombat()
@@ -382,29 +575,29 @@ IF
 	Switch("C02OspreyRasaad1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~I've read all about monks who practice martial arts, rather than the sorts of monk I know. It's so thrilling to actually meet one!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyRasaad1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Rasaad",~~)
+	DisplayStringHead("Rasaad",~I am glad to have offered this opportunity. Even I have met precious few outside of my own order. It sometimes feels as if we are from a different age.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyRasaad1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Not at all! Nobody could dare call your practice obsolete if they've seen what you can do.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyRasaad1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Rasaad",~~)
+	DisplayStringHead("Rasaad",~Would you care to learn more of our ways? I would be happy to enlighten you, on both the academic and practical sides.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyRasaad1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Ah, hehe... I'll stick with the academic side, I think. I'm too clumsy to even think about doing acrobatics...~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyRasaad1","MYAREA",-1)
 END
-*/
+
 // SAFANA
-/*
+
 IF
 	InMyArea(Player1)
 	!ActuallyInCombat()
@@ -413,37 +606,37 @@ IF
 	Switch("C02OspreySafana1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("Safana",~~)
+	DisplayStringHead("Safana",~Osprey, darling, are you talking to yourself again? People will think you insane, and me by association.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreySafana1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~No, I was just reciting and memorizing what I've learned today. There's so much to keep track of.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreySafana1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Safana",~~)
+	DisplayStringHead("Safana",~All that information going in at once can't be good for your pretty little head, my dear. Why don't you try taking it easy once in a while?~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreySafana1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~Oh, I can't do that. If I'm not recording and remembering everything here, who will? Wait, actually... maybe you could help me, Safana!~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreySafana1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Safana",~~)
+	DisplayStringHead("Safana",~Darling, I like living my life. If I had to live like you did, I'd go insane within the week, or likely sooner.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreySafana1","MYAREA",50)
 RESPONSE #50
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~I know all sorts of mental exercises that would keep your mind focused! I could show you some, if you like.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreySafana1","MYAREA",60)
 RESPONSE #60
-	DisplayStringHead("Safana",~~)
+	DisplayStringHead("Safana",~...No. Please don't.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreySafana1","MYAREA",-1)
 END
-*/
+
 // VICONIA
-/*
+
 IF
 	InMyArea(Player1)
 	!ActuallyInCombat()
@@ -452,27 +645,27 @@ IF
 	Switch("C02OspreyViconia1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("Viconia",~~)
+	DisplayStringHead("Viconia",~You have the grace of a rothe, Osprey. I would have expected the blood of my surface cousins, as contemptible as they are, to have bestowed at least some of their traits upon you.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyViconia1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~I can't help it! I've always been this way, and my tutors eventually just learned to shake their heads and accept it.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyViconia1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Viconia",~~)
+	DisplayStringHead("Viconia",~Such a disgraceful failing would have spelled your doom long before adulthood, were you a drow.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyViconia1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("C0CR2OS",~~)
+	DisplayStringHead("C0CR2OS",~I can believe that. Here, the worst thing I have to be afraid of is a scolding and a slap to the back of my head.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyViconia1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Viconia",~~)
+	DisplayStringHead("Viconia",~Surfacers are too forgiving for their own good.~)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("C02OspreyViconia1","MYAREA",-1)
 END
-*/
+
 // VOGHILN
 
 IF

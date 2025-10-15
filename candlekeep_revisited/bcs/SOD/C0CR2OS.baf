@@ -105,6 +105,168 @@ THEN
     SetInterrupt(TRUE)
 END
 
+IF
+    AreaCheck("BD2000")  // Boareskyr Bridge & Bridgefort
+    Dead("BDYMORI")  // Wight
+    Global("KNOW_VELSHAROON","GLOBAL",0)
+    NearLocation(Myself,4089,408,10)
+    See([PC])
+    !InParty("DYNAHEIR")  // Dynaheir
+    !InParty("EDWIN")  // Dynaheir
+    !ActuallyInCombat()
+THEN
+    RESPONSE #100
+        StartDialogueNoSet(Player1)
+END
+
+// FRIENDSHIP
+
+IF
+	InParty(Myself)
+	Global("C0CandleReOspreyStart","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C0CandleReOspreyStart","GLOBAL",1)
+		RealSetGlobalTimer("C0CandleReOspreyTalkTimer","GLOBAL",300)
+		SetGlobalTimer("C0CandleReOspreyTalkTimer2","GLOBAL",300)
+END
+
+IF
+	InParty(Myself)
+	Global("C0CandleReOspreyStart","GLOBAL",1)
+	RealGlobalTimerExpired("C0CandleReOspreyTalkTimer","GLOBAL")
+	GlobalTimerExpired("C0CandleReOspreyTalkTimer2","GLOBAL")
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	!AreaType(DUNGEON)
+	!AreaCheck("BD0103")
+	GlobalLT("chapter","global",8)
+	Global("C0OspreySoDTalk1","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C0OspreySoDTalk1","GLOBAL",1)
+		StartDialogNoSet(Player1)
+END
+
+IF
+	InParty(Myself)
+	Global("C0CandleReOspreyStart","GLOBAL",1)
+	RealGlobalTimerExpired("C0CandleReOspreyTalkTimer","GLOBAL")
+	GlobalTimerExpired("C0CandleReOspreyTalkTimer2","GLOBAL")
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	!AreaType(DUNGEON)
+	!GlobalLT("chapter","global",8)
+	Global("C0OspreySoDTalk1","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C0OspreySoDTalk1","GLOBAL",-1)
+END
+
+IF
+	InParty(Myself)
+	GlobalGT("chapter","global",7)
+	!See("ff_camp")
+	Global("C0OspreySoDTalk2","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C0OspreySoDTalk2","GLOBAL",1)
+		RealSetGlobalTimer("C0CandleReOspreyTalkTimer","GLOBAL",300)
+		SetGlobalTimer("C0CandleReOspreyTalkTimer2","GLOBAL",300)
+END
+
+IF
+	InParty(Myself)
+	RealGlobalTimerExpired("C0CandleReOspreyTalkTimer","GLOBAL")
+	GlobalTimerExpired("C0CandleReOspreyTalkTimer2","GLOBAL")
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	!AreaType(DUNGEON)
+    !Range("ff_camp",100)
+	Global("C0OspreySoDTalk2","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C0OspreySoDTalk2","GLOBAL",2)
+		StartDialogNoSet(Player1)
+END
+
+IF
+	InParty(Myself)
+	RealGlobalTimerExpired("C0CandleReOspreyTalkTimer","GLOBAL")
+	GlobalTimerExpired("C0CandleReOspreyTalkTimer2","GLOBAL")
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	!AreaType(DUNGEON)
+	AreaCheck("bd2000")
+    !See("Dorn Romance 1")
+	Global("C0OspreySoDTalk3","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C0OspreySoDTalk3","GLOBAL",1)
+		StartDialogNoSet(Player1)
+END
+
+IF
+	InParty(Myself)
+	GlobalGT("chapter","global",9)
+	Global("C0OspreySoDTalk4","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("C0OspreySoDTalk4","GLOBAL",1)
+		RealSetGlobalTimer("C0CandleReOspreyTalkTimer","GLOBAL",600)
+		SetGlobalTimer("C0CandleReOspreyTalkTimer2","GLOBAL",600)
+END
+
+IF
+	InParty(Myself)
+	RealGlobalTimerExpired("C0CandleReOspreyTalkTimer","GLOBAL")
+	GlobalTimerExpired("C0CandleReOspreyTalkTimer2","GLOBAL")
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	!AreaType(DUNGEON)
+	Global("C0OspreySoDTalk4","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C0OspreySoDTalk4","GLOBAL",2)
+		StartDialogNoSet(Player1)
+END
+
+// Arkanis (Lava)
+
+IF
+	InParty(Myself)
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	!AreaType(DUNGEON)
+	InParty("L#SDA")
+	Global("C02OspreyL#SDA","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		Wait(2)
+		SetGlobal("C02OspreyL#SDA","GLOBAL",1)
+		StartDialogNoSet(Player1)
+		SetInterrupt(TRUE)
+END
+
 // BANTERS
 
 // Baeloth
@@ -346,6 +508,516 @@ THEN
 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
 		SetGlobal("C02OspreyEdwin","LOCALS",2)
 	    SetGlobal("C02OspreyEdwin1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Glint
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Glint")
+	Global("C02OspreyGlint","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyGlintTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyGlint","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Glint")
+	Global("C02OspreyGlint","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyGlint","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyGlint_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyGlintTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyGlint_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyGlint","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Glint")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyGlint","LOCALS",2)
+	    SetGlobal("C02OspreyGlint1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Jaheira
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Jaheira")
+	Global("C02OspreyJaheira","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyJaheiraTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyJaheira","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Jaheira")
+	Global("C02OspreyJaheira","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyJaheira","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyJaheira_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyJaheiraTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyJaheira_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyJaheira","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Jaheira")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyJaheira","LOCALS",2)
+	    SetGlobal("C02OspreyJaheira1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Khalid
+
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Khalid")
+	Global("C02OspreyKhalid","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyKhalidTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyKhalid","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Khalid")
+	Global("C02OspreyKhalid","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyKhalid","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyKhalid_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyKhalidTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyKhalid_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyKhalid","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Khalid")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyKhalid","LOCALS",2)
+	    SetGlobal("C02OspreyKhalid1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyKhalid_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyKhalidTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyKhalid_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyKhalid","LOCALS",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Khalid")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyKhalid","LOCALS",3)
+	    SetGlobal("C02OspreyKhalid2","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Mkhiin
+
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Mkhiin")
+	Global("C02OspreyMkhiin","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyMkhiinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyMkhiin","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Mkhiin")
+	Global("C02OspreyMkhiin","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyMkhiin","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyMkhiin_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyMkhiinTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyMkhiin_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyMkhiin","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Mkhiin")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyMkhiin","LOCALS",2)
+	    SetGlobal("C02OspreyMkhiin1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyMkhiin_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyMkhiinTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyMkhiin_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyMkhiin","LOCALS",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Mkhiin")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyMkhiin","LOCALS",3)
+	    SetGlobal("C02OspreyMkhiin2","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Minsc
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Minsc")
+	Global("C02OspreyMinsc","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyMinscTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyMinsc","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Minsc")
+	Global("C02OspreyMinsc","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyMinsc","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyMinsc_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyMinscTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyMinsc_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyMinsc","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Minsc")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyMinsc","LOCALS",2)
+	    SetGlobal("C02OspreyMinsc1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Neera
+
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Neera")
+	Global("C02OspreyNeera","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyNeeraTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyNeera","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Neera")
+	Global("C02OspreyNeera","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyNeera","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyNeera_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyNeeraTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyNeera_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyNeera","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Neera")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyNeera","LOCALS",2)
+	    SetGlobal("C02OspreyNeera1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyNeera_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyNeeraTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyNeera_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyNeera","LOCALS",2)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Neera")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyNeera","LOCALS",3)
+	    SetGlobal("C02OspreyNeera2","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Rasaad
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Rasaad")
+	Global("C02OspreyRasaad","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyRasaadTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyRasaad","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Rasaad")
+	Global("C02OspreyRasaad","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyRasaad","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyRasaad_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyRasaadTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyRasaad_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyRasaad","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Rasaad")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyRasaad","LOCALS",2)
+	    SetGlobal("C02OspreyRasaad1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Safana
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Safana")
+	Global("C02OspreySafana","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreySafanaTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreySafana","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Safana")
+	Global("C02OspreySafana","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreySafana","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreySafana_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreySafanaTalk","LOCALS")
+	OR(2)
+		Global("C02OspreySafana_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreySafana","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Safana")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreySafana","LOCALS",2)
+	    SetGlobal("C02OspreySafana1","MYAREA",1)
+		SetAreaScript("C0CR2OSB",GENERAL)
+		SetInterrupt(TRUE)
+		SetSequence(SEQ_HEAD_TURN)
+END
+
+// Viconia
+IF
+	!AreaCheck("bd0120")
+	!AreaCheck("bd0130")
+	InParty(Myself)
+	InParty("Viconia")
+	Global("C02OspreyViconia","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimerRandom("C02OspreyViconiaTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
+		SetGlobal("C02OspreyViconia","LOCALS",1)
+END
+
+IF
+	OR(2)
+		!InParty(Myself)
+		!InParty("Viconia")
+	Global("C02OspreyViconia","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C02OspreyViconia","LOCALS",0)
+END
+
+IF
+	OR(2)
+		Global("C02OspreyViconia_DEBUG","GLOBAL",1)
+		GlobalTimerExpired("C02OspreyViconiaTalk","LOCALS")
+	OR(2)
+		Global("C02OspreyViconia_DEBUG","GLOBAL",1)
+		!GlobalTimerNotExpired("BD_NPC_BANTER","GLOBAL")
+	GlobalTimerNotExpired("BD_AREA_BANTER_DELAY","MYAREA")
+	Global("C02OspreyViconia","LOCALS",1)
+	IsValidForPartyDialog(Myself)
+	IsValidForPartyDialog("Viconia")  
+	!PartyRested()
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		BanterBlockTime(450)
+		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+		SetGlobal("C02OspreyViconia","LOCALS",2)
+	    SetGlobal("C02OspreyViconia1","MYAREA",1)
 		SetAreaScript("C0CR2OSB",GENERAL)
 		SetInterrupt(TRUE)
 		SetSequence(SEQ_HEAD_TURN)
