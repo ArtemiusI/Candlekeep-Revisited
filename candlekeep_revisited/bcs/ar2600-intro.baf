@@ -108,6 +108,7 @@ END
 IF
 	Global("C0CandleReClassStart","GLOBAL",0)
 	Class(Player1,THIEF)
+  %wlock_check%
 THEN
   RESPONSE #100
     ActionOverride(Player1,LeaveAreaLUA("%bg1_eet_symbol%2616","",[231.302],NE))

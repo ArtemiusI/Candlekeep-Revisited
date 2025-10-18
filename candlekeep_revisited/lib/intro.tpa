@@ -27,7 +27,18 @@ COPY_EXISTING ~DOGWI.cre~ ~override/C0CR#DOG.CRE~
     SAY NAME1 ~Dog~
     SAY NAME2 ~Dog~
 
-EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-intro.baf~ EVAL
+ACTION_IF FILE_EXISTS_IN_GAME ~C0CLABWL.2DA~ BEGIN
+
+	OUTER_SPRINT wlock_check ~  !Kit(Player1,C0FILL_WLOCK)
+	!Kit(Player1,C0WLOCK)~
+
+END ELSE BEGIN
+
+	OUTER_SPRINT wlock_check ~~
+
+	END
+
+EXTEND_TOP EVALUATE_BUFFER ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-intro.baf~
 
 ACTION_IF GAME_IS ~EET~ THEN BEGIN
 EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-eet.baf~ EVAL
