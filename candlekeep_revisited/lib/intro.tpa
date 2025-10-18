@@ -38,7 +38,7 @@ END ELSE BEGIN
 
 	END
 
-EXTEND_TOP EVALUATE_BUFFER ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-intro.baf~
+EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-intro.baf~ EVAL
 
 ACTION_IF GAME_IS ~EET~ THEN BEGIN
 EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-eet.baf~ EVAL
