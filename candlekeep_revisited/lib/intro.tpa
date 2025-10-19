@@ -40,6 +40,10 @@ END ELSE BEGIN
 
 EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-intro.baf~ EVAL
 
+ACTION_IF FILE_EXISTS_IN_GAME ~C0CLABWL.2DA~ THEN BEGIN
+EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-warlock.baf~
+END
+
 ACTION_IF GAME_IS ~EET~ THEN BEGIN
 EXTEND_TOP ~%bg1_eet_symbol%2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-eet.baf~ EVAL
 END
@@ -133,8 +137,4 @@ Requires:
  4 Strength
 
 Weight: 5~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~C0CLABWL.2DA~ THEN BEGIN
-EXTEND_TOP ~ar2600.bcs~ ~%MOD_FOLDER%/bcs/ar2600-warlock.baf~
 END
