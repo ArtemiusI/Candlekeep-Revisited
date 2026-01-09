@@ -67,7 +67,8 @@ CHAIN IMOEN C0CandleReImoenJoins.4
 ~Hmph! Well, that's some gratitude, and when I was bein' all considerate. Fine, I'll do my own thing now. You get going then if you're feelin' so cranky.~
 EXIT
 
-CHAIN IF WEIGHT #-1 ~Global("C0CandleReImoenJoins","GLOBAL",2)~ THEN IMOENP C0CandleReImoenKicked
+CHAIN IF WEIGHT #-1 ~GlobalLT("TalkedToGorion","GLOBAL",1)
+Global("C0CandleReImoenJoins","GLOBAL",2)~ THEN IMOENP C0CandleReImoenKicked
 ~Hey, what's up? You done hanging around, and it's time for you to go?~
 END
 ++ ~No, not yet. You can stay for a bit longer.~ DO ~JoinParty()~ EXIT
