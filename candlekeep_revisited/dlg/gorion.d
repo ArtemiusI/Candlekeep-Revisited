@@ -133,6 +133,7 @@ DO ~SetGlobal("C0CandleReGorionFamiliar","GLOBAL",1)
 
 CHAIN IF WEIGHT #-1 ~Global("C0CandleReGorionFamiliar","GLOBAL",1)~ THEN C0CR#GFM C0CandleReGorionMageFam
 ~Wh—Gorion! Aw, and there I was watching those two cats yowling and scratching at each other, such funny things they are... oh, hello, <CHARNAME>. Have I been called for playtime, or babysitting again?~
+DO ~SetGlobal("C0CandleReGorionFamiliar","GLOBAL",2)~
 == C0CR#GOR ~*sigh* Paloma...~
 == C0CR#GFM ~Just a little joke, master. I can guess you've summoned me as part of a lesson again. But I was having so much fun on my own! I want an apple for compensation. A nice, red, juicy one.~
 == C0CR#GOR ~Paloma, this is hardly the time.~
